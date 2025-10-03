@@ -13,7 +13,7 @@ define('EARNPE_TOKEN', 'F0D95996-2F9A-4362-950B-FC532F97A0CE');
 
 // Site configuration
 define('SITE_URL', 'https://thiyagideals.com');
-define('SITE_NAME', 'Thiyagi Shop');
+define('SITE_NAME', 'Thiyagi Deals');
 
 // Products display configuration
 define('PRODUCTS_PER_PAGE', 30); // Increase from default API response (usually 10-12 per page)
