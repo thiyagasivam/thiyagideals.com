@@ -2,11 +2,11 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://thiyagideals.com/sitemap.xml
-Sitemap: https://thiyagideals.com/sitemap-main.xml
-Sitemap: https://thiyagideals.com/sitemap-products.php
-Sitemap: https://thiyagideals.com/sitemap-images-dynamic.php
-Sitemap: https://thiyagideals.com/sitemap-news-dynamic.php
+Sitemap: https://www.thiyagideals.com/sitemap.xml
+Sitemap: https://www.thiyagideals.com/sitemap-main.xml
+Sitemap: https://www.thiyagideals.com/sitemap-products.php
+Sitemap: https://www.thiyagideals.com/sitemap-images-dynamic.php
+Sitemap: https://www.thiyagideals.com/sitemap-news-dynamic.php
 
 # Block sensitive files and folders
 Disallow: /includes/

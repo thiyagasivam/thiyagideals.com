@@ -1,4 +1,4 @@
-﻿# DOMAIN MIGRATION REVIEW REPORT
+# DOMAIN MIGRATION REVIEW REPORT
 ## Complete Review: shop.thiyagi.com  thiyagideals.com
 **Date:** 2025-10-03 23.59.12
 
@@ -18,7 +18,7 @@
 
 ### 1. Configuration Files
  **includes/config.php**
-   - SITE_URL: https://thiyagideals.com
+   - SITE_URL: https://www.thiyagideals.com
    - Status: Updated Successfully
 
 ### 2. SEO & Crawlers
@@ -31,7 +31,7 @@
    - Status: Updated Successfully
 
  **sitemap.xml.php**
-   - Base URL: https://thiyagideals.com/shop
+   - Base URL: https://www.thiyagideals.com/shop
    - Status: Updated Successfully
 
 ### 3. Documentation Files
@@ -89,11 +89,11 @@ These references to thiyagi.com (without 'deals') are CORRECT:
 ##  URL STRUCTURE VERIFICATION
 
 ### Current URL Patterns
-1. **Homepage:** https://thiyagideals.com
-2. **Deal Pages:** https://thiyagideals.com/[page-name].php
-3. **Product Pages:** https://thiyagideals.com/product/[id]/[slug]
-4. **All Pages Hub:** https://thiyagideals.com/all-pages.php
-5. **Sitemaps:** https://thiyagideals.com/sitemap*.xml
+1. **Homepage:** https://www.thiyagideals.com
+2. **Deal Pages:** https://www.thiyagideals.com/[page-name].php
+3. **Product Pages:** https://www.thiyagideals.com/product/[id]/[slug]
+4. **All Pages Hub:** https://www.thiyagideals.com/all-pages.php
+5. **Sitemaps:** https://www.thiyagideals.com/sitemap*.xml
 
 ---
 
@@ -111,11 +111,11 @@ These references to thiyagi.com (without 'deals') are CORRECT:
 
 ### Robots.txt
 `
-Sitemap: https://thiyagideals.com/sitemap.xml
-Sitemap: https://thiyagideals.com/sitemap-main.xml
-Sitemap: https://thiyagideals.com/sitemap-products.php
-Sitemap: https://thiyagideals.com/sitemap-images-dynamic.php
-Sitemap: https://thiyagideals.com/sitemap-news-dynamic.php
+Sitemap: https://www.thiyagideals.com/sitemap.xml
+Sitemap: https://www.thiyagideals.com/sitemap-main.xml
+Sitemap: https://www.thiyagideals.com/sitemap-products.php
+Sitemap: https://www.thiyagideals.com/sitemap-images-dynamic.php
+Sitemap: https://www.thiyagideals.com/sitemap-news-dynamic.php
 `
 
 ### Sitemap Index
@@ -151,11 +151,11 @@ All 4 dynamic sitemaps pointing to thiyagideals.com
 4. Monitor Google Search Console for crawl errors
 
 ### Testing Checklist
-- [ ] Homepage loads: https://thiyagideals.com
-- [ ] Product pages work: https://thiyagideals.com/product/[id]/[slug]
+- [ ] Homepage loads: https://www.thiyagideals.com
+- [ ] Product pages work: https://www.thiyagideals.com/product/[id]/[slug]
 - [ ] Deal category pages load correctly
-- [ ] Sitemap accessible: https://thiyagideals.com/sitemap.xml
-- [ ] Robots.txt accessible: https://thiyagideals.com/robots.txt
+- [ ] Sitemap accessible: https://www.thiyagideals.com/sitemap.xml
+- [ ] Robots.txt accessible: https://www.thiyagideals.com/robots.txt
 
 ---
 

@@ -5,7 +5,7 @@ The product detail page links were not working correctly from the product listin
 
 ## Root Cause
 - **URL Structure Mismatch**: The generated URLs didn't match the .htaccess rewrite rules
-- **Configuration Conflict**: SITE_URL was set to `https://thiyagideals.com` but URLs were being generated with `/shop/` prefix
+- **Configuration Conflict**: SITE_URL was set to `https://www.thiyagideals.com` but URLs were being generated with `/shop/` prefix
 
 ## ✅ Fixes Applied
 
@@ -38,18 +38,18 @@ The product detail page links were not working correctly from the product listin
 
 ### SEO-Friendly URLs (Primary)
 ```
-https://thiyagideals.com/product/123/product-name-slug
-https://thiyagideals.com/product/123/
+https://www.thiyagideals.com/product/123/product-name-slug
+https://www.thiyagideals.com/product/123/
 ```
 
 ### Direct URLs (Fallback)
 ```
-https://thiyagideals.com/product.php?id=123
+https://www.thiyagideals.com/product.php?id=123
 ```
 
 ## 🔍 Testing Instructions
 
-1. **Visit:** `https://thiyagideals.com/url-test.php`
+1. **Visit:** `https://www.thiyagideals.com/url-test.php`
    - Comprehensive URL testing page
    - Shows API status and URL generation
    - Tests both SEO and direct URLs
@@ -84,4 +84,4 @@ The URLs are now properly formatted and will direct users to the correct product
 
 ## 🔧 Quick Test
 
-Visit: `https://thiyagideals.com/?page=5` and click any product - the detail page should now load correctly!
+Visit: `https://www.thiyagideals.com/?page=5` and click any product - the detail page should now load correctly!

@@ -255,9 +255,9 @@ Page Output:
 
 ### 1. Browser Testing ✅ READY
 Your pages are now ready to test in a browser:
-- https://thiyagideals.com/beauty-deals.php
-- https://thiyagideals.com/todays-deals.php
-- https://thiyagideals.com/amazon-deals.php
+- https://www.thiyagideals.com/beauty-deals.php
+- https://www.thiyagideals.com/todays-deals.php
+- https://www.thiyagideals.com/amazon-deals.php
 - etc.
 
 ### 2. Production Deployment ✅ READY

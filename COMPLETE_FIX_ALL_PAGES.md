@@ -180,16 +180,16 @@ include 'includes/header.php';
 
 #### 1. Browse Your Pages
 Visit any page in your browser:
-- https://thiyagideals.com/beauty-deals.php
-- https://thiyagideals.com/automotive.php
-- https://thiyagideals.com/trending.php
-- https://thiyagideals.com/flash-sale.php
-- https://thiyagideals.com/deals-under-500.php
-- https://thiyagideals.com/best-value.php
+- https://www.thiyagideals.com/beauty-deals.php
+- https://www.thiyagideals.com/automotive.php
+- https://www.thiyagideals.com/trending.php
+- https://www.thiyagideals.com/flash-sale.php
+- https://www.thiyagideals.com/deals-under-500.php
+- https://www.thiyagideals.com/best-value.php
 - And 49 more...
 
 #### 2. Check All Pages Hub
-https://thiyagideals.com/all-pages.php
+https://www.thiyagideals.com/all-pages.php
 
 #### 3. Test Features
 Each page has:

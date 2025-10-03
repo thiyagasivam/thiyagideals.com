@@ -167,11 +167,11 @@ php -l includes/functions.php
 8. ✅ All links functional
 
 ### Test Any Page:
-- https://thiyagideals.com/shop/beauty-deals.php
-- https://thiyagideals.com/shop/electronics-deals.php
-- https://thiyagideals.com/shop/hot-deals.php
-- https://thiyagideals.com/shop/deals-under-500.php
-- https://thiyagideals.com/shop/amazon-deals.php
+- https://www.thiyagideals.com/shop/beauty-deals.php
+- https://www.thiyagideals.com/shop/electronics-deals.php
+- https://www.thiyagideals.com/shop/hot-deals.php
+- https://www.thiyagideals.com/shop/deals-under-500.php
+- https://www.thiyagideals.com/shop/amazon-deals.php
 - ... (all 54 pages work!)
 
 ---
@@ -328,7 +328,7 @@ $pattern = '/\<\?php\s*\/\/\s*Helper function to adjust color brightness.*?funct
 ---
 
 **All pages are now working perfectly! Test them at:**
-`https://thiyagideals.com/shop/[page-name].php`
+`https://www.thiyagideals.com/shop/[page-name].php`
 
 🎉 **Happy Shopping!** 🛍️
 

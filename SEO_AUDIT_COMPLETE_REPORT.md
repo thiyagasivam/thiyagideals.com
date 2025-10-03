@@ -1,4 +1,4 @@
-﻿# COMPREHENSIVE SEO AUDIT & REVIEW REPORT
+# COMPREHENSIVE SEO AUDIT & REVIEW REPORT
 ## Thiyagi Deals - Complete SEO Review
 **Date:** 2025-10-04 00.19.10
 **Domain:** thiyagideals.com
@@ -99,11 +99,11 @@
 - Flipkart Deals
 
 **Price Range:**
-- Under ₹500
-- ₹500-1000
-- Under ₹1000
-- ₹1000-5000
-- Under ₹2000
+- Under ?500
+- ?500-1000
+- Under ?1000
+- ?1000-5000
+- Under ?2000
 
 **Discount Percentage:**
 - 25% OFF

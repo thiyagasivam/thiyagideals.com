@@ -4,9 +4,10 @@ ErrorDocument 404 /shop/404.php
 # SEO-Friendly URL Rewriting
 RewriteEngine On
 
-# Force HTTPS (if you have SSL)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Force WWW and HTTPS
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^thiyagideals\.com$ [NC]
+RewriteRule ^(.*)$ https://www.thiyagideals.com/$1 [R=301,L]
 
 # Remove trailing slashes
 RewriteCond %{REQUEST_FILENAME} !-d
