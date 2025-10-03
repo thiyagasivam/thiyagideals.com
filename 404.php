@@ -264,7 +264,7 @@ include 'includes/header.php';
             <a href="<?php echo SITE_URL; ?>" class="error-404-btn btn-primary-404">
                 🏠 Go Home
             </a>
-            <a href="<?php echo SITE_URL; ?>/shop/all-pages.php" class="error-404-btn btn-secondary-404">
+            <a href="<?php echo SITE_URL; ?>/all-pages" class="error-404-btn btn-secondary-404">
                 📑 Browse All Pages
             </a>
         </div>
@@ -281,49 +281,49 @@ include 'includes/header.php';
         <h2>🔥 Popular Pages You Might Like</h2>
         
         <div class="pages-grid">
-            <a href="<?php echo SITE_URL; ?>/shop/todays-deals.php" class="page-card">
+            <a href="<?php echo SITE_URL; ?>/todays-deals" class="page-card">
                 <div class="page-card-icon">🎯</div>
                 <div class="page-card-title">Today's Deals</div>
                 <div class="page-card-description">Fresh deals added today</div>
             </a>
             
-            <a href="<?php echo SITE_URL; ?>/shop/hot-deals.php" class="page-card">
+            <a href="<?php echo SITE_URL; ?>/hot-deals" class="page-card">
                 <div class="page-card-icon">🔥</div>
                 <div class="page-card-title">Hot Deals</div>
                 <div class="page-card-description">40% OFF or more</div>
             </a>
             
-            <a href="<?php echo SITE_URL; ?>/shop/trending.php" class="page-card">
+            <a href="<?php echo SITE_URL; ?>/trending" class="page-card">
                 <div class="page-card-icon">📈</div>
                 <div class="page-card-title">Trending Now</div>
                 <div class="page-card-description">Most popular products</div>
             </a>
             
-            <a href="<?php echo SITE_URL; ?>/shop/flash-sale.php" class="page-card">
+            <a href="<?php echo SITE_URL; ?>/flash-sale" class="page-card">
                 <div class="page-card-icon">⚡</div>
                 <div class="page-card-title">Flash Sale</div>
                 <div class="page-card-description">Limited time offers</div>
             </a>
             
-            <a href="<?php echo SITE_URL; ?>/shop/deals-under-500.php" class="page-card">
+            <a href="<?php echo SITE_URL; ?>/deals-under-500" class="page-card">
                 <div class="page-card-icon">💰</div>
                 <div class="page-card-title">Under ₹500</div>
                 <div class="page-card-description">Budget-friendly deals</div>
             </a>
             
-            <a href="<?php echo SITE_URL; ?>/shop/best-value.php" class="page-card">
+            <a href="<?php echo SITE_URL; ?>/best-value" class="page-card">
                 <div class="page-card-icon">⭐</div>
                 <div class="page-card-title">Best Value</div>
                 <div class="page-card-description">Maximum savings</div>
             </a>
             
-            <a href="<?php echo SITE_URL; ?>/shop/amazon-deals.php" class="page-card">
+            <a href="<?php echo SITE_URL; ?>/amazon-deals" class="page-card">
                 <div class="page-card-icon">📦</div>
                 <div class="page-card-title">Amazon Deals</div>
                 <div class="page-card-description">Exclusive Amazon offers</div>
             </a>
             
-            <a href="<?php echo SITE_URL; ?>/shop/flipkart-deals.php" class="page-card">
+            <a href="<?php echo SITE_URL; ?>/flipkart-deals" class="page-card">
                 <div class="page-card-icon">🛒</div>
                 <div class="page-card-title">Flipkart Deals</div>
                 <div class="page-card-description">Best Flipkart prices</div>
@@ -337,9 +337,9 @@ include 'includes/header.php';
     <h3 style="margin-bottom: 20px; color: #667eea;">Quick Links</h3>
     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
         <a href="<?php echo SITE_URL; ?>" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">Home</a>
-        <a href="<?php echo SITE_URL; ?>" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">Shop</a>
-        <a href="<?php echo SITE_URL; ?>/shop/all-pages.php" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">All Pages</a>
-        <a href="<?php echo SITE_URL; ?>/contact.php" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">Contact</a>
+        <a href="<?php echo SITE_URL; ?>/all-pages" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">All Pages</a>
+        <a href="<?php echo SITE_URL; ?>/hot-deals" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">Hot Deals</a>
+        <a href="https://thiyagi.com" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">Contact</a>
     </div>
 </div>
 

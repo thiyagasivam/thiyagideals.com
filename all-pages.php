@@ -493,8 +493,8 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
                     <ul class="list-unstyled">
                         <li><a href="<?php echo SITE_URL; ?>" class="text-white-50">Home</a></li>
                         <li><a href="<?php echo SITE_URL; ?>" class="text-white-50">All Deals</a></li>
-                        <li><a href="<?php echo SITE_URL; ?>/shop/hot-deals.php" class="text-white-50">Hot Deals</a></li>
-                        <li><a href="<?php echo SITE_URL; ?>/shop/all-pages.php" class="text-white-50">Browse All Pages</a></li>
+                        <li><a href="<?php echo SITE_URL; ?>/hot-deals" class="text-white-50">Hot Deals</a></li>
+                        <li><a href="<?php echo SITE_URL; ?>/all-pages" class="text-white-50">Browse All Pages</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
