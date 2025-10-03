@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Main Static Pages Sitemap -->
+    <sitemap>
+        <loc>https://shop.thiyagi.com/sitemap-main.xml</loc>
+        <lastmod>2025-10-01T12:00:00+00:00</lastmod>
+    </sitemap>
+    
+    <!-- Dynamic Products Sitemap -->
+    <sitemap>
+        <loc>https://shop.thiyagi.com/sitemap-products.php</loc>
+        <lastmod>2025-10-01T12:00:00+00:00</lastmod>
+    </sitemap>
+    
+    <!-- Dynamic Images Sitemap -->
+    <sitemap>
+        <loc>https://shop.thiyagi.com/sitemap-images-dynamic.php</loc>
+        <lastmod>2025-10-01T12:00:00+00:00</lastmod>
+    </sitemap>
+    
+    <!-- Dynamic News Sitemap -->
+    <sitemap>
+        <loc>https://shop.thiyagi.com/sitemap-news-dynamic.php</loc>
+        <lastmod>2025-10-01T12:00:00+00:00</lastmod>
+    </sitemap>
+    
+</sitemapindex>

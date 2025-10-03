@@ -1,0 +1,89 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://shop.thiyagi.com/sitemap.xml
+Sitemap: https://shop.thiyagi.com/sitemap-main.xml
+Sitemap: https://shop.thiyagi.com/sitemap-products.php
+Sitemap: https://shop.thiyagi.com/sitemap-images-dynamic.php
+Sitemap: https://shop.thiyagi.com/sitemap-news-dynamic.php
+
+# Block sensitive files and folders
+Disallow: /includes/
+Disallow: /vendor/
+Disallow: /*.log
+Disallow: /config.php
+Disallow: /functions.php
+Disallow: /.env
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.git/
+Disallow: /.htaccess
+Disallow: /admin/
+Disallow: /test/
+Disallow: /tests/
+Disallow: /debug/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /backup/
+Disallow: /private/
+
+# Allow important static assets
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+Allow: /assets/fonts/
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /manifest.json
+
+# Block query parameters that don't change content
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*source=
+Disallow: /*?*medium=
+Disallow: /*?*campaign=
+Disallow: /*&utm_
+Disallow: /*&ref=
+Disallow: /*&source=
+Disallow: /*&medium=
+Disallow: /*&campaign=
+
+# Allow specific bots full access
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Block problematic bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+# Crawl delay for general bots
+Crawl-delay: 1
+
+# Cache directive
+Cache-delay: 1
