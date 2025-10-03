@@ -2,7 +2,7 @@
 
 ## ✅ Issue Resolved
 
-**Error**: Page was showing errors when accessing `https://shop.thiyagi.com/shop/all-pages.php`
+**Error**: Page was showing errors when accessing `https://thiyagideals.com/shop/all-pages.php`
 
 ---
 
@@ -128,7 +128,7 @@ php -l all-pages.php
 
 ## 🌐 Access the Fixed Page
 
-**URL**: https://shop.thiyagi.com/shop/all-pages.php
+**URL**: https://thiyagideals.com/shop/all-pages.php
 
 ### What You'll See
 - Beautiful gradient header
@@ -215,7 +215,7 @@ The page now loads perfectly with:
 
 **Fixed Date**: October 3, 2025  
 **Status**: ✅ Fully Operational  
-**URL**: https://shop.thiyagi.com/shop/all-pages.php
+**URL**: https://thiyagideals.com/shop/all-pages.php
 
 ---
 

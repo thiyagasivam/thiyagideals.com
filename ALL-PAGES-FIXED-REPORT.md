@@ -90,10 +90,10 @@ The issue was that many pages had duplicate closing tags (`</body>` and `</html>
 
 ### Test URLs
 Test these pages to verify they're working:
-- https://shop.thiyagi.com/deals-500-1000
-- https://shop.thiyagi.com/todays-deals
-- https://shop.thiyagi.com/automotive
-- https://shop.thiyagi.com/hot-deals
-- https://shop.thiyagi.com/trending
+- https://thiyagideals.com/deals-500-1000
+- https://thiyagideals.com/todays-deals
+- https://thiyagideals.com/automotive
+- https://thiyagideals.com/hot-deals
+- https://thiyagideals.com/trending
 
 All pages should now display correctly without blank screens! 🎉

@@ -249,11 +249,11 @@ php -l amazon-deals.php
 All 54 pages are now accessible and working:
 
 ### High-Priority Pages:
-- 🔥 **Hot Deals**: https://shop.thiyagi.com/shop/hot-deals.php
-- 💰 **Under ₹500**: https://shop.thiyagi.com/shop/deals-under-500.php
-- 🛒 **Amazon Deals**: https://shop.thiyagi.com/shop/amazon-deals.php
-- 📱 **Electronics**: https://shop.thiyagi.com/shop/electronics-deals.php
-- 👗 **Fashion**: https://shop.thiyagi.com/shop/fashion-deals.php
+- 🔥 **Hot Deals**: https://thiyagideals.com/shop/hot-deals.php
+- 💰 **Under ₹500**: https://thiyagideals.com/shop/deals-under-500.php
+- 🛒 **Amazon Deals**: https://thiyagideals.com/shop/amazon-deals.php
+- 📱 **Electronics**: https://thiyagideals.com/shop/electronics-deals.php
+- 👗 **Fashion**: https://thiyagideals.com/shop/fashion-deals.php
 
 ### Test Categories:
 - 💰 **Price-Based**: `/shop/deals-under-1000.php`
@@ -383,7 +383,7 @@ PHP Warnings Eliminated: 150+
 ---
 
 **All pages are now live and fully functional!**  
-**Visit any page to see them in action:** `https://shop.thiyagi.com/shop/[page-name].php`
+**Visit any page to see them in action:** `https://thiyagideals.com/shop/[page-name].php`
 
 🎉 **Problem Solved! Happy Shopping!** 🛍️
 

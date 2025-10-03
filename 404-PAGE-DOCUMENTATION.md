@@ -106,10 +106,10 @@ User can:
 
 ### Test URLs
 Try these non-existent URLs to see the 404 page:
-- https://shop.thiyagi.com/non-existent-page
-- https://shop.thiyagi.com/test-404
-- https://shop.thiyagi.com/xyz
-- https://shop.thiyagi.com/product/999999
+- https://thiyagideals.com/non-existent-page
+- https://thiyagideals.com/test-404
+- https://thiyagideals.com/xyz
+- https://thiyagideals.com/product/999999
 
 ### Expected Behavior
 ✅ Shows custom 404 page  

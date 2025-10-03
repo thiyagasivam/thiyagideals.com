@@ -21,13 +21,13 @@ Your custom 404 error page is now **active and working**!
 ## 🧪 Quick Test
 
 ### Test URLs (Click to see 404 page):
-1. https://shop.thiyagi.com/non-existent-page
-2. https://shop.thiyagi.com/test-404
-3. https://shop.thiyagi.com/xyz
-4. https://shop.thiyagi.com/product/999999
+1. https://thiyagideals.com/non-existent-page
+2. https://thiyagideals.com/test-404
+3. https://thiyagideals.com/xyz
+4. https://thiyagideals.com/product/999999
 
 ### Test Page:
-📄 https://shop.thiyagi.com/test-404-page.html
+📄 https://thiyagideals.com/test-404-page.html
 
 ---
 

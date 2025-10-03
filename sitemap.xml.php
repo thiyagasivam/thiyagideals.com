@@ -6,7 +6,7 @@
 
 header('Content-Type: application/xml; charset=utf-8');
 
-$baseUrl = 'https://shop.thiyagi.com/shop';
+$baseUrl = 'https://thiyagideals.com/shop';
 
 $pages = [
     // Main pages

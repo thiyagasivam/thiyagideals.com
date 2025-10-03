@@ -6,7 +6,7 @@
 - **Total Pages**: 54 specialized deal pages
 - **Generation Time**: ~5 seconds
 - **Success Rate**: 100% (54/54)
-- **Base URL**: https://shop.thiyagi.com/shop/
+- **Base URL**: https://thiyagideals.com/shop/
 
 ---
 
@@ -218,18 +218,18 @@ strtolower($store_name) === 'flipkart'
 ## 🚀 Quick Access Links
 
 ### High Priority Pages:
-- 🔥 [Hot Deals](https://shop.thiyagi.com/shop/hot-deals.php) - 40%+ OFF
-- 💰 [Deals Under ₹500](https://shop.thiyagi.com/shop/deals-under-500.php) - Budget deals
-- 🛒 [Amazon Deals](https://shop.thiyagi.com/shop/amazon-deals.php) - Amazon only
-- 📅 [Today's Deals](https://shop.thiyagi.com/shop/todays-deals.php) - Fresh today
-- ⚡ [Flash Sale](https://shop.thiyagi.com/shop/flash-sale.php) - Limited time
+- 🔥 [Hot Deals](https://thiyagideals.com/shop/hot-deals.php) - 40%+ OFF
+- 💰 [Deals Under ₹500](https://thiyagideals.com/shop/deals-under-500.php) - Budget deals
+- 🛒 [Amazon Deals](https://thiyagideals.com/shop/amazon-deals.php) - Amazon only
+- 📅 [Today's Deals](https://thiyagideals.com/shop/todays-deals.php) - Fresh today
+- ⚡ [Flash Sale](https://thiyagideals.com/shop/flash-sale.php) - Limited time
 
 ### Most Popular Categories:
-- 📱 [Electronics](https://shop.thiyagi.com/shop/electronics-deals.php)
-- 👗 [Fashion](https://shop.thiyagi.com/shop/fashion-deals.php)
-- 🏠 [Home & Kitchen](https://shop.thiyagi.com/shop/home-kitchen.php)
-- 💄 [Beauty](https://shop.thiyagi.com/shop/beauty-deals.php)
-- ⚽ [Sports](https://shop.thiyagi.com/shop/sports-fitness.php)
+- 📱 [Electronics](https://thiyagideals.com/shop/electronics-deals.php)
+- 👗 [Fashion](https://thiyagideals.com/shop/fashion-deals.php)
+- 🏠 [Home & Kitchen](https://thiyagideals.com/shop/home-kitchen.php)
+- 💄 [Beauty](https://thiyagideals.com/shop/beauty-deals.php)
+- ⚽ [Sports](https://thiyagideals.com/shop/sports-fitness.php)
 
 ---
 
@@ -332,7 +332,7 @@ For any issues or enhancements:
 1. Check individual page PHP files
 2. Review `generate-pages-config.php` for page definitions
 3. Modify filter logic in `generate-pages-execute.php`
-4. Test pages at: https://shop.thiyagi.com/shop/{filename}
+4. Test pages at: https://thiyagideals.com/shop/{filename}
 
 ---
 

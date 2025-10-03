@@ -121,26 +121,26 @@
 
 ### Base URL
 ```
-https://shop.thiyagi.com/shop/
+https://thiyagideals.com/shop/
 ```
 
 ### Navigation Hub (START HERE!)
 ```
-https://shop.thiyagi.com/shop/all-pages.php
+https://thiyagideals.com/shop/all-pages.php
 ```
 
 ### Example Pages
 ```
-https://shop.thiyagi.com/shop/hot-deals.php
-https://shop.thiyagi.com/shop/deals-under-500.php
-https://shop.thiyagi.com/shop/amazon-deals.php
-https://shop.thiyagi.com/shop/electronics-deals.php
-https://shop.thiyagi.com/shop/todays-deals.php
+https://thiyagideals.com/shop/hot-deals.php
+https://thiyagideals.com/shop/deals-under-500.php
+https://thiyagideals.com/shop/amazon-deals.php
+https://thiyagideals.com/shop/electronics-deals.php
+https://thiyagideals.com/shop/todays-deals.php
 ```
 
 ### Sitemap for SEO
 ```
-https://shop.thiyagi.com/shop/sitemap.xml.php
+https://thiyagideals.com/shop/sitemap.xml.php
 ```
 
 ---
@@ -269,7 +269,7 @@ Every page includes:
 ## 🎯 Quick Start Guide
 
 ### 1. View All Pages
-Visit: `https://shop.thiyagi.com/shop/all-pages.php`
+Visit: `https://thiyagideals.com/shop/all-pages.php`
 - Beautiful navigation hub
 - Search functionality
 - Organized categories

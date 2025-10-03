@@ -74,20 +74,20 @@ Interactive test page with:
 ## How to Test
 
 ### Option 1: Use Test Page
-Visit: `https://shop.thiyagi.com/test-404-page.html`
+Visit: `https://thiyagideals.com/test-404-page.html`
 
 Click any of the test links to see your 404 page in action.
 
 ### Option 2: Visit Non-Existent Pages
 Try these URLs:
-- https://shop.thiyagi.com/non-existent-page
-- https://shop.thiyagi.com/test-404
-- https://shop.thiyagi.com/xyz
-- https://shop.thiyagi.com/product/999999
+- https://thiyagideals.com/non-existent-page
+- https://thiyagideals.com/test-404
+- https://thiyagideals.com/xyz
+- https://thiyagideals.com/product/999999
 
 ### Option 3: Command Line Test
 ```bash
-curl -I https://shop.thiyagi.com/non-existent-page
+curl -I https://thiyagideals.com/non-existent-page
 # Should return: HTTP/1.1 404 Not Found
 ```
 

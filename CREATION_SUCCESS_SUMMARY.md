@@ -185,9 +185,9 @@ Each page uses intelligent filtering based on:
 ## 📍 Access Your Pages
 
 ### Main Navigation
-🏠 **Homepage**: https://shop.thiyagi.com/shop/  
-📋 **All Pages Hub**: https://shop.thiyagi.com/shop/all-pages.php  
-🗺️ **Sitemap**: https://shop.thiyagi.com/shop/sitemap.xml.php  
+🏠 **Homepage**: https://thiyagideals.com/shop/  
+📋 **All Pages Hub**: https://thiyagideals.com/shop/all-pages.php  
+🗺️ **Sitemap**: https://thiyagideals.com/shop/sitemap.xml.php  
 
 ### Popular Pages
 - 🔥 Hot Deals: `/shop/hot-deals.php`
@@ -197,12 +197,12 @@ Each page uses intelligent filtering based on:
 - ⚡ Flash: `/shop/flash-sale.php`
 
 ### All Pages Format
-`https://shop.thiyagi.com/shop/{filename}.php`
+`https://thiyagideals.com/shop/{filename}.php`
 
 Example:
-- https://shop.thiyagi.com/shop/super-saver.php
-- https://shop.thiyagi.com/shop/electronics-deals.php
-- https://shop.thiyagi.com/shop/weekend-special.php
+- https://thiyagideals.com/shop/super-saver.php
+- https://thiyagideals.com/shop/electronics-deals.php
+- https://thiyagideals.com/shop/weekend-special.php
 
 ---
 
@@ -322,7 +322,7 @@ php generate-pages-execute.php
 ls *.php | wc -l  # Should show 54+ files
 
 # Check sitemap
-curl https://shop.thiyagi.com/shop/sitemap.xml.php
+curl https://thiyagideals.com/shop/sitemap.xml.php
 ```
 
 ### Troubleshooting
