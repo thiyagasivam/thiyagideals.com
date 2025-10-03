@@ -1,0 +1,21 @@
+Contact: mailto:support@thiyagi.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, hi
+Canonical: https://thiyagideals.com/.well-known/security.txt
+Policy: https://thiyagideals.com/security-policy
+Acknowledgments: https://thiyagideals.com/security-acknowledgments
+
+# Our security address
+Contact: https://thiyagideals.com/contact
+
+# Our OpenPGP key (if available)
+# Encryption: https://thiyagideals.com/pgp-key.txt
+
+# Our security policy
+Policy: We take security seriously and appreciate responsible disclosure.
+
+# Security acknowledgments
+Acknowledgments: Thank you to all security researchers who have helped us keep our platform secure.
+
+# Hiring
+Hiring: https://thiyagideals.com/careers

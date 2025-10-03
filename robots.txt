@@ -39,6 +39,8 @@ Allow: /assets/fonts/
 Allow: /favicon.ico
 Allow: /apple-touch-icon.png
 Allow: /manifest.json
+Allow: /humans.txt
+Allow: /security.txt
 
 # Block query parameters that don't change content
 Disallow: /*?*utm_

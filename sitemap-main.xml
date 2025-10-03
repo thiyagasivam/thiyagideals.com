@@ -29,48 +29,400 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     }
     ?>
     
-    <!-- Category Pages (if you have categories) -->
+    <!-- All Deal Pages Hub -->
     <url>
-        <loc><?php echo SITE_URL; ?>/deals</loc>
+        <loc><?php echo SITE_URL; ?>/all-pages</loc>
         <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
     
+    <!-- Popular Deal Categories -->
     <url>
         <loc><?php echo SITE_URL; ?>/hot-deals</loc>
         <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>hourly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/todays-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>hourly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/flash-sale</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>hourly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Store-Specific Deals -->
+    <url>
+        <loc><?php echo SITE_URL; ?>/amazon-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     
-    <!-- Special Pages -->
     <url>
-        <loc><?php echo SITE_URL; ?>/about</loc>
+        <loc><?php echo SITE_URL; ?>/flipkart-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Price Range Deals -->
+    <url>
+        <loc><?php echo SITE_URL; ?>/deals-under-500</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/deals-500-1000</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/deals-under-1000</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/deals-1000-5000</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/deals-under-2000</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Discount Percentage Deals -->
+    <url>
+        <loc><?php echo SITE_URL; ?>/deals-25-percent-off</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/deals-30-percent-off</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Category-Based Deals -->
+    <url>
+        <loc><?php echo SITE_URL; ?>/electronics-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/fashion-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/home-kitchen</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/beauty-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/sports-fitness</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/books-media</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/toys-kids</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/automotive</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/health-wellness</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/pet-supplies</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Special Deal Types -->
+    <url>
+        <loc><?php echo SITE_URL; ?>/best-sellers</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/top-rated</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/new-arrivals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/trending</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/best-value</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/editors-choice</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/recommended-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Special Event Deals -->
+    <url>
+        <loc><?php echo SITE_URL; ?>/festival-sale</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/weekend-special</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/weekly-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/month-end-sale</loc>
         <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.7</priority>
     </url>
     
     <url>
-        <loc><?php echo SITE_URL; ?>/contact</loc>
+        <loc><?php echo SITE_URL; ?>/midnight-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Value Propositions -->
+    <url>
+        <loc><?php echo SITE_URL; ?>/super-saver</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/mega-discounts</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/maximum-savings</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/lowest-prices</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/most-saved</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Special Features -->
+    <url>
+        <loc><?php echo SITE_URL; ?>/free-delivery</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/buy-1-get-1</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/combo-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/clearance-sale</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/last-chance</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/limited-stock</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/price-drop-alert</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Premium & Special -->
+    <url>
+        <loc><?php echo SITE_URL; ?>/premium-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/luxury-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/handmade-deals</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/eco-friendly</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/local-sellers</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/gift-ideas</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/deal-of-day</loc>
+        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc><?php echo SITE_URL; ?>/payday-special</loc>
         <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc><?php echo SITE_URL; ?>/privacy-policy</loc>
-        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    
-    <url>
-        <loc><?php echo SITE_URL; ?>/terms-of-service</loc>
-        <lastmod><?php echo date('Y-m-d\TH:i:s+00:00'); ?></lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <priority>0.7</priority>
     </url>
     
 </urlset>
