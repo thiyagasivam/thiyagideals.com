@@ -19,10 +19,60 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <!-- Custom CSS -->
     <link href="<?php echo SITE_URL; ?>/assets/css/style.css" rel="stylesheet">
     
     <style>
+        /* Navigation Styles */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            padding: 10px 0;
+            margin-top: 8px;
+            min-width: 250px;
+        }
+        
+        .dropdown-item {
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9ff;
+            color: #2874f0;
+            padding-left: 25px;
+        }
+        
+        .dropdown-header {
+            color: #2874f0;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 20px 5px;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            padding: 8px 16px !important;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #2874f0 !important;
+            background-color: rgba(40, 116, 240, 0.08);
+            border-radius: 6px;
+        }
+        
+        .nav-link i {
+            margin-right: 4px;
+            font-size: 1.1em;
+        }
+        
         .page-hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -89,27 +139,89 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="<?php echo SITE_URL; ?>">
-                <strong><?php echo SITE_NAME; ?></strong>
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="<?php echo SITE_URL; ?>" style="color: #2874f0;">
+                <img src="https://www.thiyagi.com/nt.png" alt="<?php echo SITE_NAME; ?>" height="40" class="me-2">
+                <span class="fs-4"><?php echo SITE_NAME; ?></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo SITE_URL; ?>">Home</a>
+                        <a class="nav-link" href="<?php echo SITE_URL; ?>">
+                            <i class="bi bi-house-door"></i> Home
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo SITE_URL; ?>/shop">All Deals</a>
+                    
+                    <!-- Popular Deals Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarPopular" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-fire"></i> Popular Deals
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarPopular">
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/hot-deals">🔥 Hot Deals (40%+ OFF)</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/todays-deals">📅 Today's Deals</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/flash-sale">⚡ Flash Sale</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/deal-of-day">🎯 Deal of the Day</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/trending">📈 Trending Now</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/best-sellers">⭐ Best Sellers</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo SITE_URL; ?>/shop/all-pages.php">Browse Pages</a>
+                    
+                    <!-- Price Range Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarPrice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-currency-rupee"></i> By Price
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarPrice">
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/deals-under-500">💰 Under ₹500</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/deals-500-1000">💵 ₹500 - ₹1000</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/deals-under-1000">💸 Under ₹1000</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/deals-1000-5000">💴 ₹1000 - ₹5000</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/deals-under-2000">💷 Under ₹2000</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo SITE_URL; ?>/shop/hot-deals.php">Hot Deals 🔥</a>
+                    
+                    <!-- Categories Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarCategories" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-grid"></i> Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarCategories">
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/electronics-deals">📱 Electronics</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/fashion-deals">👗 Fashion</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/home-kitchen">🏠 Home & Kitchen</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/beauty-deals">💄 Beauty & Personal Care</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/sports-fitness">⚽ Sports & Fitness</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/toys-kids">🧸 Toys & Kids</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/books-media">📚 Books & Media</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/automotive">🚗 Automotive</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- More Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarMore" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-three-dots"></i> More
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarMore">
+                            <li><h6 class="dropdown-header">Stores</h6></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/amazon-deals">🛒 Amazon Deals</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/flipkart-deals">🛒 Flipkart Deals</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Special</h6></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/buy-1-get-1">🎁 Buy 1 Get 1</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/free-delivery">🚚 Free Delivery</a></li>
+                            <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/festival-sale">🎊 Festival Sale</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item fw-bold text-primary" href="<?php echo SITE_URL; ?>/all-pages">📋 All Deals Pages</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
