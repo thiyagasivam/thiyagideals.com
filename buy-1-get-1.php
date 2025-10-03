@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Buy 1 Get 1 Free Offers
  * Auto-generated specialized deals page
@@ -75,7 +75,7 @@ include 'includes/header.php';
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo SITE_URL; ?>" style="color: white;">Home</a></li>
-                            <li class="breadcrumb-item"><a href="<?php echo SITE_URL; ?>/shop" style="color: white;">Shop</a></li>
+                            <li class="breadcrumb-item"><a href="<?php echo SITE_URL; ?>" style="color: white;">Shop</a></li>
                             <li class="breadcrumb-item active" style="color: rgba(255,255,255,0.8);">Buy 1 Get 1 Free Offers</li>
                         </ol>
                     </nav>
@@ -162,7 +162,7 @@ include 'includes/header.php';
         <?php else: ?>
             <div class="alert alert-info text-center">
                 <h4>No deals found matching this criteria</h4>
-                <p>Check back later for new deals or <a href="<?php echo SITE_URL; ?>/shop">browse all deals</a></p>
+                <p>Check back later for new deals or <a href="<?php echo SITE_URL; ?>">browse all deals</a></p>
             </div>
         <?php endif; ?>
     </div>

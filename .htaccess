@@ -1,5 +1,5 @@
 # Custom Error Pages
-ErrorDocument 404 /shop/404.php
+ErrorDocument 404 /404.php
 
 # SEO-Friendly URL Rewriting
 RewriteEngine On

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Custom 404 Error Page
  * User-friendly page not found error with helpful navigation
@@ -337,7 +337,7 @@ include 'includes/header.php';
     <h3 style="margin-bottom: 20px; color: #667eea;">Quick Links</h3>
     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
         <a href="<?php echo SITE_URL; ?>" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">Home</a>
-        <a href="<?php echo SITE_URL; ?>/shop" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">Shop</a>
+        <a href="<?php echo SITE_URL; ?>" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">Shop</a>
         <a href="<?php echo SITE_URL; ?>/shop/all-pages.php" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">All Pages</a>
         <a href="<?php echo SITE_URL; ?>/contact.php" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 25px; transition: all 0.3s;">Contact</a>
     </div>

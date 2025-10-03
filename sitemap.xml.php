@@ -6,7 +6,8 @@
 
 header('Content-Type: application/xml; charset=utf-8');
 
-$baseUrl = 'https://www.thiyagideals.com/shop';
+// Base URL for sitemap
+$baseUrl = 'https://www.thiyagideals.com';
 
 $pages = [
     // Main pages

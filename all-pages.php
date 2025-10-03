@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * All Deals Pages - Complete Directory
  * Navigation hub for all 54 specialized deal pages
@@ -13,7 +13,15 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <m                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="<?php echo SITE_URL; ?>" class="text-white-50">Home</a></li>
+                        <li><a href="<?php echo SITE_URL; ?>" class="text-white-50">All Deals</a></li>
+                        <li><a href="<?php echo SITE_URL; ?>/hot-deals" class="text-white-50">Hot Deals</a></li>
+                        <li><a href="<?php echo SITE_URL; ?>/all-pages" class="text-white-50">Browse All Pages</a></li>
+                    </ul>
+                </div>"viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?></title>
     <meta name="description" content="<?php echo $metaDescription; ?>">
     
@@ -484,7 +492,7 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="<?php echo SITE_URL; ?>" class="text-white-50">Home</a></li>
-                        <li><a href="<?php echo SITE_URL; ?>/shop" class="text-white-50">All Deals</a></li>
+                        <li><a href="<?php echo SITE_URL; ?>" class="text-white-50">All Deals</a></li>
                         <li><a href="<?php echo SITE_URL; ?>/shop/hot-deals.php" class="text-white-50">Hot Deals</a></li>
                         <li><a href="<?php echo SITE_URL; ?>/shop/all-pages.php" class="text-white-50">Browse All Pages</a></li>
                     </ul>
