@@ -386,7 +386,7 @@ include 'includes/header.php';
                         
                         <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
                            class="view-details-btn <?php echo $isHotDeal ? 'hot-deal-btn' : ''; ?>"
-                           onclick="trackProductClick('<?php echo $deal['pid']; ?>')"
+                           data-product-id="<?php echo $deal['pid']; ?>"
                            title="View details for <?php echo sanitizeOutput($deal['product_name']); ?>">
                             <i class="bi bi-cart-plus"></i>
                             <?php echo $isHotDeal ? '🔥 Grab Hot Deal Now!' : 'View Details & Buy Now'; ?>
@@ -591,30 +591,35 @@ function startCountdowns() {
     });
 }
 
-// Product click tracking
-function trackProductClick(productId) {
-    // Track product clicks for analytics
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'product_click', {
-            'product_id': productId,
-            'timestamp': new Date().toISOString()
-        });
-    }
-    
-    // Store for recommendations and add visual feedback
-    const productCard = document.querySelector(`[data-product-id="${productId}"]`);
-    if (productCard) {
-        const priceText = productCard.querySelector('.current-price').textContent.replace(/[₹,]/g, '');
-        const price = parseInt(priceText);
-        storeViewedProduct(productId, price);
-        
-        // Add visual feedback
-        productCard.style.transform = 'scale(0.98)';
-        setTimeout(() => {
-            productCard.style.transform = '';
-        }, 150);
-    }
+// Product click tracking - Non-blocking approach
+function initProductTracking() {
+    // Listen for clicks on all product links
+    document.querySelectorAll('.view-details-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            // Don't prevent default - let link work normally
+            const productId = this.getAttribute('data-product-id');
+            
+            // Track in background without blocking navigation
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'product_click', {
+                    'product_id': productId,
+                    'timestamp': new Date().toISOString()
+                });
+            }
+            
+            // Store for recommendations
+            const productCard = this.closest('.product-card');
+            if (productCard) {
+                const priceText = productCard.querySelector('.current-price').textContent.replace(/[₹,]/g, '');
+                const price = parseInt(priceText);
+                storeViewedProduct(productId, price);
+            }
+        }, { passive: true }); // Passive listener for better mobile performance
+    });
 }
+
+// Initialize tracking when page loads
+document.addEventListener('DOMContentLoaded', initProductTracking);
 
 // Mobile touch enhancements
 function addTouchEnhancements() {
