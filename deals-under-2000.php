@@ -31,7 +31,7 @@ $filteredDeals = array_filter($allDeals, function($deal) {
 
 // Sort by discount (highest first)
 usort($filteredDeals, function($a, $b) {
-    return getDiscountPercentage($b['product_offer_price'], $b['product_sale_price']) - getDiscountPercentage($a['product_offer_price'], $a['product_sale_price']);
+    return getDiscountPercentage($b['product_offer_price'] ?? 0, $b['product_sale_price'] ?? 0) - getDiscountPercentage($a['product_offer_price'] ?? 0, $a['product_sale_price'] ?? 0);
 });
 
 $totalDeals = count($filteredDeals);

@@ -24,7 +24,7 @@ $allDeals = fetchMultipleEarnPeDeals(1, API_PAGES_TO_FETCH);
 $filteredDeals = [];
 if ($allDeals && is_array($allDeals)) {
     foreach ($allDeals as $deal) {
-        $originalPrice = floatval($deal['product_original_price'] ?? 0);
+        $originalPrice = floatval($deal['product_sale_price'] ?? 0);
         $offerPrice = floatval($deal['product_offer_price'] ?? 0);
         $discount = getDiscountPercentage($originalPrice, $offerPrice);
         
@@ -42,7 +42,7 @@ usort($filteredDeals, function($a, $b) {
 
 $totalDeals = count($filteredDeals);
 $avgSavings = $totalDeals > 0 ? round(array_sum(array_map(function($d) {
-    return floatval($d['product_original_price'] ?? 0) - floatval($d['product_offer_price'] ?? 0);
+    return floatval($d['product_sale_price'] ?? 0) - floatval($d['product_offer_price'] ?? 0);
 }, $filteredDeals)) / $totalDeals) : 0;
 ?>
 <!DOCTYPE html>
@@ -137,7 +137,7 @@ $avgSavings = $totalDeals > 0 ? round(array_sum(array_map(function($d) {
                     $pid = $deal['pid'] ?? '';
                     $productName = sanitizeOutput($deal['product_name'] ?? 'Product');
                     $productImage = $deal['product_image'] ?? 'assets/images/placeholder.jpg';
-                    $originalPrice = floatval($deal['product_original_price'] ?? 0);
+                    $originalPrice = floatval($deal['product_sale_price'] ?? 0);
                     $offerPrice = floatval($deal['product_offer_price'] ?? 0);
                     $storeName = sanitizeOutput($deal['store_name'] ?? 'Store');
                     $discount = getDiscountPercentage($originalPrice, $offerPrice);

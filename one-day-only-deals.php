@@ -22,7 +22,7 @@ $filteredDeals = [];
 if ($allDeals && is_array($allDeals)) {
 
     foreach ($allDeals as $deal) {
-        $originalPrice = floatval($deal['product_original_price'] ?? 0);
+        $originalPrice = floatval($deal['product_sale_price'] ?? 0);
         $offerPrice = floatval($deal['product_offer_price'] ?? 0);
         $discount = getDiscountPercentage($originalPrice, $offerPrice);
         
@@ -34,14 +34,14 @@ if ($allDeals && is_array($allDeals)) {
 
 // Sort by discount
 usort($filteredDeals, function($a, $b) {
-    $discountA = getDiscountPercentage($a['product_original_price'], $a['product_offer_price']);
-    $discountB = getDiscountPercentage($b['product_original_price'], $b['product_offer_price']);
+    $discountA = getDiscountPercentage($a['product_sale_price'], $a['product_offer_price']);
+    $discountB = getDiscountPercentage($b['product_sale_price'], $b['product_offer_price']);
     return $discountB <=> $discountA;
 });
 
 $totalDeals = count($filteredDeals);
 $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
-    return getDiscountPercentage($d['product_original_price'], $d['product_offer_price']);
+    return getDiscountPercentage($d['product_sale_price'], $d['product_offer_price']);
 }, $filteredDeals))) : 0;
 ?>
 <!DOCTYPE html>
@@ -88,7 +88,7 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
                     $pid = $deal['pid'] ?? '';
                     $productName = sanitizeOutput($deal['product_name'] ?? 'Product');
                     $productImage = $deal['product_image'] ?? 'assets/images/placeholder.jpg';
-                    $originalPrice = floatval($deal['product_original_price'] ?? 0);
+                    $originalPrice = floatval($deal['product_sale_price'] ?? 0);
                     $offerPrice = floatval($deal['product_offer_price'] ?? 0);
                     $storeName = sanitizeOutput($deal['store_name'] ?? 'Store');
                     $discount = getDiscountPercentage($originalPrice, $offerPrice);

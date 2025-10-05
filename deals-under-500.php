@@ -26,8 +26,8 @@ $filteredDeals = array_filter($allDeals, function($deal) {
 
 // Sort by best discount
 usort($filteredDeals, function($a, $b) {
-    $discountA = (($a['product_sale_price'] - $a['product_offer_price']) / $a['product_sale_price']) * 100;
-    $discountB = (($b['product_sale_price'] - $b['product_offer_price']) / $b['product_sale_price']) * 100;
+    $discountA = (($a['product_sale_price'] ?? 0 - $a['product_offer_price'] ?? 0) / $a['product_sale_price'] ?? 0) * 100;
+    $discountB = (($b['product_sale_price'] ?? 0 - $b['product_offer_price'] ?? 0) / $b['product_sale_price'] ?? 0) * 100;
     return $discountB <=> $discountA;
 });
 

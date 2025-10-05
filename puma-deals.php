@@ -37,8 +37,8 @@ if ($allDeals && is_array($allDeals)) {
 
 // Sort by discount percentage
 usort($filteredDeals, function($a, $b) {
-    $discountA = getDiscountPercentage($a['product_original_price'], $a['product_offer_price']);
-    $discountB = getDiscountPercentage($b['product_original_price'], $b['product_offer_price']);
+    $discountA = getDiscountPercentage($a['product_sale_price'], $a['product_offer_price']);
+    $discountB = getDiscountPercentage($b['product_sale_price'], $b['product_offer_price']);
     return $discountB <=> $discountA;
 });
 
@@ -98,7 +98,7 @@ $totalDeals = count($filteredDeals);
                     $pid = $deal['pid'] ?? '';
                     $productName = sanitizeOutput($deal['product_name'] ?? 'Product');
                     $productImage = $deal['product_image'] ?? 'assets/images/placeholder.jpg';
-                    $originalPrice = floatval($deal['product_original_price'] ?? 0);
+                    $originalPrice = floatval($deal['product_sale_price'] ?? 0);
                     $offerPrice = floatval($deal['product_offer_price'] ?? 0);
                     $storeName = sanitizeOutput($deal['store_name'] ?? 'Store');
                     $discount = getDiscountPercentage($originalPrice, $offerPrice);
@@ -141,7 +141,7 @@ $totalDeals = count($filteredDeals);
                     <div class="card shadow-sm">
                         <div class="card-body">
                             <h2 class="h3 mb-3">Why Choose <?php echo $brandName; ?>?</h2>
-                            <p>Discover exclusive <?php echo $brandName; ?> deals with up to <?php echo $totalDeals > 0 ? round(max(array_map(function($d) { return getDiscountPercentage($d['product_original_price'], $d['product_offer_price']); }, $filteredDeals))) : 0; ?>% off. We bring you the best <?php echo $brandName; ?> products at unbeatable prices.</p>
+                            <p>Discover exclusive <?php echo $brandName; ?> deals with up to <?php echo $totalDeals > 0 ? round(max(array_map(function($d) { return getDiscountPercentage($d['product_sale_price'], $d['product_offer_price']); }, $filteredDeals))) : 0; ?>% off. We bring you the best <?php echo $brandName; ?> products at unbeatable prices.</p>
                             
                             <h3 class="h5 mt-4 mb-2">How to Find Best <?php echo $brandName; ?> Deals?</h3>
                             <ul>
