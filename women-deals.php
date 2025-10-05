@@ -175,6 +175,11 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
         .product-card {
             transition: all 0.3s ease;
             border: 2px solid transparent;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background: white;
         }
         
         .product-card:hover {
@@ -210,18 +215,34 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
             text-decoration: line-through;
         }
         
-        /* Product Image Container */
+        /* Product Image Container - Fix Overlap */
         .product-image {
             position: relative;
             z-index: 1;
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
         }
         
-        /* Product Info Section */
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Product Info Section - Fix Overlap */
         .product-info {
             position: relative;
             z-index: 2;
             background: white;
             padding: 12px;
+            margin-top: 0;
+            border-radius: 0 0 8px 8px;
         }
         
         /* Mobile Responsive */

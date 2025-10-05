@@ -1,21 +1,21 @@
 <?php
 /**
- * 50% OFF Deals - Get Half Price Discount
+ * 40% OFF Deals - Get 40 Percent Discount
  * Discount percentage page - High search volume for discount-specific searches
  */
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
 
-$pageTitle = '50% OFF Deals - Get Half Price Discount';
-$pageDescription = 'Amazing 50% off deals! Get half price on electronics, mobiles, fashion, home products. Shop 50 percent discount offers - save 50% today!';
-$pageKeywords = '50 percent off, half price, 50% discount, deals 50 off';
-$discountLabel = '50% OFF';
-$minDiscount = 50;
-$maxDiscount = 59;
-$discountColor = '#ff5722';
-$discountIcon = '💥';
-$discountMessage = 'Half Price! Save 50% on premium products.';
+$pageTitle = '40% OFF Deals - Get 40 Percent Discount';
+$pageDescription = 'Huge 40% off deals! Shop electronics, mobiles, fashion, home appliances with 40 percent discount. Best 40% OFF offers with maximum savings.';
+$pageKeywords = '40 percent off, 40% discount, deals 40 off, 40 percent discount';
+$discountLabel = '40% OFF';
+$minDiscount = 40;
+$maxDiscount = 49;
+$discountColor = '#ff9800';
+$discountIcon = '🔥';
+$discountMessage = 'Hot deals! Save big with 40% off on top products.';
 
 // Fetch all deals from multiple API pages
 $allDeals = fetchMultipleEarnPeDeals(1, API_PAGES_TO_FETCH);
@@ -176,15 +176,9 @@ $avgSavings = $totalDeals > 0 ? round(array_sum(array_map(function($d) {
         }
         
         /* Product Card Hover Effect */
-                /* Product Card Hover Effect */
         .product-card {
             transition: all 0.3s ease;
             border: 2px solid transparent;
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            background: white;
         }
         
         .product-card:hover {
@@ -216,35 +210,17 @@ $avgSavings = $totalDeals > 0 ? round(array_sum(array_map(function($d) {
         }
         
         /* Product Image Container */
-                /* Product Image Container - Fix Overlap */
         .product-image {
             position: relative;
             z-index: 1;
-            overflow: hidden;
-            border-radius: 8px 8px 0 0;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f8f9fa;
-        }
-        
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
         }
         
         /* Product Info Section */
-                /* Product Info Section - Fix Overlap */
         .product-info {
             position: relative;
             z-index: 2;
             background: white;
             padding: 12px;
-            margin-top: 0;
-            border-radius: 0 0 8px 8px;
         }
         
         /* Mobile Responsive */
