@@ -242,7 +242,7 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <h1 class="display-3 mb-3">🎯 All Deals Pages</h1>
-                    <p class="lead mb-4">Browse through 54+ specialized deal collections tailored for every shopping need</p>
+                    <p class="lead mb-4">Browse through 150+ specialized deal collections tailored for every shopping need</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo SITE_URL; ?>" style="color: white;">Home</a></li>
@@ -252,10 +252,10 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
                 </div>
                 <div class="col-md-4">
                     <div class="stats-box">
-                        <h2 class="mb-0">54+</h2>
+                        <h2 class="mb-0">150+</h2>
                         <p class="mb-2">Specialized Pages</p>
                         <hr style="border-color: rgba(255,255,255,0.3); margin: 15px 0;">
-                        <h3 class="mb-0">1000+</h3>
+                        <h3 class="mb-0">2000+</h3>
                         <p class="mb-0">Daily Deals</p>
                     </div>
                 </div>
@@ -276,22 +276,27 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
             </div>
         </div>
         
-        <!-- Price-Based Pages -->
+        <!-- Price-Based Pages - PHASE 3 -->
         <div class="category-section">
             <div class="category-header">
-                <h2 class="mb-0">💰 Price-Based Deals (7 Pages)</h2>
-                <small>Find deals by your budget</small>
+                <h2 class="mb-0">💰 Price-Based Deals (12 Pages)</h2>
+                <small>Find deals by your budget - All price ranges covered</small>
             </div>
             <div class="row">
                 <?php 
                 $pricePages = [
-                    ['icon' => '💰', 'title' => 'Deals Under ₹500', 'url' => 'deals-under-500.php', 'desc' => 'Budget-friendly deals under ₹500'],
-                    ['icon' => '💵', 'title' => 'Deals Under ₹1000', 'url' => 'deals-under-1000.php', 'desc' => 'Best value deals under ₹1000'],
-                    ['icon' => '💸', 'title' => 'Deals Under ₹2000', 'url' => 'deals-under-2000.php', 'desc' => 'Premium quality under ₹2000'],
-                    ['icon' => '💳', 'title' => 'Deals ₹500-1000', 'url' => 'deals-500-1000.php', 'desc' => 'Mid-range value deals'],
-                    ['icon' => '💎', 'title' => 'Deals ₹1000-5000', 'url' => 'deals-1000-5000.php', 'desc' => 'Quality products ₹1000-5000'],
-                    ['icon' => '⭐', 'title' => 'Premium Deals', 'url' => 'premium-deals.php', 'desc' => 'Premium products ₹5000+'],
-                    ['icon' => '👑', 'title' => 'Luxury Deals', 'url' => 'luxury-deals.php', 'desc' => 'Luxury products ₹10000+'],
+                    ['icon' => '💰', 'title' => 'Under ₹299', 'url' => 'deals-under-299.php', 'desc' => 'Ultra-budget deals under ₹299'],
+                    ['icon' => '💵', 'title' => 'Under ₹500', 'url' => 'deals-under-500.php', 'desc' => 'Budget-friendly under ₹500'],
+                    ['icon' => '�', 'title' => 'Under ₹999', 'url' => 'deals-under-999.php', 'desc' => 'Value deals under ₹999'],
+                    ['icon' => '💳', 'title' => 'Under ₹1000', 'url' => 'deals-under-1000.php', 'desc' => 'Best value under ₹1000'],
+                    ['icon' => '�', 'title' => 'Under ₹2000', 'url' => 'deals-under-2000.php', 'desc' => 'Quality under ₹2000'],
+                    ['icon' => '🎯', 'title' => 'Under ₹5000', 'url' => 'deals-under-5000.php', 'desc' => 'Premium under ₹5000'],
+                    ['icon' => '⭐', 'title' => '₹500-₹1000', 'url' => 'deals-500-1000.php', 'desc' => 'Mid-range value deals'],
+                    ['icon' => '💎', 'title' => '₹1000-₹5000', 'url' => 'deals-1000-5000.php', 'desc' => 'Quality products ₹1K-5K'],
+                    ['icon' => '👑', 'title' => '₹5000-₹10000', 'url' => 'deals-5000-10000.php', 'desc' => 'Premium range ₹5K-10K'],
+                    ['icon' => '💎', 'title' => '₹10000-₹50000', 'url' => 'deals-10000-50000.php', 'desc' => 'Luxury range ₹10K-50K'],
+                    ['icon' => '🌟', 'title' => '₹50000+', 'url' => 'deals-50000-plus.php', 'desc' => 'Ultra-luxury above ₹50K'],
+                    ['icon' => '🎁', 'title' => 'Budget Friendly', 'url' => 'budget-friendly-deals.php', 'desc' => 'Best affordable options'],
                 ];
                 foreach ($pricePages as $page): ?>
                 <div class="col-md-4 col-lg-3">
@@ -308,21 +313,29 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
             </div>
         </div>
         
-        <!-- Discount-Based Pages -->
+        <!-- Discount-Based Pages - PHASE 4 -->
         <div class="category-section">
             <div class="category-header" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);">
-                <h2 class="mb-0">🔥 Discount-Based Deals (6 Pages)</h2>
-                <small>Maximum savings guaranteed</small>
+                <h2 class="mb-0">🔥 Discount-Based Deals (14 Pages)</h2>
+                <small>Maximum savings guaranteed - All discount ranges</small>
             </div>
             <div class="row">
                 <?php 
                 $discountPages = [
-                    ['icon' => '🔥', 'title' => 'Hot Deals (40%+ OFF)', 'url' => 'hot-deals.php', 'desc' => 'Minimum 40% discount deals'],
-                    ['icon' => '💥', 'title' => 'Super Saver (50%+ OFF)', 'url' => 'super-saver.php', 'desc' => 'Incredible 50%+ discounts'],
-                    ['icon' => '🎯', 'title' => 'Mega Discounts (60%+ OFF)', 'url' => 'mega-discounts.php', 'desc' => 'Massive 60%+ savings'],
-                    ['icon' => '⚡', 'title' => 'Minimum 25% OFF', 'url' => 'deals-25-percent-off.php', 'desc' => 'Great deals with 25%+ off'],
-                    ['icon' => '💫', 'title' => 'Minimum 30% OFF', 'url' => 'deals-30-percent-off.php', 'desc' => 'Exciting 30%+ discounts'],
-                    ['icon' => '💣', 'title' => 'Clearance (70%+ OFF)', 'url' => 'clearance-sale.php', 'desc' => 'Ultimate 70%+ clearance'],
+                    ['icon' => '�', 'title' => '10% OFF', 'url' => 'deals-10-percent-off.php', 'desc' => '10-19% discount deals'],
+                    ['icon' => '⚡', 'title' => '25% OFF+', 'url' => 'deals-25-percent-off.php', 'desc' => 'Minimum 25% discounts'],
+                    ['icon' => '�', 'title' => '30% OFF+', 'url' => 'deals-30-percent-off.php', 'desc' => 'Minimum 30% savings'],
+                    ['icon' => '🎯', 'title' => '40% OFF', 'url' => 'deals-40-percent-off.php', 'desc' => '40-49% discount range'],
+                    ['icon' => '🔥', 'title' => '50% OFF', 'url' => 'deals-50-percent-off.php', 'desc' => '50-59% mega savings'],
+                    ['icon' => '💥', 'title' => '60% OFF', 'url' => 'deals-60-percent-off.php', 'desc' => '60-69% huge discounts'],
+                    ['icon' => '💣', 'title' => '70% OFF', 'url' => 'deals-70-percent-off.php', 'desc' => '70-74% massive savings'],
+                    ['icon' => '⚡', 'title' => '75% OFF', 'url' => 'deals-75-percent-off.php', 'desc' => '75-79% incredible deals'],
+                    ['icon' => '🌟', 'title' => '80% OFF', 'url' => 'deals-80-percent-off.php', 'desc' => '80-89% super savings'],
+                    ['icon' => '�', 'title' => '90% OFF', 'url' => 'deals-90-percent-off.php', 'desc' => '90%+ ultra discounts'],
+                    ['icon' => '🔥', 'title' => 'Hot Deals (40%+)', 'url' => 'hot-deals.php', 'desc' => 'Minimum 40% discount'],
+                    ['icon' => '💥', 'title' => 'Super Saver (50%+)', 'url' => 'super-saver.php', 'desc' => 'Incredible 50%+ off'],
+                    ['icon' => '🎯', 'title' => 'Mega Discounts (60%+)', 'url' => 'mega-discounts.php', 'desc' => 'Massive 60%+ savings'],
+                    ['icon' => '💣', 'title' => 'Clearance (70%+)', 'url' => 'clearance-sale.php', 'desc' => 'Ultimate 70%+ clearance'],
                 ];
                 foreach ($discountPages as $page): ?>
                 <div class="col-md-4 col-lg-3">
@@ -401,11 +414,53 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
             </div>
         </div>
         
-        <!-- Time-Based & Event Pages -->
+        <!-- Festival & Occasion Pages - PHASE 2 -->
         <div class="category-section">
             <div class="category-header" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
-                <h2 class="mb-0">📅 Time-Based & Event Deals (8 Pages)</h2>
-                <small>Special occasion offers</small>
+                <h2 class="mb-0">🎉 Festival & Occasion Deals (17 Pages)</h2>
+                <small>Seasonal and special occasion offers</small>
+            </div>
+            <div class="row">
+                <?php 
+                $festivalPages = [
+                    ['icon' => '🪔', 'title' => 'Diwali Deals', 'url' => 'diwali-deals.php', 'desc' => 'Festival of Lights offers'],
+                    ['icon' => '🎄', 'title' => 'Christmas Deals', 'url' => 'christmas-deals.php', 'desc' => 'Merry Christmas savings'],
+                    ['icon' => '🛍️', 'title' => 'Black Friday', 'url' => 'black-friday-deals.php', 'desc' => 'Biggest sale of the year'],
+                    ['icon' => '💻', 'title' => 'Cyber Monday', 'url' => 'cyber-monday-deals.php', 'desc' => 'Online shopping bonanza'],
+                    ['icon' => '🎆', 'title' => 'New Year Sale', 'url' => 'new-year-sale.php', 'desc' => 'Start fresh with savings'],
+                    ['icon' => '🎊', 'title' => 'Holi Offers', 'url' => 'holi-deals.php', 'desc' => 'Colorful festival deals'],
+                    ['icon' => '🕌', 'title' => 'Ramadan Sale', 'url' => 'ramadan-deals.php', 'desc' => 'Holy month special'],
+                    ['icon' => '🎁', 'title' => 'Raksha Bandhan', 'url' => 'rakhi-deals.php', 'desc' => 'Sibling love offers'],
+                    ['icon' => '🙏', 'title' => 'Navratri Deals', 'url' => 'navratri-deals.php', 'desc' => 'Nine nights celebration'],
+                    ['icon' => '🌸', 'title' => 'Pongal Sale', 'url' => 'pongal-deals.php', 'desc' => 'Harvest festival offers'],
+                    ['icon' => '💝', 'title' => "Valentine's Day", 'url' => 'valentine-deals.php', 'desc' => 'Love & romance gifts'],
+                    ['icon' => '🎓', 'title' => 'Back to School', 'url' => 'back-to-school-deals.php', 'desc' => 'School essentials'],
+                    ['icon' => '🏫', 'title' => 'Back to College', 'url' => 'back-to-college-deals.php', 'desc' => 'College must-haves'],
+                    ['icon' => '🛒', 'title' => 'Prime Day', 'url' => 'prime-day-deals.php', 'desc' => 'Exclusive Prime offers'],
+                    ['icon' => '🎂', 'title' => 'Birthday Sale', 'url' => 'birthday-sale.php', 'desc' => 'Celebrate with savings'],
+                    ['icon' => '💍', 'title' => 'Wedding Season', 'url' => 'wedding-season-deals.php', 'desc' => 'Wedding essentials'],
+                    ['icon' => '�', 'title' => 'Home Decor Sale', 'url' => 'home-decor-deals.php', 'desc' => 'Beautify your home'],
+                ];
+                foreach ($festivalPages as $page): ?>
+                <div class="col-md-4 col-lg-3">
+                    <a href="<?php echo $page['url']; ?>" class="page-link">
+                        <div class="page-card">
+                            <div class="page-icon"><?php echo $page['icon']; ?></div>
+                            <div class="page-title"><?php echo $page['title']; ?></div>
+                            <div class="page-description"><?php echo $page['desc']; ?></div>
+                            <button class="btn btn-sm btn-outline-warning">Shop Festival →</button>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <!-- Time-Based Pages -->
+        <div class="category-section">
+            <div class="category-header" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+                <h2 class="mb-0">⏰ Time-Based Deals (8 Pages)</h2>
+                <small>Shop by time and urgency</small>
             </div>
             <div class="row">
                 <?php 
@@ -414,10 +469,10 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
                     ['icon' => '📆', 'title' => 'Weekly Deals', 'url' => 'weekly-deals.php', 'desc' => 'This week\'s best'],
                     ['icon' => '🎉', 'title' => 'Weekend Special', 'url' => 'weekend-special.php', 'desc' => 'Weekend exclusive'],
                     ['icon' => '⚡', 'title' => 'Flash Sale', 'url' => 'flash-sale.php', 'desc' => 'Limited time only'],
-                    ['icon' => '🎆', 'title' => 'Festival Sale', 'url' => 'festival-sale.php', 'desc' => 'Festival special offers'],
                     ['icon' => '📉', 'title' => 'Month End Sale', 'url' => 'month-end-sale.php', 'desc' => 'Month end clearance'],
                     ['icon' => '💰', 'title' => 'Payday Special', 'url' => 'payday-special.php', 'desc' => 'Payday shopping deals'],
                     ['icon' => '🌙', 'title' => 'Midnight Deals', 'url' => 'midnight-deals.php', 'desc' => 'Night special prices'],
+                    ['icon' => '🌅', 'title' => 'Morning Deals', 'url' => 'morning-deals.php', 'desc' => 'Early bird offers'],
                 ];
                 foreach ($timePages as $page): ?>
                 <div class="col-md-4 col-lg-3">
@@ -472,6 +527,208 @@ $metaDescription = "Explore 54+ specialized deal pages including budget deals, h
                             <div class="page-icon"><?php echo $page['icon']; ?></div>
                             <div class="page-title"><?php echo $page['title']; ?></div>
                             <button class="btn btn-sm btn-outline-secondary">View →</button>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <!-- Audience-Based Pages - PHASE 5 -->
+        <div class="category-section">
+            <div class="category-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <h2 class="mb-0">👥 Audience-Based Deals (10 Pages)</h2>
+                <small>Deals tailored for specific audiences</small>
+            </div>
+            <div class="row">
+                <?php 
+                $audiencePages = [
+                    ['icon' => '👨', 'title' => 'Men Deals', 'url' => 'men-deals.php', 'desc' => 'Products for men'],
+                    ['icon' => '👩', 'title' => 'Women Deals', 'url' => 'women-deals.php', 'desc' => 'Products for women'],
+                    ['icon' => '👶', 'title' => 'Kids Deals', 'url' => 'kids-deals.php', 'desc' => 'Products for children'],
+                    ['icon' => '🎓', 'title' => 'Students Deals', 'url' => 'students-deals.php', 'desc' => 'Student essentials'],
+                    ['icon' => '👴', 'title' => 'Seniors Deals', 'url' => 'seniors-deals.php', 'desc' => 'Senior citizen friendly'],
+                    ['icon' => '🎮', 'title' => 'Gaming Deals', 'url' => 'gaming-deals.php', 'desc' => 'Gaming products'],
+                    ['icon' => '💪', 'title' => 'Fitness Deals', 'url' => 'fitness-deals.php', 'desc' => 'Fitness enthusiasts'],
+                    ['icon' => '💼', 'title' => 'Professionals', 'url' => 'professionals-deals.php', 'desc' => 'Work essentials'],
+                    ['icon' => '📷', 'title' => 'Photographers', 'url' => 'photographers-deals.php', 'desc' => 'Photography gear'],
+                    ['icon' => '✈️', 'title' => 'Travelers', 'url' => 'travelers-deals.php', 'desc' => 'Travel essentials'],
+                ];
+                foreach ($audiencePages as $page): ?>
+                <div class="col-md-4 col-lg-3">
+                    <a href="<?php echo $page['url']; ?>" class="page-link">
+                        <div class="page-card">
+                            <div class="page-icon"><?php echo $page['icon']; ?></div>
+                            <div class="page-title"><?php echo $page['title']; ?></div>
+                            <div class="page-description"><?php echo $page['desc']; ?></div>
+                            <button class="btn btn-sm btn-outline-primary">Explore →</button>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <!-- Quality-Based Pages - PHASE 5 -->
+        <div class="category-section">
+            <div class="category-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <h2 class="mb-0">⭐ Quality-Based Deals (10 Pages)</h2>
+                <small>Premium quality verified deals</small>
+            </div>
+            <div class="row">
+                <?php 
+                $qualityPages = [
+                    ['icon' => '✅', 'title' => 'Verified Sellers', 'url' => 'verified-sellers-deals.php', 'desc' => 'Trusted sellers only'],
+                    ['icon' => '🏆', 'title' => 'Bestsellers', 'url' => 'bestsellers-deals.php', 'desc' => 'Top selling products'],
+                    ['icon' => '⭐', 'title' => 'Highly Rated', 'url' => 'highly-rated-deals.php', 'desc' => '4+ star ratings'],
+                    ['icon' => '🎖️', 'title' => 'Certified', 'url' => 'certified-products-deals.php', 'desc' => 'Certified products'],
+                    ['icon' => '🆕', 'title' => 'Brand New', 'url' => 'brand-new-deals.php', 'desc' => 'Factory sealed'],
+                    ['icon' => '🌍', 'title' => 'Imported', 'url' => 'imported-products-deals.php', 'desc' => 'International products'],
+                    ['icon' => '🔥', 'title' => 'Trending', 'url' => 'trending-deals.php', 'desc' => 'Most popular now'],
+                    ['icon' => '🏅', 'title' => 'Award Winning', 'url' => 'award-winning-deals.php', 'desc' => 'Award winners'],
+                    ['icon' => '💎', 'title' => 'Exclusive', 'url' => 'exclusive-deals.php', 'desc' => 'Exclusive to us'],
+                    ['icon' => '🛡️', 'title' => 'Guaranteed', 'url' => 'guaranteed-quality-deals.php', 'desc' => 'Quality assured'],
+                ];
+                foreach ($qualityPages as $page): ?>
+                <div class="col-md-4 col-lg-3">
+                    <a href="<?php echo $page['url']; ?>" class="page-link">
+                        <div class="page-card">
+                            <div class="page-icon"><?php echo $page['icon']; ?></div>
+                            <div class="page-title"><?php echo $page['title']; ?></div>
+                            <div class="page-description"><?php echo $page['desc']; ?></div>
+                            <button class="btn btn-sm btn-outline-danger">View →</button>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <!-- Shopping Pattern Pages - PHASE 5 -->
+        <div class="category-section">
+            <div class="category-header" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <h2 class="mb-0">🛍️ Shopping Pattern Deals (10 Pages)</h2>
+                <small>Shop based on your habits</small>
+            </div>
+            <div class="row">
+                <?php 
+                $patternPages = [
+                    ['icon' => '🎉', 'title' => 'Weekend Deals', 'url' => 'weekend-deals.php', 'desc' => 'Weekend shoppers'],
+                    ['icon' => '🌅', 'title' => 'Morning Deals', 'url' => 'morning-deals.php', 'desc' => 'Early bird offers'],
+                    ['icon' => '🌙', 'title' => 'Night Deals', 'url' => 'night-deals.php', 'desc' => 'Late night shopping'],
+                    ['icon' => '📦', 'title' => 'Bulk Deals', 'url' => 'bulk-deals.php', 'desc' => 'Buy in bulk, save more'],
+                    ['icon' => '🔔', 'title' => 'Pre-Order', 'url' => 'pre-order-deals.php', 'desc' => 'Reserve upcoming items'],
+                    ['icon' => '🔄', 'title' => 'Subscription', 'url' => 'subscription-deals.php', 'desc' => 'Subscribe & save'],
+                    ['icon' => '🆕', 'title' => 'First Time Buyer', 'url' => 'first-time-buyer-deals.php', 'desc' => 'New customer offers'],
+                    ['icon' => '♻️', 'title' => 'Repeat Purchase', 'url' => 'repeat-purchase-deals.php', 'desc' => 'Loyal customers'],
+                    ['icon' => '📱', 'title' => 'App Exclusive', 'url' => 'app-exclusive-deals.php', 'desc' => 'Mobile app only'],
+                    ['icon' => '❤️', 'title' => 'Wishlist Deals', 'url' => 'wishlist-deals.php', 'desc' => 'From your wishlist'],
+                ];
+                foreach ($patternPages as $page): ?>
+                <div class="col-md-4 col-lg-3">
+                    <a href="<?php echo $page['url']; ?>" class="page-link">
+                        <div class="page-card">
+                            <div class="page-icon"><?php echo $page['icon']; ?></div>
+                            <div class="page-title"><?php echo $page['title']; ?></div>
+                            <div class="page-description"><?php echo $page['desc']; ?></div>
+                            <button class="btn btn-sm btn-outline-info">Shop Now →</button>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <!-- Urgency-Based Pages - PHASE 5 -->
+        <div class="category-section">
+            <div class="category-header" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);">
+                <h2 class="mb-0">⚡ Urgency-Based Deals (8 Pages)</h2>
+                <small>Limited time offers - Act fast!</small>
+            </div>
+            <div class="row">
+                <?php 
+                $urgencyPages = [
+                    ['icon' => '⏰', 'title' => 'Ending Today', 'url' => 'ending-today-deals.php', 'desc' => 'Expires tonight'],
+                    ['icon' => '🚨', 'title' => 'Last Few Hours', 'url' => 'last-few-hours-deals.php', 'desc' => 'Hurry, ending soon'],
+                    ['icon' => '📉', 'title' => 'Stock Running Out', 'url' => 'stock-running-out-deals.php', 'desc' => 'Limited quantity'],
+                    ['icon' => '🔥', 'title' => 'Almost Sold Out', 'url' => 'almost-sold-out-deals.php', 'desc' => 'Few items left'],
+                    ['icon' => '⚡', 'title' => 'One Day Only', 'url' => 'one-day-only-deals.php', 'desc' => '24-hour flash sale'],
+                    ['icon' => '📆', 'title' => 'This Week Only', 'url' => 'this-week-only-deals.php', 'desc' => 'Weekly specials'],
+                    ['icon' => '🎯', 'title' => 'Grab Now', 'url' => 'grab-now-deals.php', 'desc' => 'Hot selling fast'],
+                    ['icon' => '⚠️', 'title' => 'While Stocks Last', 'url' => 'while-stocks-last-deals.php', 'desc' => 'Till stocks last'],
+                ];
+                foreach ($urgencyPages as $page): ?>
+                <div class="col-md-4 col-lg-3">
+                    <a href="<?php echo $page['url']; ?>" class="page-link">
+                        <div class="page-card">
+                            <div class="page-icon"><?php echo $page['icon']; ?></div>
+                            <div class="page-title"><?php echo $page['title']; ?></div>
+                            <div class="page-description"><?php echo $page['desc']; ?></div>
+                            <button class="btn btn-sm btn-outline-danger">Hurry →</button>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <!-- Delivery-Based Pages - PHASE 5 -->
+        <div class="category-section">
+            <div class="category-header" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                <h2 class="mb-0">🚚 Delivery-Based Deals (8 Pages)</h2>
+                <small>Fast & convenient delivery options</small>
+            </div>
+            <div class="row">
+                <?php 
+                $deliveryPages = [
+                    ['icon' => '⚡', 'title' => 'Same Day Delivery', 'url' => 'same-day-delivery-deals.php', 'desc' => 'Get it today'],
+                    ['icon' => '📦', 'title' => 'Next Day Delivery', 'url' => 'next-day-delivery-deals.php', 'desc' => 'Tomorrow delivery'],
+                    ['icon' => '🚚', 'title' => 'Free Shipping', 'url' => 'free-shipping-deals.php', 'desc' => 'No delivery charges'],
+                    ['icon' => '🚀', 'title' => 'Express Delivery', 'url' => 'express-delivery-deals.php', 'desc' => 'Super fast shipping'],
+                    ['icon' => '👑', 'title' => 'Prime Eligible', 'url' => 'prime-eligible-deals.php', 'desc' => 'Prime benefits'],
+                    ['icon' => '💳', 'title' => 'COD Available', 'url' => 'cod-available-deals.php', 'desc' => 'Cash on delivery'],
+                    ['icon' => '🔄', 'title' => 'Easy Returns', 'url' => 'easy-returns-deals.php', 'desc' => 'Hassle-free returns'],
+                    ['icon' => '💰', 'title' => 'No Cost EMI', 'url' => 'no-cost-emi-deals.php', 'desc' => 'Easy installments'],
+                ];
+                foreach ($deliveryPages as $page): ?>
+                <div class="col-md-4 col-lg-3">
+                    <a href="<?php echo $page['url']; ?>" class="page-link">
+                        <div class="page-card">
+                            <div class="page-icon"><?php echo $page['icon']; ?></div>
+                            <div class="page-title"><?php echo $page['title']; ?></div>
+                            <div class="page-description"><?php echo $page['desc']; ?></div>
+                            <button class="btn btn-sm btn-outline-success">Order →</button>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <!-- Condition-Based Pages - PHASE 5 -->
+        <div class="category-section">
+            <div class="category-header" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                <h2 class="mb-0">📦 Condition-Based Deals (6 Pages)</h2>
+                <small>Quality products at great prices</small>
+            </div>
+            <div class="row">
+                <?php 
+                $conditionPages = [
+                    ['icon' => '♻️', 'title' => 'Renewed Deals', 'url' => 'renewed-deals.php', 'desc' => 'Certified renewed'],
+                    ['icon' => '🔧', 'title' => 'Refurbished', 'url' => 'refurbished-deals.php', 'desc' => 'Professionally restored'],
+                    ['icon' => '📦', 'title' => 'Open Box', 'url' => 'open-box-deals.php', 'desc' => 'Opened but unused'],
+                    ['icon' => '🏬', 'title' => 'Display Unit', 'url' => 'display-unit-deals.php', 'desc' => 'Store display models'],
+                    ['icon' => '🛡️', 'title' => 'Extended Warranty', 'url' => 'warranty-extended-deals.php', 'desc' => 'Extra protection'],
+                    ['icon' => '🏭', 'title' => 'Factory Seconds', 'url' => 'factory-seconds-deals.php', 'desc' => 'Minor imperfections'],
+                ];
+                foreach ($conditionPages as $page): ?>
+                <div class="col-md-4 col-lg-3">
+                    <a href="<?php echo $page['url']; ?>" class="page-link">
+                        <div class="page-card">
+                            <div class="page-icon"><?php echo $page['icon']; ?></div>
+                            <div class="page-title"><?php echo $page['title']; ?></div>
+                            <div class="page-description"><?php echo $page['desc']; ?></div>
+                            <button class="btn btn-sm btn-outline-warning">Browse →</button>
                         </div>
                     </a>
                 </div>
