@@ -130,7 +130,9 @@ include 'includes/header.php';
                             </div>
                             
                             <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
-                               class="view-details-btn <?php echo $isHotDeal ? 'hot-deal-btn' : ''; ?>">
+                               class="view-details-btn <?php echo $isHotDeal ? 'hot-deal-btn' : ''; ?>"
+                               data-product-id="<?php echo $deal['pid']; ?>"
+                               title="View details for <?php echo sanitizeOutput($deal['product_name']); ?>">
                                 <i class="bi bi-cart-plus"></i>
                                 <?php echo $isHotDeal ? '🔥 Grab Hot Deal Now!' : 'View Details & Buy Now'; ?>
                             </a>

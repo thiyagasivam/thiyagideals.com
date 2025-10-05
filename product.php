@@ -1158,8 +1158,7 @@ include 'includes/header.php';
                                     <small class="text-muted text-decoration-line-through"><?php echo formatPrice($deal['product_sale_price']); ?></small>
                                 </div>
                                 
-                                <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
-                                   class="btn btn-outline-primary btn-sm mt-auto">
+                                <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" data-product-id="<?php echo $deal['pid']; ?>" title="View details for <?php echo sanitizeOutput($deal['product_name']); ?>" class="btn btn-outline-primary btn-sm mt-auto">
                                     View Details
                                 </a>
                             </div>

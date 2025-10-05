@@ -265,7 +265,9 @@ foreach (\$filteredDeals as \$deal) {
                             </div>
                             
                             <a href=\"<?php echo SITE_URL; ?>/product/<?php echo \$deal['pid']; ?>/<?php echo createSlug(\$deal['product_name']); ?>\" 
-                               class=\"btn btn-primary w-100\">
+                               class=\"btn btn-primary w-100\"
+                               data-product-id=\"<?php echo \$deal['pid']; ?>\"
+                               title=\"View details for <?php echo sanitizeOutput(\$deal['product_name']); ?>\">
                                 View Deal
                             </a>
                         </div>

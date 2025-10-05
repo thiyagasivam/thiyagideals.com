@@ -1,6 +1,6 @@
-﻿<?php
+<?php
 /**
- * Premium Deals (₹5000+)
+ * Premium Deals (?5000+)
  * Auto-generated specialized deals page
  */
 
@@ -51,9 +51,9 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Premium Deals (₹5000+) 2025";
-$pageDescription = "Premium and luxury products with exclusive discounts - Find Premium Deals (₹5000+) with massive discounts and offers.";
-$pageKeywords = "Premium Deals (₹5000+), deals, offers, discounts, online shopping";
+$pageTitle = "Premium Deals (?5000+) 2025";
+$pageDescription = "Premium and luxury products with exclusive discounts - Find Premium Deals (?5000+) with massive discounts and offers.";
+$pageKeywords = "Premium Deals (?5000+), deals, offers, discounts, online shopping";
 
 // Include header
 include 'includes/header.php';
@@ -90,8 +90,8 @@ include 'includes/header.php';
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <h1 class="display-4 mb-3">
-                        <span style="font-size: 3rem;">⭐</span> 
-                        Premium Deals (₹5000+)
+                        <span style="font-size: 3rem;">?</span> 
+                        Premium Deals (?5000+)
                     </h1>
                     <p class="lead mb-4">Premium and luxury products with exclusive discounts</p>
                     
@@ -99,7 +99,7 @@ include 'includes/header.php';
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo SITE_URL; ?>" style="color: white;">Home</a></li>
                             <li class="breadcrumb-item"><a href="<?php echo SITE_URL; ?>" style="color: white;">Shop</a></li>
-                            <li class="breadcrumb-item active" style="color: rgba(255,255,255,0.8);">Premium Deals (₹5000+)</li>
+                            <li class="breadcrumb-item active" style="color: rgba(255,255,255,0.8);">Premium Deals (?5000+)</li>
                         </ol>
                     </nav>
                 </div>
@@ -112,7 +112,7 @@ include 'includes/header.php';
                         <small>Avg Discount</small>
                         <?php if ($totalSavings > 0): ?>
                         <hr style="border-color: rgba(255,255,255,0.3); margin: 10px 0;">
-                        <h4 class="mb-0">₹<?php echo number_format($totalSavings); ?></h4>
+                        <h4 class="mb-0">?<?php echo number_format($totalSavings); ?></h4>
                         <small>Total Savings</small>
                         <?php endif; ?>
                     </div>
@@ -135,7 +135,7 @@ include 'includes/header.php';
                     <div class="card h-100 product-card">
                         <?php if ($discount >= 40): ?>
                         <div class="deal-badge" style="position: absolute; top: 10px; left: 10px; z-index: 1;">
-                            ⭐ <?php echo number_format($discount); ?>% OFF
+                            ? <?php echo number_format($discount); ?>% OFF
                         </div>
                         <?php endif; ?>
                         
@@ -151,16 +151,16 @@ include 'includes/header.php';
                             </h5>
                             
                             <div class="price-section mb-2">
-                                <span class="current-price">₹<?php echo number_format($price); ?></span>
+                                <span class="current-price">?<?php echo number_format($price); ?></span>
                                 <?php if ($originalPrice > $price): ?>
-                                    <span class="original-price">₹<?php echo number_format($originalPrice); ?></span>
+                                    <span class="original-price">?<?php echo number_format($originalPrice); ?></span>
                                     <span class="discount-badge"><?php echo number_format($discount); ?>% OFF</span>
                                 <?php endif; ?>
                             </div>
                             
                             <?php if ($savings > 0): ?>
                             <div class="savings-badge mb-2">
-                                💰 Save ₹<?php echo number_format($savings); ?>
+                                ?? Save ?<?php echo number_format($savings); ?>
                             </div>
                             <?php endif; ?>
                             
@@ -169,12 +169,11 @@ include 'includes/header.php';
                                     <?php echo htmlspecialchars($deal['store_name']); ?>
                                 </span>
                                 <span class="stock-status">
-                                    <?php echo $deal['stock_status'] === 'In Stock' ? '✅ In Stock' : '❌ Out of Stock'; ?>
+                                    <?php echo $deal['stock_status'] === 'In Stock' ? '? In Stock' : '? Out of Stock'; ?>
                                 </span>
                             </div>
                             
-                            <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo createSlug($deal['product_name']); ?>" 
-                               class="btn btn-primary w-100">
+                            <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo createSlug($deal['product_name']); ?>" data-product-id="<?php echo $deal['pid']; ?>" title="View details for <?php echo sanitizeOutput($deal['product_name']); ?>" class="btn btn-primary w-100">
                                 View Deal
                             </a>
                         </div>
@@ -195,20 +194,20 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Premium Deals (₹5000+) - Best Offers 2025</h2>
+                    <h2>Premium Deals (?5000+) - Best Offers 2025</h2>
                     <p>Premium and luxury products with exclusive discounts</p>
                     
-                    <h3>Why Shop Premium Deals (₹5000+)?</h3>
+                    <h3>Why Shop Premium Deals (?5000+)?</h3>
                     <ul>
-                        <li>🎯 Verified deals with genuine discounts</li>
-                        <li>💰 Maximum savings on quality products</li>
-                        <li>🚚 Fast delivery from trusted sellers</li>
-                        <li>✅ Easy returns and customer support</li>
-                        <li>🔒 Secure payment options</li>
+                        <li>?? Verified deals with genuine discounts</li>
+                        <li>?? Maximum savings on quality products</li>
+                        <li>?? Fast delivery from trusted sellers</li>
+                        <li>? Easy returns and customer support</li>
+                        <li>?? Secure payment options</li>
                     </ul>
                     
                     <h3>How to Get the Best Deals?</h3>
-                    <p>Browse through our curated collection of Premium Deals (₹5000+). 
+                    <p>Browse through our curated collection of Premium Deals (?5000+). 
                     Each product is carefully selected to ensure you get the maximum value for your money. 
                     Compare prices, check discounts, and grab the best deals before they expire!</p>
                     

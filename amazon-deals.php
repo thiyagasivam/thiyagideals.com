@@ -92,7 +92,9 @@ include 'includes/header.php';
                             <span class="savings-text">💰 Save ₹<?php echo number_format($savings); ?></span>
                         </div>
                         <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
-                           class="view-details-btn">
+                           class="view-details-btn"
+                           data-product-id="<?php echo $deal['pid']; ?>"
+                           title="View details for <?php echo sanitizeOutput($deal['product_name']); ?>">
                             <i class="bi bi-cart-plus"></i> View on Amazon
                         </a>
                     </div>

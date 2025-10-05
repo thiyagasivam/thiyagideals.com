@@ -90,7 +90,7 @@ foreach ($deals as $index => $deal) {
     
     $html .= '<a href="' . SITE_URL . '/product/' . $deal['pid'] . '/' . generateSlug($deal['product_name']) . '" ';
     $html .= 'class="view-details-btn ' . ($isHotDeal ? 'hot-deal-btn' : '') . '" ';
-    $html .= 'onclick="trackProductClick(\'' . $deal['pid'] . '\')" ';
+    $html .= 'data-product-id="' . $deal['pid'] . '" ';
     $html .= 'title="View details for ' . sanitizeOutput($deal['product_name']) . '">';
     $html .= '<i class="bi bi-cart-plus"></i>';
     $html .= ($isHotDeal ? '🔥 Grab Hot Deal Now!' : 'View Details & Buy Now');
