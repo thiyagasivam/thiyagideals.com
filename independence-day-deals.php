@@ -83,20 +83,18 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
         }
     
         /* Product Title Enhancement - Fix Overlap */
-        .product-title {
-            display: -webkit-box !important;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden !important;
-            text-overflow: ellipsis;
-            line-height: 1.4;
-            max-height: 2.8em;
-            min-height: 2.8em;
+                .product-title {
             font-size: 0.9rem;
             font-weight: 600;
             color: #2c3e50 !important;
             margin-bottom: 0.5rem;
-            white-space: normal !important;
+            min-height: 2.8em;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.4em;
         }
         
         /* Powerful CTA Button */
@@ -193,12 +191,24 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
         }
         
         /* Discount Badge Enhancement */
+                /* Discount Badge Enhancement - Fixed Positioning */
         .discount-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             font-weight: 800;
             font-size: 0.9rem;
             padding: 5px 12px;
+            border-radius: 5px;
             box-shadow: 0 3px 10px rgba(245, 87, 108, 0.4);
+            z-index: 10;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
         
         /* Price Display Enhancement */
@@ -230,11 +240,19 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .product-title {
-                font-size: 0.8rem;
-                -webkit-line-clamp: 2;
-                min-height: 2.4em;
-            }
+                    .product-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2c3e50 !important;
+            margin-bottom: 0.5rem;
+            min-height: 2.8em;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.4em;
+        }
             
             .cta-button {
                 font-size: 0.75rem;

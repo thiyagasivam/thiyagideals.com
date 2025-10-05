@@ -80,6 +80,60 @@ $avgPrice = $totalDeals > 0 ? round(array_sum(array_map(function($d) {
             color: <?php echo $rangeColor; ?>;
             font-weight: bold;
         }
+    
+        /* Powerful CTA Button */
+        .cta-button {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%) !important;
+            border: none !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Urgency Animations */
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .blink-animation {
+            animation: blink 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.7; }
+        }
     </style>
 </head>
 <body>

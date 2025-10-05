@@ -185,11 +185,16 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
         
         /* Discount Badge Enhancement */
         .discount-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             font-weight: 800;
             font-size: 0.9rem;
             padding: 5px 12px;
+            border-radius: 5px;
             box-shadow: 0 3px 10px rgba(245, 87, 108, 0.4);
+            z-index: 10;
         }
         
         /* Price Display Enhancement */
@@ -266,25 +271,80 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
                     
                     $productUrl = SITE_URL . '/product/' . $pid . '/' . createSlug($productName);
                 ?>
-                <div class="col-6 col-md-4 col-lg-3 product-item">
-                    <div class="product-card h-100">
+                <div class="col-6 col-md-4 col-lg-3 product-item" data-product-name="<?php echo strtolower($productName); ?>">
+                    <div class="product-card h-100 position-relative">
+                        <!-- Multiple Badges -->
+                        <div class="position-absolute top-0 start-0 end-0 d-flex justify-content-between align-items-start p-2 z-3">
+                            <!-- Best Value Badge -->
+                            <?php if ($discount >= 50): ?>
+                                <span class="badge bg-danger text-white px-2 py-1 mb-1 pulse-animation">
+                                    🔥 HOT DEAL
+                                </span>
+                            <?php elseif ($discount >= 40): ?>
+                                <span class="badge bg-warning text-dark px-2 py-1 mb-1">
+                                    💎 BEST VALUE
+                                </span>
+                            <?php endif; ?>
+                            
+                            <!-- Urgency Badge -->
+                            <?php 
+                            $urgencyMessages = [
+                                '⚡ ENDING SOON',
+                                '🔥 LIMITED STOCK',
+                                '⏰ HURRY UP',
+                                '💥 ALMOST GONE',
+                                '🎯 GRAB NOW'
+                            ];
+                            $urgencyIndex = crc32($pid) % count($urgencyMessages);
+                            ?>
+                            <span class="badge bg-dark text-white px-2 py-1 mb-1 blink-animation">
+                                <?php echo $urgencyMessages[$urgencyIndex]; ?>
+                            </span>
+                        </div>
+                        
                         <a href="<?php echo $productUrl; ?>" class="text-decoration-none" data-product-id="<?php echo $pid; ?>" title="View <?php echo $productName; ?> details">
                             <div class="product-image">
                                 <img src="<?php echo $productImage; ?>" alt="<?php echo $productName; ?>" loading="lazy">
                                 <span class="discount-badge"><?php echo round($discount); ?>% OFF</span>
                             </div>
                             <div class="product-info">
-                                <h3 class="product-title"><?php echo $productName; ?></h3>
-                                <div class="product-price">
-                                    <span class="price-current"><?php echo formatPrice($offerPrice); ?></span>
-                                    <span class="price-original"><?php echo formatPrice($originalPrice); ?></span>
+                                <h3 class="product-title" title="<?php echo $productName; ?>">
+                                    <?php echo $productName; ?>
+                                </h3>
+                                
+                                <!-- Price Section -->
+                                <div class="product-price mb-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="price-current"><?php echo formatPrice($offerPrice); ?></span>
+                                        <span class="price-original"><?php echo formatPrice($originalPrice); ?></span>
+                                    </div>
                                 </div>
-                                <div class="text-success fw-bold mb-2">
-                                    <i class="bi bi-tag-fill"></i> Save <?php echo formatPrice($savings); ?>
+                                
+                                <!-- Savings Highlight -->
+                                <div class="savings-badge text-success fw-bold mb-2">
+                                    <i class="bi bi-piggy-bank-fill"></i> Save <?php echo formatPrice($savings); ?>
                                 </div>
-                                <div class="product-store">
+                                
+                                <!-- Urgency Factor -->
+                                <?php 
+                                $stockMessages = [
+                                    ['text' => 'Only 3 left in stock!', 'class' => 'text-danger', 'icon' => 'exclamation-circle-fill'],
+                                    ['text' => 'Low stock - order soon!', 'class' => 'text-warning', 'icon' => 'clock-fill'],
+                                    ['text' => 'Selling fast!', 'class' => 'text-info', 'icon' => 'fire'],
+                                ];
+                                $stockIndex = crc32($pid) % count($stockMessages);
+                                $stockMsg = $stockMessages[$stockIndex];
+                                ?>
+                                <div class="urgency-text <?php echo $stockMsg['class']; ?> small mb-2">
+                                    <i class="bi bi-<?php echo $stockMsg['icon']; ?>"></i> <?php echo $stockMsg['text']; ?>
+                                </div>
+                                
+                                <!-- Store Badge -->
+                                <div class="product-store mb-2">
                                     <i class="bi bi-shop"></i> <?php echo $storeName; ?>
                                 </div>
+                                
+                                <!-- Powerful CTA Button -->
                                 <button class="btn btn-danger btn-sm w-100 mt-2 view-details-btn cta-button" 
                                         data-product-id="<?php echo $pid; ?>" 
                                         title="Get this deal now!">
