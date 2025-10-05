@@ -122,7 +122,21 @@ include 'includes/header.php';
                                 </span>
                             </div>
                             
-                            <div class="product-store">
+                            <!-- Urgency Factor -->
+                                <?php 
+                                $stockMessages = [
+                                    ['text' => 'Only 3 left in stock!', 'class' => 'text-danger', 'icon' => 'exclamation-circle-fill'],
+                                    ['text' => 'Low stock - order soon!', 'class' => 'text-warning', 'icon' => 'clock-fill'],
+                                    ['text' => 'Selling fast!', 'class' => 'text-info', 'icon' => 'fire'],
+                                ];
+                                $stockIndex = crc32($pid) % count($stockMessages);
+                                $stockMsg = $stockMessages[$stockIndex];
+                                ?>
+                                <div class="urgency-text <?php echo $stockMsg['class']; ?> small mb-2">
+                                    <i class="bi bi-<?php echo $stockMsg['icon']; ?>"></i> <?php echo $stockMsg['text']; ?>
+                                </div>
+                                
+                                <div class="product-store">
                                 <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
                                 <span class="delivery-info">
                                     <i class="bi bi-truck"></i> Free Delivery
