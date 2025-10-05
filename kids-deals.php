@@ -8,7 +8,7 @@ require_once 'includes/config.php';
 require_once 'includes/functions.php';
 
 $pageTitle = 'Kids Deals & Offers - Best Deals for Children';
-$pageDescription = 'Best deals for kids! Shop children's toys, clothing, books, games, baby products, and educational items. Great kids offers.';
+$pageDescription = 'Best deals for kids! Shop childrens toys, clothing, books, games, baby products, and educational items. Great kids offers.';
 $pageKeywords = 'kids deals, children offers, baby products, kids toys deals';
 $categoryName = 'Audience';
 $categoryColor = '#ff9800';
