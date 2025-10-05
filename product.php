@@ -507,7 +507,8 @@ include 'includes/header.php';
                         <a href="<?php echo htmlspecialchars_decode($product['product_url']); ?>" 
                            target="_blank" 
                            class="btn btn-primary btn-lg"
-                           onclick="trackProductClick('<?php echo $product['pid']; ?>')">
+                           data-product-id="<?php echo $product['pid']; ?>"
+                           title="Buy <?php echo sanitizeOutput($product['product_name']); ?> now">
                             <i class="bi bi-cart-plus me-2"></i>
                             Buy Now on <?php echo sanitizeOutput($product['store_name']); ?>
                         </a>
@@ -1075,7 +1076,8 @@ include 'includes/header.php';
                                 <a href="<?php echo htmlspecialchars_decode($product['product_url']); ?>" 
                                    target="_blank" 
                                    class="btn btn-danger btn-lg pulse-btn"
-                                   onclick="trackProductClick('<?php echo $product['pid']; ?>')">
+                                   data-product-id="<?php echo $product['pid']; ?>"
+                                   title="Get this deal and save ₹<?php echo $savings; ?>">
                                     <i class="bi bi-lightning-charge-fill me-2"></i>
                                     🔥 Get This Deal Now - Save ₹<?php echo $savings; ?>!
                                 </a>
