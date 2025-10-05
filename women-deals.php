@@ -7,8 +7,8 @@
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
 
-$pageTitle = 'Women's Deals & Offers - Best Deals for Women';
-$pageDescription = 'Best deals for women! Shop women's fashion, accessories, beauty products, jewelry, bags, and more. Exclusive women's offers.';
+$pageTitle = 'Women\'s Deals & Offers - Best Deals for Women';
+$pageDescription = 'Best deals for women! Shop women\'s fashion, accessories, beauty products, jewelry, bags, and more. Exclusive women\'s offers.';
 $pageKeywords = 'women deals, womens offers, deals for women, ladies products';
 $categoryName = 'Audience';
 $categoryColor = '#e91e63';

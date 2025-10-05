@@ -7,8 +7,8 @@
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
 
-$pageTitle = 'Men's Deals & Offers - Best Deals for Men';
-$pageDescription = 'Best deals for men! Shop men's fashion, electronics, grooming, watches, shoes, and accessories. Exclusive men's offers with huge discounts.';
+$pageTitle = 'Men\'s Deals & Offers - Best Deals for Men';
+$pageDescription = 'Best deals for men! Shop men\'s fashion, electronics, grooming, watches, shoes, and accessories. Exclusive men\'s offers with huge discounts.';
 $pageKeywords = 'men deals, mens offers, deals for men, mens products';
 $categoryName = 'Audience';
 $categoryColor = '#2196f3';
