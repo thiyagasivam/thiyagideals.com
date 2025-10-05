@@ -83,18 +83,19 @@ $avgPrice = $totalDeals > 0 ? round(array_sum(array_map(function($d) {
         
         /* Product Title Enhancement - Fix Overlap */
         .product-title {
-            display: -webkit-box;
+            display: -webkit-box !important;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
-            overflow: hidden;
+            overflow: hidden !important;
             text-overflow: ellipsis;
             line-height: 1.4;
             max-height: 2.8em;
             min-height: 2.8em;
             font-size: 0.9rem;
             font-weight: 600;
-            color: #2c3e50;
+            color: #2c3e50 !important;
             margin-bottom: 0.5rem;
+            white-space: normal !important;
         }
         
         /* Powerful CTA Button */
@@ -210,6 +211,20 @@ $avgPrice = $totalDeals > 0 ? round(array_sum(array_map(function($d) {
             font-size: 0.9rem;
             color: #95a5a6;
             text-decoration: line-through;
+        }
+        
+        /* Product Image Container */
+        .product-image {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Product Info Section */
+        .product-info {
+            position: relative;
+            z-index: 2;
+            background: white;
+            padding: 12px;
         }
         
         /* Mobile Responsive */
@@ -336,8 +351,8 @@ $avgPrice = $totalDeals > 0 ? round(array_sum(array_map(function($d) {
                                 <span class="discount-badge"><?php echo round($discount); ?>% OFF</span>
                             </div>
                             <div class="product-info">
-                                <h3 class="product-title text-truncate" title="<?php echo $productName; ?>">
-                                    <?php echo strlen($productName) > 50 ? substr($productName, 0, 50) . '...' : $productName; ?>
+                                <h3 class="product-title" title="<?php echo $productName; ?>">
+                                    <?php echo $productName; ?>
                                 </h3>
                                 
                                 <!-- Price Section -->
