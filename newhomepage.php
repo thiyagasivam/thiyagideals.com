@@ -22,6 +22,15 @@ for ($page = 1; $page <= 8; $page++) {
     if ($pageDeals && is_array($pageDeals)) {
         $allDeals = array_merge($allDeals, $pageDeals);
     }
+    // Add small delay between API calls
+    if ($page < 8) {
+        usleep(100000); // 0.1 second delay
+    }
+}
+
+// If no deals fetched, set empty array to prevent errors
+if (!is_array($allDeals)) {
+    $allDeals = [];
 }
 
 // Sort all deals by discount percentage (highest first)
@@ -31,19 +40,38 @@ usort($allDeals, function($a, $b) {
     return $discountB <=> $discountA;
 });
 
-// Separate different deal categories
-$flashDeals = array_slice(array_filter($allDeals, function($deal) {
-    $discount = (($deal['product_sale_price'] - $deal['product_offer_price']) / $deal['product_sale_price']) * 100;
-    return $discount >= 50; // Flash deals with 50%+ discount
-}), 0, 12);
+// Separate different deal categories with error handling
+$flashDeals = [];
+$hotDeals = [];
+$topDeals = [];
+$recentDeals = [];
 
-$hotDeals = array_slice(array_filter($allDeals, function($deal) {
-    $discount = (($deal['product_sale_price'] - $deal['product_offer_price']) / $deal['product_sale_price']) * 100;
-    return $discount >= 30 && $discount < 50; // Hot deals with 30-49% discount
-}), 0, 12);
+if (!empty($allDeals) && is_array($allDeals)) {
+    $flashDeals = array_slice(array_filter($allDeals, function($deal) {
+        if (!isset($deal['product_sale_price']) || !isset($deal['product_offer_price'])) {
+            return false;
+        }
+        $salePrice = floatval($deal['product_sale_price']);
+        $offerPrice = floatval($deal['product_offer_price']);
+        if ($salePrice <= 0) return false;
+        $discount = (($salePrice - $offerPrice) / $salePrice) * 100;
+        return $discount >= 50; // Flash deals with 50%+ discount
+    }), 0, 12);
 
-$topDeals = array_slice($allDeals, 0, 12); // Top 12 deals by highest discount
-$recentDeals = array_slice($allDeals, 12, 8); // Next 8 deals as "recent"
+    $hotDeals = array_slice(array_filter($allDeals, function($deal) {
+        if (!isset($deal['product_sale_price']) || !isset($deal['product_offer_price'])) {
+            return false;
+        }
+        $salePrice = floatval($deal['product_sale_price']);
+        $offerPrice = floatval($deal['product_offer_price']);
+        if ($salePrice <= 0) return false;
+        $discount = (($salePrice - $offerPrice) / $salePrice) * 100;
+        return $discount >= 30 && $discount < 50; // Hot deals with 30-49% discount
+    }), 0, 12);
+
+    $topDeals = array_slice($allDeals, 0, 12); // Top 12 deals by highest discount
+    $recentDeals = array_slice($allDeals, 12, 8); // Next 8 deals as "recent"
+}
 
 $currentYear = date('Y');
 $currentDate = date('F j, Y');
@@ -54,7 +82,12 @@ $pageDescription = "🔥 Discover flash deals, hot offers & amazing discounts fr
 $pageKeywords = "flash deals, hot deals, offers today, discounts " . $currentYear . ", shopping, best prices, electronics deals, fashion offers";
 
 // Enhanced SEO Meta
-$canonicalUrl = SITE_URL . ($page > 1 ? "?page=" . $page : "");
+$canonicalUrl = SITE_URL;
+
+// Ensure we have deals data
+if (empty($allDeals)) {
+    $allDeals = [];
+}
 
 // Collection Page Schema
 $collectionSchema = [
@@ -65,7 +98,7 @@ $collectionSchema = [
     "url" => $canonicalUrl,
     "mainEntity" => [
         "@type" => "ItemList",
-        "numberOfItems" => count($deals),
+        "numberOfItems" => count($allDeals),
         "itemListElement" => []
     ],
     "breadcrumb" => [
@@ -353,6 +386,7 @@ include 'includes/header.php';
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
@@ -569,12 +603,20 @@ include 'includes/header.php';
         </div>
         
         <div class="deals-grid">
-            <?php foreach (array_slice($flashDeals, 0, 8) as $index => $deal): 
-                $discount = round((($deal['product_sale_price'] - $deal['product_offer_price']) / $deal['product_sale_price']) * 100);
-                $savings = $deal['product_sale_price'] - $deal['product_offer_price'];
-                $urgencyTexts = ['Only 3 left!', 'Limited stock!', 'Almost gone!', 'Last few items!'];
-                $urgencyText = $urgencyTexts[array_rand($urgencyTexts)];
-            ?>
+            <?php if (!empty($flashDeals)): ?>
+                <?php foreach (array_slice($flashDeals, 0, 8) as $index => $deal): 
+                    if (!isset($deal['product_sale_price']) || !isset($deal['product_offer_price']) || !isset($deal['product_name'])) {
+                        continue;
+                    }
+                    $salePrice = floatval($deal['product_sale_price']);
+                    $offerPrice = floatval($deal['product_offer_price']);
+                    if ($salePrice <= 0) continue;
+                    
+                    $discount = round((($salePrice - $offerPrice) / $salePrice) * 100);
+                    $savings = $salePrice - $offerPrice;
+                    $urgencyTexts = ['Only 3 left!', 'Limited stock!', 'Almost gone!', 'Last few items!'];
+                    $urgencyText = $urgencyTexts[array_rand($urgencyTexts)];
+                ?>
                 <div class="deal-card">
                     <div class="deal-image">
                         <div class="urgency-badge"><?php echo $urgencyText; ?></div>
@@ -586,8 +628,8 @@ include 'includes/header.php';
                     <div class="deal-content">
                         <h3 class="deal-title"><?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?></h3>
                         <div class="price-section">
-                            <span class="current-price">₹<?php echo number_format($deal['product_offer_price']); ?></span>
-                            <span class="original-price">₹<?php echo number_format($deal['product_sale_price']); ?></span>
+                            <span class="current-price">₹<?php echo number_format($offerPrice); ?></span>
+                            <span class="original-price">₹<?php echo number_format($salePrice); ?></span>
                         </div>
                         <div class="store-badge">
                             <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
@@ -600,6 +642,13 @@ include 'includes/header.php';
                     </div>
                 </div>
             <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12 text-center py-5">
+                    <h3>⚡ Flash Deals Loading...</h3>
+                    <p>Great deals will appear here soon! Check back in a moment.</p>
+                    <a href="<?php echo SITE_URL; ?>" class="btn btn-primary">Browse All Deals</a>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -616,11 +665,19 @@ include 'includes/header.php';
         </div>
         
         <div class="deals-grid">
-            <?php foreach (array_slice($hotDeals, 0, 8) as $index => $deal): 
-                $discount = round((($deal['product_sale_price'] - $deal['product_offer_price']) / $deal['product_sale_price']) * 100);
-                $updateTimes = ['2 mins ago', '5 mins ago', '15 mins ago', '30 mins ago'];
-                $updateTime = $updateTimes[array_rand($updateTimes)];
-            ?>
+            <?php if (!empty($hotDeals)): ?>
+                <?php foreach (array_slice($hotDeals, 0, 8) as $index => $deal): 
+                    if (!isset($deal['product_sale_price']) || !isset($deal['product_offer_price']) || !isset($deal['product_name'])) {
+                        continue;
+                    }
+                    $salePrice = floatval($deal['product_sale_price']);
+                    $offerPrice = floatval($deal['product_offer_price']);
+                    if ($salePrice <= 0) continue;
+                    
+                    $discount = round((($salePrice - $offerPrice) / $salePrice) * 100);
+                    $updateTimes = ['2 mins ago', '5 mins ago', '15 mins ago', '30 mins ago'];
+                    $updateTime = $updateTimes[array_rand($updateTimes)];
+                ?>
                 <div class="deal-card">
                     <div class="deal-image">
                         <div class="deal-badge"><?php echo $discount; ?>% OFF</div>
@@ -631,8 +688,8 @@ include 'includes/header.php';
                     <div class="deal-content">
                         <h3 class="deal-title"><?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?></h3>
                         <div class="price-section">
-                            <span class="current-price">₹<?php echo number_format($deal['product_offer_price']); ?></span>
-                            <span class="original-price">₹<?php echo number_format($deal['product_sale_price']); ?></span>
+                            <span class="current-price">₹<?php echo number_format($offerPrice); ?></span>
+                            <span class="original-price">₹<?php echo number_format($salePrice); ?></span>
                         </div>
                         <div class="store-badge">
                             <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
@@ -646,6 +703,13 @@ include 'includes/header.php';
                     </div>
                 </div>
             <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12 text-center py-5">
+                    <h3>🔥 Hot Deals Loading...</h3>
+                    <p>Amazing hot deals will appear here soon!</p>
+                    <a href="<?php echo SITE_URL; ?>" class="btn btn-primary">Browse All Deals</a>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -662,11 +726,19 @@ include 'includes/header.php';
         </div>
         
         <div class="deals-grid">
-            <?php foreach (array_slice($topDeals, 0, 8) as $index => $deal): 
-                $discount = round((($deal['product_sale_price'] - $deal['product_offer_price']) / $deal['product_sale_price']) * 100);
-                $ratings = ['4.8★', '4.7★', '4.9★', '4.6★', '4.5★'];
-                $rating = $ratings[array_rand($ratings)];
-            ?>
+            <?php if (!empty($topDeals)): ?>
+                <?php foreach (array_slice($topDeals, 0, 8) as $index => $deal): 
+                    if (!isset($deal['product_sale_price']) || !isset($deal['product_offer_price']) || !isset($deal['product_name'])) {
+                        continue;
+                    }
+                    $salePrice = floatval($deal['product_sale_price']);
+                    $offerPrice = floatval($deal['product_offer_price']);
+                    if ($salePrice <= 0) continue;
+                    
+                    $discount = round((($salePrice - $offerPrice) / $salePrice) * 100);
+                    $ratings = ['4.8★', '4.7★', '4.9★', '4.6★', '4.5★'];
+                    $rating = $ratings[array_rand($ratings)];
+                ?>
                 <div class="deal-card">
                     <div class="deal-image">
                         <div class="deal-badge"><?php echo $discount; ?>% OFF</div>
@@ -677,8 +749,8 @@ include 'includes/header.php';
                     <div class="deal-content">
                         <h3 class="deal-title"><?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?></h3>
                         <div class="price-section">
-                            <span class="current-price">₹<?php echo number_format($deal['product_offer_price']); ?></span>
-                            <span class="original-price">₹<?php echo number_format($deal['product_sale_price']); ?></span>
+                            <span class="current-price">₹<?php echo number_format($offerPrice); ?></span>
+                            <span class="original-price">₹<?php echo number_format($salePrice); ?></span>
                         </div>
                         <div class="store-badge">
                             <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
@@ -692,6 +764,13 @@ include 'includes/header.php';
                     </div>
                 </div>
             <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12 text-center py-5">
+                    <h3>🏆 Top Deals Loading...</h3>
+                    <p>Our best deals will appear here soon!</p>
+                    <a href="<?php echo SITE_URL; ?>" class="btn btn-primary">Browse All Deals</a>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -708,11 +787,19 @@ include 'includes/header.php';
         </div>
         
         <div class="deals-grid">
-            <?php foreach ($recentDeals as $index => $deal): 
-                $discount = round((($deal['product_sale_price'] - $deal['product_offer_price']) / $deal['product_sale_price']) * 100);
-                $newBadges = ['NEW', 'FRESH', 'JUST IN'];
-                $newBadge = $newBadges[array_rand($newBadges)];
-            ?>
+            <?php if (!empty($recentDeals)): ?>
+                <?php foreach ($recentDeals as $index => $deal): 
+                    if (!isset($deal['product_sale_price']) || !isset($deal['product_offer_price']) || !isset($deal['product_name'])) {
+                        continue;
+                    }
+                    $salePrice = floatval($deal['product_sale_price']);
+                    $offerPrice = floatval($deal['product_offer_price']);
+                    if ($salePrice <= 0) continue;
+                    
+                    $discount = round((($salePrice - $offerPrice) / $salePrice) * 100);
+                    $newBadges = ['NEW', 'FRESH', 'JUST IN'];
+                    $newBadge = $newBadges[array_rand($newBadges)];
+                ?>
                 <div class="deal-card">
                     <div class="deal-image">
                         <div class="urgency-badge" style="background: #27ae60;"><?php echo $newBadge; ?></div>
@@ -724,8 +811,8 @@ include 'includes/header.php';
                     <div class="deal-content">
                         <h3 class="deal-title"><?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?></h3>
                         <div class="price-section">
-                            <span class="current-price">₹<?php echo number_format($deal['product_offer_price']); ?></span>
-                            <span class="original-price">₹<?php echo number_format($deal['product_sale_price']); ?></span>
+                            <span class="current-price">₹<?php echo number_format($offerPrice); ?></span>
+                            <span class="original-price">₹<?php echo number_format($salePrice); ?></span>
                         </div>
                         <div class="store-badge">
                             <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
@@ -738,6 +825,13 @@ include 'includes/header.php';
                     </div>
                 </div>
             <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12 text-center py-5">
+                    <h3>🆕 Recent Deals Loading...</h3>
+                    <p>Fresh new deals will appear here soon!</p>
+                    <a href="<?php echo SITE_URL; ?>" class="btn btn-primary">Browse All Deals</a>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 
