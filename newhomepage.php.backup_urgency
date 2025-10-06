@@ -702,35 +702,15 @@ include 'includes/header.php';
                              loading="<?php echo $index < 4 ? 'eager' : 'lazy'; ?>">
                     </div>
                     <div class="deal-content">
-                        <h3 class="deal-title">
-                            <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
-                               style="color: inherit; text-decoration: none;">
-                                <?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?>
-                            </a>
-                        </h3>
+                        <h3 class="deal-title"><?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?></h3>
                         <div class="price-section">
                             <span class="current-price">â‚¹<?php echo number_format($offerPrice); ?></span>
                             <span class="original-price">â‚¹<?php echo number_format($salePrice); ?></span>
                         </div>
                         <div class="store-badge">
-                            <i class="bi bi-shop"></i> 
-                            <a href="<?php echo SITE_URL; ?>/<?php echo strtolower(str_replace(' ', '-', $deal['store_name'])); ?>-deals.php" 
-                               style="color: inherit; text-decoration: none;">
-                                <?php echo sanitizeOutput($deal['store_name']); ?>
-                            </a>
+                            <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
                         </div>
-                        <div class="deal-timer">
-                            â° Ends in <?php echo $timeLeft; ?> hours
-                        </div>
-                        <div class="urgency-info">
-                            <span class="viewers-count">
-                                <i class="bi bi-eye"></i> <?php echo $viewersCount; ?> viewing
-                            </span>
-                            <span class="stock-warning">
-                                <i class="bi bi-lightning"></i> <?php echo $soldCount; ?> sold
-                            </span>
-                        </div>
-                        <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" '
+                        <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
                            class="deal-btn"
                            data-product-id="<?php echo $deal['pid']; ?>">
                             <i class="bi bi-lightning-charge"></i> Grab Flash Deal
@@ -773,8 +753,6 @@ include 'includes/header.php';
                     $discount = round((($salePrice - $offerPrice) / $salePrice) * 100);
                     $updateTimes = ['2 mins ago', '5 mins ago', '15 mins ago', '30 mins ago'];
                     $updateTime = $updateTimes[array_rand($updateTimes)];
-                    $viewersCount = rand(18, 95);
-                    $soldToday = rand(12, 67);
                 ?>
                 <div class="deal-card">
                     <div class="deal-image">
@@ -784,31 +762,14 @@ include 'includes/header.php';
                              loading="lazy">
                     </div>
                     <div class="deal-content">
-                        <h3 class="deal-title">
-                            <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
-                               style="color: inherit; text-decoration: none;">
-                                <?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?>
-                            </a>
-                        </h3>
+                        <h3 class="deal-title"><?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?></h3>
                         <div class="price-section">
                             <span class="current-price">â‚¹<?php echo number_format($offerPrice); ?></span>
                             <span class="original-price">â‚¹<?php echo number_format($salePrice); ?></span>
                         </div>
                         <div class="store-badge">
-                            <i class="bi bi-shop"></i> 
-                            <a href="<?php echo SITE_URL; ?>/<?php echo strtolower(str_replace(' ', '-', $deal['store_name'])); ?>-deals.php" 
-                               style="color: inherit; text-decoration: none;">
-                                <?php echo sanitizeOutput($deal['store_name']); ?>
-                            </a>
+                            <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
                             <small class="text-muted ms-2">Updated <?php echo $updateTime; ?></small>
-                        </div>
-                        <div class="urgency-info">
-                            <span class="viewers-count">
-                                <i class="bi bi-eye"></i> <?php echo $viewersCount; ?> viewing
-                            </span>
-                            <span class="stock-warning">
-                                <i class="bi bi-fire"></i> <?php echo $soldToday; ?> sold today
-                            </span>
                         </div>
                         <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
                            class="deal-btn"
@@ -853,8 +814,6 @@ include 'includes/header.php';
                     $discount = round((($salePrice - $offerPrice) / $salePrice) * 100);
                     $ratings = ['4.8â˜…', '4.7â˜…', '4.9â˜…', '4.6â˜…', '4.5â˜…'];
                     $rating = $ratings[array_rand($ratings)];
-                    $viewersCount = rand(45, 178);
-                    $reviewsCount = rand(120, 850);
                 ?>
                 <div class="deal-card">
                     <div class="deal-image">
@@ -864,31 +823,14 @@ include 'includes/header.php';
                              loading="lazy">
                     </div>
                     <div class="deal-content">
-                        <h3 class="deal-title">
-                            <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
-                               style="color: inherit; text-decoration: none;">
-                                <?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?>
-                            </a>
-                        </h3>
+                        <h3 class="deal-title"><?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?></h3>
                         <div class="price-section">
                             <span class="current-price">â‚¹<?php echo number_format($offerPrice); ?></span>
                             <span class="original-price">â‚¹<?php echo number_format($salePrice); ?></span>
                         </div>
                         <div class="store-badge">
-                            <i class="bi bi-shop"></i> 
-                            <a href="<?php echo SITE_URL; ?>/<?php echo strtolower(str_replace(' ', '-', $deal['store_name'])); ?>-deals.php" 
-                               style="color: inherit; text-decoration: none;">
-                                <?php echo sanitizeOutput($deal['store_name']); ?>
-                            </a>
+                            <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
                             <span class="text-warning ms-2"><?php echo $rating; ?></span>
-                        </div>
-                        <div class="urgency-info">
-                            <span class="viewers-count">
-                                <i class="bi bi-eye"></i> <?php echo $viewersCount; ?> viewing
-                            </span>
-                            <span class="text-muted">
-                                <i class="bi bi-chat-dots"></i> <?php echo $reviewsCount; ?> reviews
-                            </span>
                         </div>
                         <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
                            class="deal-btn"
@@ -933,9 +875,6 @@ include 'includes/header.php';
                     $discount = round((($salePrice - $offerPrice) / $salePrice) * 100);
                     $newBadges = ['NEW', 'FRESH', 'JUST IN'];
                     $newBadge = $newBadges[array_rand($newBadges)];
-                    $viewersCount = rand(8, 45);
-                    $addedTime = ['Just added', 'Added 1h ago', 'Added 2h ago', 'Added today'];
-                    $timeAdded = $addedTime[array_rand($addedTime)];
                 ?>
                 <div class="deal-card">
                     <div class="deal-image">
@@ -946,35 +885,15 @@ include 'includes/header.php';
                              loading="lazy">
                     </div>
                     <div class="deal-content">
-                        <h3 class="deal-title">
-                            <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
-                               style="color: inherit; text-decoration: none;">
-                                <?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?>
-                            </a>
-                        </h3>
+                        <h3 class="deal-title"><?php echo sanitizeOutput(substr($deal['product_name'], 0, 80)); ?></h3>
                         <div class="price-section">
                             <span class="current-price">â‚¹<?php echo number_format($offerPrice); ?></span>
                             <span class="original-price">â‚¹<?php echo number_format($salePrice); ?></span>
                         </div>
                         <div class="store-badge">
-                            <i class="bi bi-shop"></i> 
-                            <a href="<?php echo SITE_URL; ?>/<?php echo strtolower(str_replace(' ', '-', $deal['store_name'])); ?>-deals.php" 
-                               style="color: inherit; text-decoration: none;">
-                                <?php echo sanitizeOutput($deal['store_name']); ?>
-                            </a>
+                            <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
                         </div>
-                        <div class="deal-timer">
-                            â° Ends in <?php echo $timeLeft; ?> hours
-                        </div>
-                        <div class="urgency-info">
-                            <span class="viewers-count">
-                                <i class="bi bi-eye"></i> <?php echo $viewersCount; ?> viewing
-                            </span>
-                            <span class="stock-warning">
-                                <i class="bi bi-lightning"></i> <?php echo $soldCount; ?> sold
-                            </span>
-                        </div>
-                        <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" '
+                        <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
                            class="deal-btn"
                            data-product-id="<?php echo $deal['pid']; ?>">
                             <i class="bi bi-plus-circle"></i> Check New Deal
