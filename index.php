@@ -156,7 +156,7 @@ include 'includes/header.php';
     </div>
 
     <div class="page-header">
-        <h1>🛍️ Hot Deals & Offers<?php echo $currentYear; ?>Limited Time Onlys! </h1>
+        <h1>🛍️ Hot Deals & Offers <?php echo $currentYear; ?> - Limited Time Onlys</h1>
         <p class="section-subtitle">⚡ Discover amazing products at unbeatable prices today <?php echo $currentDate; ?>. Shop now before deals expire!</p>
         
         <!-- Deal Counter -->
