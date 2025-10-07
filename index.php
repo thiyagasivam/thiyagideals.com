@@ -18,7 +18,7 @@ $deals = fetchMultipleEarnPeDeals($apiStartPage, API_PAGES_TO_FETCH);
 $currentYear = date('Y');
 $currentDate = date('F j, Y');
 
-$pageTitle = "Hot Deals & Offers " . $currentYear . " - Best Prices Today | " . SITE_NAME;
+$pageTitle = "Hot Deals & Offer " . $currentYear . " - Best Prices Today | " . SITE_NAME;
 $pageDescription = "🔥 Discover amazing deals and discounts on various products from top stores in " . $currentYear . ". Shop today " . $currentDate . " and save big on electronics, fashion, home & more!";
 $pageKeywords = "deals " . $currentYear . ", offers today, discounts, shopping, best prices, electronics deals, fashion offers, home deals";
 
