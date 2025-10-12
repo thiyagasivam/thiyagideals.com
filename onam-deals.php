@@ -380,7 +380,7 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
                                 '💥 ALMOST GONE',
                                 '🎯 GRAB NOW'
                             ];
-                            $urgencyIndex = crc32($pid) % count($urgencyMessages);
+                            $urgencyIndex = crc32($deal['pid']) % count($urgencyMessages);
                             ?>
                             <span class="badge bg-dark text-white px-2 py-1 mb-1 blink-animation">
                                 <?php echo $urgencyMessages[$urgencyIndex]; ?>
@@ -417,7 +417,7 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
                                     ['text' => 'Low stock - order soon!', 'class' => 'text-warning', 'icon' => 'clock-fill'],
                                     ['text' => 'Selling fast!', 'class' => 'text-info', 'icon' => 'fire'],
                                 ];
-                                $stockIndex = crc32($pid) % count($stockMessages);
+                                $stockIndex = crc32($deal['pid']) % count($stockMessages);
                                 $stockMsg = $stockMessages[$stockIndex];
                                 ?>
                                 <div class="urgency-text <?php echo $stockMsg['class']; ?> small mb-2">
