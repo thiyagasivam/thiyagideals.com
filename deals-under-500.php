@@ -316,7 +316,8 @@ include 'includes/header.php';
                                     ['text' => 'Low stock - order soon!', 'class' => 'text-warning', 'icon' => 'clock-fill'],
                                     ['text' => 'Selling fast!', 'class' => 'text-info', 'icon' => 'fire'],
                                 ];
-                                $stockIndex = crc32($deal['pid']) % count($stockMessages);
+                                $productId = $deal['pid'] ?? 'default-' . $index;
+                                $stockIndex = crc32((string)$productId) % count($stockMessages);
                                 $stockMsg = $stockMessages[$stockIndex];
                                 ?>
                                 <div class="urgency-text <?php echo $stockMsg['class']; ?> small mb-2">
