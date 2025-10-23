@@ -4,7 +4,9 @@ ErrorDocument 404 /404.php
 # SEO-Friendly URL Rewriting
 RewriteEngine On
 
-# Force WWW and HTTPS
+# Force WWW and HTTPS (only on production, not localhost)
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^thiyagideals\.com$ [NC]
 RewriteRule ^(.*)$ https://www.thiyagideals.com/$1 [R=301,L]

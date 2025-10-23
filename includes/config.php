@@ -11,8 +11,26 @@ define('EARNPE_API_URL', 'https://earn.pe/profile/api/getDeal.php');
 define('EARNPE_USER_ID', 'EP74686979616769');
 define('EARNPE_TOKEN', 'F0D95996-2F9A-4362-950B-FC532F97A0CE');
 
-// Site configuration
-define('SITE_URL', 'https://www.thiyagideals.com');
+// Site configuration - Auto-detect environment
+$isLocalhost = (
+    isset($_SERVER['HTTP_HOST']) && (
+        $_SERVER['HTTP_HOST'] === 'localhost' ||
+        strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false ||
+        strpos($_SERVER['HTTP_HOST'], 'localhost:') !== false
+    )
+) || (
+    php_sapi_name() === 'cli' && (
+        !isset($_SERVER['HTTP_HOST']) ||
+        strpos(getcwd(), 'xampp') !== false ||
+        strpos(getcwd(), 'XAMPP') !== false
+    )
+);
+
+if ($isLocalhost) {
+    define('SITE_URL', 'http://localhost/live/thiyagideal');
+} else {
+    define('SITE_URL', 'https://www.thiyagideals.com');
+}
 define('SITE_NAME', 'Thiyagi Deals');
 
 // Products display configuration
