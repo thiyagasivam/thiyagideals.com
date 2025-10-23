@@ -318,80 +318,83 @@ include 'includes/header.php';
                 $viewerCount = rand(15, 156); // Random viewer count for urgency
             ?>
                 <div class="product-card <?php echo $isHotDeal ? 'hot-deal-card' : ''; ?>" data-product-id="<?php echo $deal['pid']; ?>">
-                    <div class="product-image-section">
-                        <?php if ($isHotDeal): ?>
-                            <div class="product-badge">
-                                <span class="discount-badge-corner">🔥 HOT DEAL</span>
-                            </div>
-                        <?php endif; ?>
+                    <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
+                       class="product-card-link"
+                       data-product-id="<?php echo $deal['pid']; ?>"
+                       title="View details for <?php echo sanitizeOutput($deal['product_name']); ?>">
                         
-                        <?php if ($isLimitedStock): ?>
-                            <div class="stock-badge">
-                                <span class="limited-stock-badge">⚡ Only 3 left!</span>
-                            </div>
-                        <?php endif; ?>
-                        
-                        <img src="<?php echo htmlspecialchars_decode($deal['product_image']); ?>" 
-                             alt="<?php echo sanitizeOutput($deal['product_name']); ?>" 
-                             class="product-image"
-                             loading="<?php echo $index < 6 ? 'eager' : 'lazy'; ?>"
-                             onerror="this.src='https://via.placeholder.com/300x200?text=Product+Image'">
-                    </div>
-                    
-                    <div class="product-info">
-                        <h3 class="product-title"><?php echo sanitizeOutput($deal['product_name']); ?></h3>
-                        
-                        <!-- Urgency Indicators -->
-                        <div class="urgency-indicators">
-                            <div class="viewer-count">
-                                <i class="bi bi-eye-fill"></i>
-                                <span><?php echo $viewerCount; ?> people viewing</span>
-                            </div>
-                            <?php if ($isLimitedStock): ?>
-                                <div class="stock-alert">
-                                    <i class="bi bi-exclamation-triangle-fill"></i>
-                                    <span>Low stock!</span>
+                        <div class="product-image-section">
+                            <?php if ($isHotDeal): ?>
+                                <div class="product-badge">
+                                    <span class="discount-badge-corner">🔥 HOT DEAL</span>
                                 </div>
                             <?php endif; ?>
+                            
+                            <?php if ($isLimitedStock): ?>
+                                <div class="stock-badge">
+                                    <span class="limited-stock-badge">⚡ Only 3 left!</span>
+                                </div>
+                            <?php endif; ?>
+                            
+                            <img src="<?php echo htmlspecialchars_decode($deal['product_image']); ?>" 
+                                 alt="<?php echo sanitizeOutput($deal['product_name']); ?>" 
+                                 class="product-image"
+                                 loading="<?php echo $index < 6 ? 'eager' : 'lazy'; ?>"
+                                 onerror="this.src='https://via.placeholder.com/300x200?text=Product+Image'">
                         </div>
                         
-                        <div class="product-pricing">
-                            <span class="current-price"><?php echo formatPrice($deal['product_offer_price']); ?></span>
-                            <span class="original-price"><?php echo formatPrice($deal['product_sale_price']); ?></span>
-                            <span class="discount-badge <?php echo $isHotDeal ? 'hot-discount' : ''; ?>">
-                                <?php echo $discountPercent; ?>
-                            </span>
+                        <div class="product-info">
+                            <h3 class="product-title"><?php echo sanitizeOutput($deal['product_name']); ?></h3>
+                            
+                            <!-- Urgency Indicators -->
+                            <div class="urgency-indicators">
+                                <div class="viewer-count">
+                                    <i class="bi bi-eye-fill"></i>
+                                    <span><?php echo $viewerCount; ?> people viewing</span>
+                                </div>
+                                <?php if ($isLimitedStock): ?>
+                                    <div class="stock-alert">
+                                        <i class="bi bi-exclamation-triangle-fill"></i>
+                                        <span>Low stock!</span>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            
+                            <div class="product-pricing">
+                                <span class="current-price"><?php echo formatPrice($deal['product_offer_price']); ?></span>
+                                <span class="original-price"><?php echo formatPrice($deal['product_sale_price']); ?></span>
+                                <span class="discount-badge <?php echo $isHotDeal ? 'hot-discount' : ''; ?>">
+                                    <?php echo $discountPercent; ?>
+                                </span>
+                            </div>
+                            
+                            <!-- Savings Calculator -->
+                            <div class="savings-info">
+                                <span class="savings-text">
+                                    💰 You save ₹<?php echo number_format($deal['product_sale_price'] - $deal['product_offer_price']); ?>
+                                </span>
+                            </div>
+                            
+                            <div class="product-store">
+                                <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
+                                <span class="delivery-info">
+                                    <i class="bi bi-truck"></i>
+                                    <?php echo $deal['product_offer_price'] > 499 ? 'Free Delivery' : 'Fast Delivery'; ?>
+                                </span>
+                            </div>
+                            
+                            <!-- Timer for urgency -->
+                            <div class="deal-timer">
+                                <i class="bi bi-clock"></i>
+                                <span>Deal ends in: <strong id="timer-<?php echo $deal['pid']; ?>">23:47:12</strong></span>
+                            </div>
+                            
+                            <div class="view-details-btn <?php echo $isHotDeal ? 'hot-deal-btn' : ''; ?>">
+                                <i class="bi bi-cart-plus"></i>
+                                <?php echo $isHotDeal ? '🔥 Grab Hot Deal Now!' : 'View Details & Buy Now'; ?>
+                            </div>
                         </div>
-                        
-                        <!-- Savings Calculator -->
-                        <div class="savings-info">
-                            <span class="savings-text">
-                                💰 You save ₹<?php echo number_format($deal['product_sale_price'] - $deal['product_offer_price']); ?>
-                            </span>
-                        </div>
-                        
-                        <div class="product-store">
-                            <i class="bi bi-shop"></i> <?php echo sanitizeOutput($deal['store_name']); ?>
-                            <span class="delivery-info">
-                                <i class="bi bi-truck"></i>
-                                <?php echo $deal['product_offer_price'] > 499 ? 'Free Delivery' : 'Fast Delivery'; ?>
-                            </span>
-                        </div>
-                        
-                        <!-- Timer for urgency -->
-                        <div class="deal-timer">
-                            <i class="bi bi-clock"></i>
-                            <span>Deal ends in: <strong id="timer-<?php echo $deal['pid']; ?>">23:47:12</strong></span>
-                        </div>
-                        
-                        <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo generateSlug($deal['product_name']); ?>" 
-                           class="view-details-btn <?php echo $isHotDeal ? 'hot-deal-btn' : ''; ?>"
-                           data-product-id="<?php echo $deal['pid']; ?>"
-                           title="View details for <?php echo sanitizeOutput($deal['product_name']); ?>">
-                            <i class="bi bi-cart-plus"></i>
-                            <?php echo $isHotDeal ? '🔥 Grab Hot Deal Now!' : 'View Details & Buy Now'; ?>
-                        </a>
-                    </div>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -593,9 +596,9 @@ function startCountdowns() {
 
 // Product click tracking - Non-blocking approach
 function initProductTracking() {
-    // Listen for clicks on all product links
-    document.querySelectorAll('.view-details-btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
+    // Listen for clicks on product card links (entire card clickable)
+    document.querySelectorAll('.product-card-link').forEach(link => {
+        link.addEventListener('click', function(e) {
             // Don't prevent default - let link work normally
             const productId = this.getAttribute('data-product-id');
             
@@ -603,6 +606,7 @@ function initProductTracking() {
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'product_click', {
                     'product_id': productId,
+                    'click_source': 'product_card',
                     'timestamp': new Date().toISOString()
                 });
             }
@@ -614,7 +618,35 @@ function initProductTracking() {
                 const price = parseInt(priceText);
                 storeViewedProduct(productId, price);
             }
+            
+            // Add visual feedback
+            this.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 100);
         }, { passive: true }); // Passive listener for better mobile performance
+    });
+    
+    // Fallback: Listen for clicks on old view details buttons (if any remain)
+    document.querySelectorAll('.view-details-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const productId = this.getAttribute('data-product-id');
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'product_click', {
+                    'product_id': productId,
+                    'click_source': 'view_details_btn',
+                    'timestamp': new Date().toISOString()
+                });
+            }
+            
+            const productCard = this.closest('.product-card');
+            if (productCard) {
+                const priceText = productCard.querySelector('.current-price').textContent.replace(/[₹,]/g, '');
+                const price = parseInt(priceText);
+                storeViewedProduct(productId, price);
+            }
+        }, { passive: true });
     });
 }
 
@@ -626,13 +658,26 @@ function addTouchEnhancements() {
     const productCards = document.querySelectorAll('.product-card');
     
     productCards.forEach(card => {
-        card.addEventListener('touchstart', function() {
-            this.style.transform = 'scale(0.98)';
-        });
+        const cardLink = card.querySelector('.product-card-link');
         
-        card.addEventListener('touchend', function() {
-            this.style.transform = '';
-        });
+        if (cardLink) {
+            cardLink.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+                card.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+            });
+            
+            cardLink.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.style.transform = '';
+                    card.style.boxShadow = '';
+                }, 100);
+            });
+            
+            cardLink.addEventListener('touchcancel', function() {
+                this.style.transform = '';
+                card.style.boxShadow = '';
+            });
+        }
     });
 }
 

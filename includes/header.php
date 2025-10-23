@@ -545,6 +545,100 @@
                 border-bottom: none;
             }
         }
+        
+        /* Product Card Clickable Styles */
+        .product-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .product-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+            position: relative;
+        }
+        
+        .product-card-link:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .product-card-link:hover .product-title {
+            color: var(--flipkart-blue);
+        }
+        
+        .product-card-link:hover .current-price {
+            color: var(--success-green);
+            font-weight: 600;
+        }
+        
+        /* Make the button area non-clickable to prevent double-click issues */
+        .view-details-btn {
+            pointer-events: none;
+            cursor: default;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Add a subtle hover effect for the entire card */
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+        
+        /* Enhance the hot deal cards */
+        .hot-deal-card:hover {
+            box-shadow: 0 8px 25px rgba(255, 107, 0, 0.25);
+        }
+        
+        .hot-deal-card .product-card-link:hover .product-title {
+            color: #ff6b00;
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .product-card:hover {
+                transform: none;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+            
+            .product-card:hover .product-image {
+                transform: none;
+            }
+        }
+        
+        /* Add click feedback */
+        .product-card:active {
+            transform: translateY(-2px);
+        }
+        
+        /* Ensure proper spacing and layout */
+        .product-card-link {
+            padding: 0;
+            margin: 0;
+            border: none;
+            background: none;
+        }
+        
+        /* Make sure all text elements are properly styled */
+        .product-card-link .product-title,
+        .product-card-link .current-price,
+        .product-card-link .original-price,
+        .product-card-link .savings-text {
+            transition: color 0.2s ease;
+        }
     </style>
     
     <!-- Preconnect to external domains -->
