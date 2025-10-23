@@ -551,11 +551,15 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
         }
         
         .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: var(--flipkart-blue);
         }
         
         .product-card-link {
@@ -563,7 +567,9 @@
             color: inherit;
             display: block;
             height: 100%;
+            width: 100%;
             position: relative;
+            cursor: pointer;
         }
         
         .product-card-link:hover {
@@ -571,21 +577,41 @@
             color: inherit;
         }
         
+        .product-card-link:focus {
+            outline: 2px solid var(--flipkart-blue);
+            outline-offset: 2px;
+        }
+        
         .product-card-link:hover .product-title {
             color: var(--flipkart-blue);
+            transition: color 0.2s ease;
         }
         
         .product-card-link:hover .current-price {
             color: var(--success-green);
             font-weight: 600;
+            transition: all 0.2s ease;
         }
         
         /* Make the button area non-clickable to prevent double-click issues */
         .view-details-btn {
             pointer-events: none;
-            cursor: default;
+            cursor: pointer;
             position: relative;
             z-index: 1;
+            background: var(--flipkart-blue);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: all 0.2s ease;
+        }
+        
+        .product-card:hover .view-details-btn {
+            background: #1a5dc7;
+            transform: scale(1.02);
         }
         
         /* Add a subtle hover effect for the entire card */

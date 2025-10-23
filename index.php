@@ -599,6 +599,9 @@ function initProductTracking() {
     // Listen for clicks on product card links (entire card clickable)
     document.querySelectorAll('.product-card-link').forEach(link => {
         link.addEventListener('click', function(e) {
+            // Add immediate visual feedback
+            this.style.transform = 'scale(0.98)';
+            
             // Don't prevent default - let link work normally
             const productId = this.getAttribute('data-product-id');
             
@@ -619,8 +622,7 @@ function initProductTracking() {
                 storeViewedProduct(productId, price);
             }
             
-            // Add visual feedback
-            this.style.transform = 'scale(0.98)';
+            // Reset transform after a brief moment
             setTimeout(() => {
                 this.style.transform = '';
             }, 100);
