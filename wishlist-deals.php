@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Wishlist Deals - Price Drops on Saved Items
  * Category: Shopping Pattern
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/wishlist-deals';
 
 $pageTitle = 'Wishlist Deals - Price Drops on Saved Items';
 $pageDescription = 'Wishlist deals! Get notifications on price drops for saved items. Shop your wishlist with best prices.';

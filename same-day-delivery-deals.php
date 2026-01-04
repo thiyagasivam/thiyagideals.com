@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Same Day Delivery Deals - Get It Today
  * Category: Delivery
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/same-day-delivery-deals';
 
 $pageTitle = 'Same Day Delivery Deals - Get It Today';
 $pageDescription = 'Same day delivery! Get your products delivered today. Order now for instant same-day delivery.';

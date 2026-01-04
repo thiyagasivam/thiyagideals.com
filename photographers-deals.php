@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Photography Deals & Offers - Best Deals for Photographers
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/photographers-deals';
 
 $pageTitle = 'Photography Deals & Offers - Best Deals for Photographers';
 $pageDescription = 'Best photography deals! Shop cameras, lenses, tripods, lighting, memory cards, camera bags. Professional photographer offers.';

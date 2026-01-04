@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Pre-Order Deals - Book New Launches Early
  * Category: Shopping Pattern
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/pre-order-deals';
 
 $pageTitle = 'Pre-Order Deals - Book New Launches Early';
 $pageDescription = 'Pre-order deals! Book new launches early with special discounts. Get upcoming products before others.';

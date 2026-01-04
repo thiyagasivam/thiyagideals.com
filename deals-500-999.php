@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Deals ₹500-999 - Best Products in 500 to 1000 Range
  * Price range page - High search volume for budget-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-500-999';
 
 $pageTitle = 'Deals ₹500-999 - Best Products in 500 to 1000 Range';
 $pageDescription = 'Best deals between ₹500-999! Shop quality products in 500-1000 price range. Get headphones, smartwatches, fashion, accessories with maximum savings.';

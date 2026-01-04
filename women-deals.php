@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Women's Deals & Offers - Best Deals for Women
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/women-deals';
 
 $pageTitle = 'Women\'s Deals & Offers - Best Deals for Women';
 $pageDescription = 'Best deals for women! Shop women\'s fashion, accessories, beauty products, jewelry, bags, and more. Exclusive women\'s offers.';

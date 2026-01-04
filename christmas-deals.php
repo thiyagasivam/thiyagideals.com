@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Christmas Sale 2025 - Best Xmas Deals & Offers
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/christmas-deals';
 
 $pageTitle = 'Christmas Sale 2025 - Best Xmas Deals & Offers';
 $pageDescription = 'Merry Christmas! Best Christmas deals 2025 on gifts, electronics, fashion, toys, home decor. Biggest Xmas sale with amazing discounts.';

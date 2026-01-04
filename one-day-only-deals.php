@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * One Day Only Deals - Today's Exclusive Offers
  * Category: Urgency
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/one-day-only-deals';
 
 $pageTitle = 'One Day Only Deals - Today's Exclusive Offers';
 $pageDescription = 'One day only deals! Today's exclusive offers - valid for 24 hours only. Shop today's special.';

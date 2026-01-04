@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Free Shipping Deals - No Delivery Charges
  * Category: Delivery
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/free-shipping-deals';
 
 $pageTitle = 'Free Shipping Deals - No Delivery Charges';
 $pageDescription = 'Free shipping deals! No delivery charges on these products. Save on shipping costs.';

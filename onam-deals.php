@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Onam Sale 2025 - Best Onam Deals & Offers
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/onam-deals';
 
 $pageTitle = 'Onam Sale 2025 - Best Onam Deals & Offers';
 $pageDescription = 'Happy Onam! Get best Onam deals on traditional wear, home appliances, jewelry, and gifts. Exclusive Onam sale 2025 with amazing discounts.';

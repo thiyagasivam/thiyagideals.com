@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * No Cost EMI Deals - 0% Interest EMI
  * Category: Delivery
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/no-cost-emi-deals';
 
 $pageTitle = 'No Cost EMI Deals - 0% Interest EMI';
 $pageDescription = 'No cost EMI available! 0% interest EMI on select products. Pay in easy installments.';

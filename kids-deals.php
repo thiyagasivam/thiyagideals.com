@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Kids Deals & Offers - Best Deals for Children
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/kids-deals';
 
 $pageTitle = 'Kids Deals & Offers - Best Deals for Children';
 $pageDescription = 'Best deals for kids! Shop childrens toys, clothing, books, games, baby products, and educational items. Great kids offers.';

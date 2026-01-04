@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Imported Products Deals - International Brands
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/imported-products-deals';
 
 $pageTitle = 'Imported Products Deals - International Brands';
 $pageDescription = 'Shop imported products! Get international brands, USA/UK imported items. Premium imported deals.';

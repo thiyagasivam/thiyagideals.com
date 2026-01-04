@@ -1,6 +1,9 @@
-<?php
+﻿<?php
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/api-analysis';
 
 echo "=== EarnPe API Analysis ===\n\n";
 

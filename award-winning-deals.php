@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Award Winning Products - Best in Class
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/award-winning-deals';
 
 $pageTitle = 'Award Winning Products - Best in Class';
 $pageDescription = 'Shop award-winning products! Get best in class, award-recognized items. Premium quality assured.';

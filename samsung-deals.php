@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Samsung Deals & Offers
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/samsung-deals';
 
 $pageTitle = 'Samsung Deals & Offers';
 $pageDescription = 'Best Samsung mobile phones, TVs, appliances deals. Get exclusive discounts on Samsung Galaxy smartphones, tablets, and electronics.';

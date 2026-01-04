@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Cyber Monday Sale 2025 - Best Online Deals
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/cyber-monday-deals';
 
 $pageTitle = 'Cyber Monday Sale 2025 - Best Online Deals';
 $pageDescription = 'Cyber Monday India 2025! Best online shopping deals on electronics, gadgets, mobiles. Exclusive Cyber Monday offers up to 70% off.';

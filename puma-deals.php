@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Puma Shoes & Sports Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/puma-deals';
 
 $pageTitle = 'Puma Shoes & Sports Deals';
 $pageDescription = 'Puma shoes and sportswear offers. Get exclusive discounts on Puma sneakers and athletic wear.';

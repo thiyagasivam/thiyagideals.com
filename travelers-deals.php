@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Travel Deals & Offers - Best Deals for Travelers
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/travelers-deals';
 
 $pageTitle = 'Travel Deals & Offers - Best Deals for Travelers';
 $pageDescription = 'Best travel deals! Shop luggage, backpacks, travel accessories, power banks, neck pillows, travel adapters. Traveler offers.';

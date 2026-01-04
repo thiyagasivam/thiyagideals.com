@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Men's Deals & Offers - Best Deals for Men
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/men-deals';
 
 $pageTitle = 'Men\'s Deals & Offers - Best Deals for Men';
 $pageDescription = 'Best deals for men! Shop men\'s fashion, electronics, grooming, watches, shoes, and accessories. Exclusive men\'s offers with huge discounts.';

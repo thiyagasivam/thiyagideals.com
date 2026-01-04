@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Pongal Sale 2025 - Best Tamil New Year Deals
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/pongal-deals';
 
 $pageTitle = 'Pongal Sale 2025 - Best Tamil New Year Deals';
 $pageDescription = 'Pongal festival sale 2025! Get best deals on electronics, home appliances, traditional wear, and gifts. Celebrate harvest festival with savings.';

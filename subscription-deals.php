@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Subscription Deals - Save with Regular Orders
  * Category: Shopping Pattern
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/subscription-deals';
 
 $pageTitle = 'Subscription Deals - Save with Regular Orders';
 $pageDescription = 'Subscription deals! Save with regular orders, subscribe & save offers. Best subscription discounts.';

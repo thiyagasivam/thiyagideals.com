@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Ending Today Deals - Last Day Offers
  * Category: Urgency
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/ending-today-deals';
 
 $pageTitle = 'Ending Today Deals - Last Day Offers';
 $pageDescription = 'Ending today! Last day to grab these deals. Offers expiring tonight - shop before midnight.';

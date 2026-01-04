@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Stock Running Out - Limited Stock Available
  * Category: Urgency
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/stock-running-out-deals';
 
 $pageTitle = 'Stock Running Out - Limited Stock Available';
 $pageDescription = 'Stock running out! Limited stock available - order before sold out. Almost gone deals.';

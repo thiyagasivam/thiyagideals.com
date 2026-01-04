@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Student Deals & Offers - Best Deals for Students
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/students-deals';
 
 $pageTitle = 'Student Deals & Offers - Best Deals for Students';
 $pageDescription = 'Best deals for students! Shop laptops, books, stationery, electronics, backpacks for college and school. Student discount offers.';

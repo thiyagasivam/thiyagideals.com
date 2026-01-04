@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Xiaomi & Mi Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/xiaomi-deals';
 
 $pageTitle = 'Xiaomi & Mi Deals';
 $pageDescription = 'Best Xiaomi, Mi, Redmi, POCO smartphone deals. Save on budget-friendly mobile phones and smart devices.';

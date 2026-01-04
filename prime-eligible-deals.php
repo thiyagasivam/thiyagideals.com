@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Prime Eligible Deals - Amazon Prime Benefits
  * Category: Delivery
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/prime-eligible-deals';
 
 $pageTitle = 'Prime Eligible Deals - Amazon Prime Benefits';
 $pageDescription = 'Prime eligible deals! Get Amazon Prime benefits - free fast delivery for Prime members.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Renewed Products Deals - Certified Refurbished
  * Category: Condition
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/renewed-deals';
 
 $pageTitle = 'Renewed Products Deals - Certified Refurbished';
 $pageDescription = 'Renewed products! Certified refurbished items with warranty. Like new condition at lower prices.';

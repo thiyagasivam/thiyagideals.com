@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Almost Sold Out - Few Units Left
  * Category: Urgency
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/almost-sold-out-deals';
 
 $pageTitle = 'Almost Sold Out - Few Units Left';
 $pageDescription = 'Almost sold out! Few units left in stock. Order now before completely sold out.';

@@ -35,6 +35,41 @@ $pageTitle = "Amazon Deals Today " . $currentYear . " - Best Amazon Offers & Dis
 $pageDescription = "🛍️ Best Amazon deals today with up to 70% OFF! " . count($filteredDeals) . " exclusive offers updated " . $currentDate . ". Save big on genuine products with fast delivery!";
 $pageKeywords = "amazon deals, amazon offers, amazon discount, amazon sale " . $currentYear;
 
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/amazon-deals';
+
+// Collection Schema for rich snippets
+$collectionSchema = [
+    "@context" => "https://schema.org",
+    "@type" => "CollectionPage",
+    "name" => "Amazon Deals Today " . $currentYear,
+    "description" => $pageDescription,
+    "url" => $canonicalUrl,
+    "mainEntity" => [
+        "@type" => "ItemList",
+        "numberOfItems" => count($filteredDeals),
+        "itemListElement" => []
+    ],
+    "breadcrumb" => [
+        "@type" => "BreadcrumbList",
+        "itemListElement" => [
+            [
+                "@type" => "ListItem",
+                "position" => 1,
+                "name" => "Home",
+                "item" => SITE_URL
+            ],
+            [
+                "@type" => "ListItem",
+                "position" => 2,
+                "name" => "Amazon Deals",
+                "item" => $canonicalUrl
+            ]
+        ]
+    ]
+];
+$structuredData = $collectionSchema;
+
 // Include header
 include 'includes/header.php';
 ?>
@@ -79,7 +114,7 @@ include 'includes/header.php';
                         <div class="amazon-badge">Amazon</div>
                         <img src="<?php echo htmlspecialchars_decode($deal['product_image']); ?>" 
                              alt="<?php echo sanitizeOutput($deal['product_name']); ?>" 
-                             class="product-image" loading="<?php echo $index < 6 ? 'eager' : 'lazy'; ?>">
+                             class="product-image" loading="<?php echo $index < 3 ? 'eager' : 'lazy'; ?>">
                     </div>
                     <div class="product-info">
                         <h3 class="product-title"><?php echo sanitizeOutput($deal['product_name']); ?></h3>

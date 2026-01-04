@@ -114,11 +114,18 @@
     <?php endif; ?>
     
     <!-- Canonical URL -->
-    <?php if (isset($canonicalUrl)): ?>
-    <link rel="canonical" href="<?php echo $canonicalUrl; ?>">
-    <?php else: ?>
-    <link rel="canonical" href="<?php echo SITE_URL . $_SERVER['REQUEST_URI']; ?>">
-    <?php endif; ?>
+    <?php 
+    // Generate canonical URL without .php extension
+    if (isset($canonicalUrl)) {
+        $finalCanonical = $canonicalUrl;
+    } else {
+        // Remove .php extension and query params for canonical
+        $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $path = preg_replace('/\.php$/', '', $path);
+        $finalCanonical = SITE_URL . $path;
+    }
+    ?>
+    <link rel="canonical" href="<?php echo $finalCanonical; ?>">
     
     <!-- Sitemap References -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="<?php echo SITE_URL; ?>/sitemap.xml">

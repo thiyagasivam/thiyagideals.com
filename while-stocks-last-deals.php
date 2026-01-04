@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * While Stocks Last - Limited Quantity Deals
  * Category: Urgency
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/while-stocks-last-deals';
 
 $pageTitle = 'While Stocks Last - Limited Quantity Deals';
 $pageDescription = 'While stocks last! Limited quantity available. First come first served - order before stock ends.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Gaming Deals & Offers - Best Deals for Gamers
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/gaming-deals';
 
 $pageTitle = 'Gaming Deals & Offers - Best Deals for Gamers';
 $pageDescription = 'Best gaming deals! Shop gaming laptops, consoles, accessories, headsets, keyboards, mice. Exclusive gamer offers.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Weekend Deals & Offers - Saturday Sunday Special
  * Category: Shopping Pattern
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/weekend-deals';
 
 $pageTitle = 'Weekend Deals & Offers - Saturday Sunday Special';
 $pageDescription = 'Weekend special deals! Get Saturday-Sunday exclusive offers on electronics, fashion, home products. Best weekend shopping.';

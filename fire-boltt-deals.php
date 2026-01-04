@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Fire-Boltt Smartwatch Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/fire-boltt-deals';
 
 $pageTitle = 'Fire-Boltt Smartwatch Deals';
 $pageDescription = 'Fire-Boltt smartwatch deals and offers. Get best prices on Fire-Boltt smart watches with exclusive discounts.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Comprehensive EarnPe API Data Analysis
  * Shows all available fields and their sample values
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/detailed-api-analysis';
 
 echo "🔍 EarnPe API Comprehensive Data Analysis\n";
 echo "==========================================\n\n";

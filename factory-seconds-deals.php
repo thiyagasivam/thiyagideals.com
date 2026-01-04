@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Factory Seconds Deals - Minor Defects Items
  * Category: Condition
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/factory-seconds-deals';
 
 $pageTitle = 'Factory Seconds Deals - Minor Defects Items';
 $pageDescription = 'Factory seconds! Minor cosmetic defects, full functionality. Huge discounts on factory seconds.';

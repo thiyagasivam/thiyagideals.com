@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Last Few Hours Deals - Hurry Limited Time
  * Category: Urgency
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/last-few-hours-deals';
 
 $pageTitle = 'Last Few Hours Deals - Hurry Limited Time';
 $pageDescription = 'Last few hours! Hurry, limited time left. Deals ending soon - grab before they expire.';

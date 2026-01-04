@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Certified Products Deals - Quality Certified Items
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/certified-products-deals';
 
 $pageTitle = 'Certified Products Deals - Quality Certified Items';
 $pageDescription = 'Shop certified products! Get warranty-backed, quality certified items. Genuine products with manufacturer warranty.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Senior Citizen Deals & Offers - Best Deals for Seniors
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/seniors-deals';
 
 $pageTitle = 'Senior Citizen Deals & Offers - Best Deals for Seniors';
 $pageDescription = 'Best deals for senior citizens! Shop health products, comfortable clothing, electronics, books, and senior-friendly items.';

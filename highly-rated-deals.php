@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Highly Rated Deals - Top Rated Products
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/highly-rated-deals';
 
 $pageTitle = 'Highly Rated Deals - Top Rated Products';
 $pageDescription = 'Shop highly rated products! Get 4+ star rated items with best customer reviews. Top quality assured deals.';

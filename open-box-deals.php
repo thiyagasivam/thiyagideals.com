@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Open Box Deals - Unused Return Items
  * Category: Condition
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/open-box-deals';
 
 $pageTitle = 'Open Box Deals - Unused Return Items';
 $pageDescription = 'Open box deals! Unused return items, slightly opened packaging. Original condition at discounts.';

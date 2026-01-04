@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Budget Friendly Deals - Best Affordable Products
  * Price range page - High search volume for budget-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/budget-friendly-deals';
 
 $pageTitle = 'Budget Friendly Deals - Best Affordable Products';
 $pageDescription = 'Best budget-friendly deals! Shop affordable products under 3000. Get electronics, fashion, accessories, home essentials at lowest prices with huge discounts.';

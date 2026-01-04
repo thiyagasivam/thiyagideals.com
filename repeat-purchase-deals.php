@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Repeat Purchase Deals - Loyalty Rewards
  * Category: Shopping Pattern
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/repeat-purchase-deals';
 
 $pageTitle = 'Repeat Purchase Deals - Loyalty Rewards';
 $pageDescription = 'Repeat purchase deals! Loyalty rewards for returning customers. Buy again and save more.';

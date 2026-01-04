@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Display Unit Deals - Demo Pieces
  * Category: Condition
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/display-unit-deals';
 
 $pageTitle = 'Display Unit Deals - Demo Pieces';
 $pageDescription = 'Display unit deals! Demo pieces from showrooms. Minimal use, excellent condition at lower prices.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Durga Puja Sale 2025 - Best Festive Deals
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/durga-puja-deals';
 
 $pageTitle = 'Durga Puja Sale 2025 - Best Festive Deals';
 $pageDescription = 'Biggest Durga Puja sale 2025! Celebrate Navratri with exclusive deals on sarees, jewelry, electronics, home decor, and festive essentials.';

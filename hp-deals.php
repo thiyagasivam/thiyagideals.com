@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * HP Laptop & Computer Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/hp-deals';
 
 $pageTitle = 'HP Laptop & Computer Deals';
 $pageDescription = 'HP laptop deals and computer offers. Save on HP notebooks, desktops, printers with best prices.';

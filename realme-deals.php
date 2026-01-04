@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Realme Deals & Offers
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/realme-deals';
 
 $pageTitle = 'Realme Deals & Offers';
 $pageDescription = 'Realme smartphone deals and offers. Get best prices on Realme mobile phones with exclusive discounts.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * 70% OFF Deals - Get 70 Percent Discount
  * Discount percentage page - High search volume for discount-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-70-percent-off';
 
 $pageTitle = '70% OFF Deals - Get 70 Percent Discount';
 $pageDescription = 'Incredible 70% off deals! Get 70 percent discount on electronics, fashion, mobiles, home products. Best 70% OFF offers - super savings!';

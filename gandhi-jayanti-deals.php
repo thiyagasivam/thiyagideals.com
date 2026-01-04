@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Gandhi Jayanti Sale 2025 - October 2nd Deals
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/gandhi-jayanti-deals';
 
 $pageTitle = 'Gandhi Jayanti Sale 2025 - October 2nd Deals';
 $pageDescription = 'Gandhi Jayanti sale 2025! Get best deals on 2nd October. Shop electronics, fashion, and essentials with special Gandhi Jayanti offers.';

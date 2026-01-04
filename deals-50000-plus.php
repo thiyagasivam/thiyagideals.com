@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Deals Above ₹50000 - Best Premium & Luxury Products
  * Price range page - High search volume for budget-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-50000-plus';
 
 $pageTitle = 'Deals Above ₹50000 - Best Premium & Luxury Products';
 $pageDescription = 'Ultra-premium deals above ₹50000! Shop luxury smartphones, laptops, TVs, appliances. Best discounts on flagship and premium products above 50K.';

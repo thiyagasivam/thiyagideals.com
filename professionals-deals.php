@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Professional Deals & Offers - Best Deals for Working Professionals
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/professionals-deals';
 
 $pageTitle = 'Professional Deals & Offers - Best Deals for Working Professionals';
 $pageDescription = 'Best deals for professionals! Shop laptops, formal wear, bags, office accessories, electronics for working professionals.';

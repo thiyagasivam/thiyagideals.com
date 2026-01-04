@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * First Time Buyer Deals - New Customer Offers
  * Category: Shopping Pattern
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/first-time-buyer-deals';
 
 $pageTitle = 'First Time Buyer Deals - New Customer Offers';
 $pageDescription = 'First time buyer deals! Special offers for new customers. Welcome bonus and first purchase discounts.';

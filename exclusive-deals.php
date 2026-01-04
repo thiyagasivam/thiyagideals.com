@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Exclusive Deals - Special Limited Offers
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/exclusive-deals';
 
 $pageTitle = 'Exclusive Deals - Special Limited Offers';
 $pageDescription = 'Exclusive deals! Get special limited offers, exclusive products, members-only deals. Premium exclusive offers.';

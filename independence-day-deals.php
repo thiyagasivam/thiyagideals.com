@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Independence Day Sale 2025 - 15th August Deals
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/independence-day-deals';
 
 $pageTitle = 'Independence Day Sale 2025 - 15th August Deals';
 $pageDescription = 'Independence Day sale 2025! Celebrate freedom with exclusive 15th August deals on electronics, fashion, mobiles. Best Independence Day offers.';

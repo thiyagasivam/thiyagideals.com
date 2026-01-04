@@ -55,6 +55,30 @@ $pageTitle = "Flipkart Deals Today 2025";
 $pageDescription = "Best Flipkart deals and offers today - Find Flipkart Deals Today with massive discounts and offers.";
 $pageKeywords = "Flipkart Deals Today, deals, offers, discounts, online shopping";
 
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/flipkart-deals';
+
+// Collection Schema for rich snippets
+$collectionSchema = [
+    "@context" => "https://schema.org",
+    "@type" => "CollectionPage",
+    "name" => $pageTitle,
+    "description" => $pageDescription,
+    "url" => $canonicalUrl,
+    "mainEntity" => [
+        "@type" => "ItemList",
+        "numberOfItems" => $totalDeals
+    ],
+    "breadcrumb" => [
+        "@type" => "BreadcrumbList",
+        "itemListElement" => [
+            ["@type" => "ListItem", "position" => 1, "name" => "Home", "item" => SITE_URL],
+            ["@type" => "ListItem", "position" => 2, "name" => "Flipkart Deals", "item" => $canonicalUrl]
+        ]
+    ]
+];
+$structuredData = $collectionSchema;
+
 // Include header
 include 'includes/header.php';
 ?>

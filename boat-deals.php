@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * boAt Headphones & Audio Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/boat-deals';
 
 $pageTitle = 'boAt Headphones & Audio Deals';
 $pageDescription = 'boAt headphones, earphones, speakers deals. Get best prices on boAt audio products with exclusive discounts.';

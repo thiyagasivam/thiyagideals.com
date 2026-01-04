@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * LG Electronics Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/lg-deals';
 
 $pageTitle = 'LG Electronics Deals';
 $pageDescription = 'LG electronics deals - TVs, refrigerators, washing machines. Save on LG home appliances.';

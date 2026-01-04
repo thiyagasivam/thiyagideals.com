@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Deals ₹2500-4999 - Best Products in 2.5K-5K Range
  * Price range page - High search volume for budget-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-2500-4999';
 
 $pageTitle = 'Deals ₹2500-4999 - Best Products in 2.5K-5K Range';
 $pageDescription = 'Premium deals ₹2500-4999! Shop best electronics, smartwatches, headphones, fashion in 2500-5000 range. Get maximum savings on quality products.';

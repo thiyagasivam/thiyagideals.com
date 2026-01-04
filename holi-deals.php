@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Holi Sale 2025 - Best Holi Deals & Offers
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/holi-deals';
 
 $pageTitle = 'Holi Sale 2025 - Best Holi Deals & Offers';
 $pageDescription = 'Celebrate Holi with colorful deals! Get best Holi offers on colors, water guns, ethnic wear, sweets, and gifts. Biggest Holi sale 2025.';

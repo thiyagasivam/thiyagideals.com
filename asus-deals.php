@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Asus Laptop & Gaming Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/asus-deals';
 
 $pageTitle = 'Asus Laptop & Gaming Deals';
 $pageDescription = 'Asus laptop and gaming laptop deals. Get best prices on Asus ROG gaming laptops and computers.';

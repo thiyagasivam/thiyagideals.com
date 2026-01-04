@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Cash on Delivery Deals - COD Available
  * Category: Delivery
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/cod-available-deals';
 
 $pageTitle = 'Cash on Delivery Deals - COD Available';
 $pageDescription = 'Cash on delivery available! Pay when you receive. COD option on these products.';

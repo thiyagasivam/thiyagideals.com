@@ -1,7 +1,10 @@
-<?php
+﻿<?php
 header('Content-Type: application/xml; charset=utf-8');
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/sitemap-images-dynamic';
 
 // Generate SEO-friendly URL slug
 function generateSlug($text) {

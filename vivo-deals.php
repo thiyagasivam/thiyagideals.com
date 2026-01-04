@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Vivo Deals & Offers
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/vivo-deals';
 
 $pageTitle = 'Vivo Deals & Offers';
 $pageDescription = 'Vivo smartphone deals and offers. Get exclusive discounts on Vivo mobile phones with best features.';

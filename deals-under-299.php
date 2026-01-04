@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Deals Under ₹299 - Best Budget Products
  * Price range page - High search volume for budget-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-under-299';
 
 $pageTitle = 'Deals Under ₹299 - Best Budget Products';
 $pageDescription = 'Best deals under ₹299! Shop ultra-budget products with amazing discounts. Get electronics, accessories, fashion, and essentials at unbeatable prices below 299 rupees.';

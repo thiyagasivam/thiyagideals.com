@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Black Friday Sale 2025 - Best Black Friday Deals India
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/black-friday-deals';
 
 $pageTitle = 'Black Friday Sale 2025 - Best Black Friday Deals India';
 $pageDescription = 'Black Friday India 2025! Get biggest Black Friday deals on electronics, mobiles, laptops, fashion. Up to 80% off - Best Black Friday sale.';

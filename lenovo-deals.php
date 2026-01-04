@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Lenovo Laptop & Computer Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/lenovo-deals';
 
 $pageTitle = 'Lenovo Laptop & Computer Deals';
 $pageDescription = 'Lenovo laptop deals and ThinkPad offers. Save big on Lenovo computers and tablets.';

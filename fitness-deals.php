@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Fitness Deals & Offers - Best Deals for Fitness Enthusiasts
  * Category: Audience
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/fitness-deals';
 
 $pageTitle = 'Fitness Deals & Offers - Best Deals for Fitness Enthusiasts';
 $pageDescription = 'Best fitness deals! Shop gym equipment, fitness trackers, yoga mats, running shoes, protein supplements, workout gear.';

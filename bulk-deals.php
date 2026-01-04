@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Bulk Buy Deals - Wholesale & Quantity Discounts
  * Category: Shopping Pattern
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/bulk-deals';
 
 $pageTitle = 'Bulk Buy Deals - Wholesale & Quantity Discounts';
 $pageDescription = 'Bulk buy deals! Get wholesale prices, quantity discounts, combo packs. Save more when buying in bulk.';

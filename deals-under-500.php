@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
 
@@ -136,6 +136,30 @@ $currentDate = date('F j, Y');
 $pageTitle = "Best Deals Under ₹500 " . $currentYear . " - Budget Shopping Offers Today | " . SITE_NAME;
 $pageDescription = "🛍️ Shop the best deals under ₹500! Amazing discounts on quality products. Budget-friendly shopping with up to 70% OFF. Updated " . $currentDate . ". Free delivery available!";
 $pageKeywords = "deals under 500, budget shopping, cheap deals, best offers, affordable products, " . $currentYear;
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-under-500';
+
+// Collection Schema for rich snippets
+$collectionSchema = [
+    "@context" => "https://schema.org",
+    "@type" => "CollectionPage",
+    "name" => $pageTitle,
+    "description" => $pageDescription,
+    "url" => $canonicalUrl,
+    "mainEntity" => [
+        "@type" => "ItemList",
+        "numberOfItems" => $totalDeals
+    ],
+    "breadcrumb" => [
+        "@type" => "BreadcrumbList",
+        "itemListElement" => [
+            ["@type" => "ListItem", "position" => 1, "name" => "Home", "item" => SITE_URL],
+            ["@type" => "ListItem", "position" => 2, "name" => "Deals Under ₹500", "item" => $canonicalUrl]
+        ]
+    ]
+];
+$structuredData = $collectionSchema;
 
 // Include header
 include 'includes/header.php';
@@ -290,7 +314,7 @@ include 'includes/header.php';
                                 <img src="<?php echo htmlspecialchars_decode($deal['product_image']); ?>"
                                      alt="<?php echo sanitizeOutput($deal['product_name']); ?>"
                                      class="product-image"
-                                     loading="<?php echo $index < 6 ? 'eager' : 'lazy'; ?>">
+                                     loading="<?php echo $index < 3 ? 'eager' : 'lazy'; ?>">
                             </div>
 
                             <div class="product-info">

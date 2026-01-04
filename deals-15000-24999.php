@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Deals ₹15000-24999 - Best Products in 15K-25K Range
  * Price range page - High search volume for budget-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-15000-24999';
 
 $pageTitle = 'Deals ₹15000-24999 - Best Products in 15K-25K Range';
 $pageDescription = 'Premium deals ₹15000-24999! Find flagship smartphones, laptops, TVs, appliances in 15K-25K range. Best discounts on high-end electronics.';

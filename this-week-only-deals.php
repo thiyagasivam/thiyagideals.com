@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * This Week Only - Limited Week Offers
  * Category: Urgency
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/this-week-only-deals';
 
 $pageTitle = 'This Week Only - Limited Week Offers';
 $pageDescription = 'This week only! Limited time weekly deals. Valid for this week only - don't miss out.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Beauty & Personal Care
  * Auto-generated specialized deals page
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/beauty-deals';
 
 // Helper function to adjust color brightness
 function adjustBrightness($hex, $percent) {

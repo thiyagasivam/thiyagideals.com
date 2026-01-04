@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Night Deals & Offers - Midnight Shopping Special
  * Category: Shopping Pattern
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/night-deals';
 
 $pageTitle = 'Night Deals & Offers - Midnight Shopping Special';
 $pageDescription = 'Night special deals! Midnight shopping offers with exclusive night-time discounts. Late night deals.';

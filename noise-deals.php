@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Noise Smartwatch & Audio Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/noise-deals';
 
 $pageTitle = 'Noise Smartwatch & Audio Deals';
 $pageDescription = 'Noise smartwatch and audio deals. Save on Noise smart watches, earbuds, and wearables.';

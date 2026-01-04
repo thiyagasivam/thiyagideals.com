@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Brand New Products - Fresh Stock Deals
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/brand-new-deals';
 
 $pageTitle = 'Brand New Products - Fresh Stock Deals';
 $pageDescription = 'Shop brand new products! Get fresh stock, latest models, new arrivals. 100% brand new sealed items.';

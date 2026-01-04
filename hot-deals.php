@@ -1,6 +1,9 @@
-<?php
+﻿<?php
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/hot-deals';
 
 function generateSlug($text) {
     $text = strtolower($text);
@@ -105,7 +108,7 @@ include 'includes/header.php';
                             <img src="<?php echo htmlspecialchars_decode($deal['product_image']); ?>" 
                                  alt="<?php echo sanitizeOutput($deal['product_name']); ?>" 
                                  class="product-image"
-                                 loading="<?php echo $index < 6 ? 'eager' : 'lazy'; ?>">
+                                 loading="<?php echo $index < 3 ? 'eager' : 'lazy'; ?>">
                         </div>
                         
                         <div class="product-info">

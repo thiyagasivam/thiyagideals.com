@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Morning Deals & Offers - Early Bird Special
  * Category: Shopping Pattern
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/morning-deals';
 
 $pageTitle = 'Morning Deals & Offers - Early Bird Special';
 $pageDescription = 'Morning special deals! Early bird offers with best morning prices. Fresh deals updated every morning.';

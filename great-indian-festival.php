@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Amazon Great Indian Festival 2025 - Biggest Sale
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/great-indian-festival';
 
 $pageTitle = 'Amazon Great Indian Festival 2025 - Biggest Sale';
 $pageDescription = 'Amazon Great Indian Festival 2025! Biggest online shopping festival. Get up to 80% off on electronics, mobiles, fashion, home essentials.';

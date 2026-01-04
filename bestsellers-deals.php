@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Bestseller Deals - Top Selling Products
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/bestsellers-deals';
 
 $pageTitle = 'Bestseller Deals - Top Selling Products';
 $pageDescription = 'Shop bestseller products! Get top-selling items across all categories. Most popular deals with highest sales.';

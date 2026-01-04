@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Valentine's Day Sale 2025 - Best Gift Deals
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/valentines-day-deals';
 
 $pageTitle = 'Valentine's Day Sale 2025 - Best Gift Deals';
 $pageDescription = 'Valentine's Day deals 2025! Find perfect gifts for your loved ones. Best Valentine offers on jewelry, watches, perfumes, chocolates, flowers.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Raksha Bandhan Sale 2025 - Rakhi Deals & Gifts
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/rakhi-deals';
 
 $pageTitle = 'Raksha Bandhan Sale 2025 - Rakhi Deals & Gifts';
 $pageDescription = 'Best Raksha Bandhan deals 2025! Shop rakhi gifts for brothers and sisters. Exclusive rakhi sale on electronics, fashion, jewelry, and more.';

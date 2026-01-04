@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Nike Shoes & Sports Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/nike-deals';
 
 $pageTitle = 'Nike Shoes & Sports Deals';
 $pageDescription = 'Nike shoes and sportswear deals. Get best prices on Nike sneakers, clothing, and sports accessories.';

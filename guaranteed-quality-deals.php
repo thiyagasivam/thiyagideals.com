@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Guaranteed Quality Deals - 100% Quality Assured
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/guaranteed-quality-deals';
 
 $pageTitle = 'Guaranteed Quality Deals - 100% Quality Assured';
 $pageDescription = 'Guaranteed quality deals! 100% quality assured products with money-back guarantee. Risk-free shopping.';

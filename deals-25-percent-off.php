@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Minimum 25% OFF Deals
  * Auto-generated specialized deals page
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-25-percent-off';
 
 // Fetch all deals from multiple API pages
 $allDeals = fetchMultipleEarnPeDeals(1, API_PAGES_TO_FETCH);

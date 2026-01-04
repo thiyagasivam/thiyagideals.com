@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Grab Now Deals - Instant Purchase Offers
  * Category: Urgency
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/grab-now-deals';
 
 $pageTitle = 'Grab Now Deals - Instant Purchase Offers';
 $pageDescription = 'Grab now! Instant purchase offers with immediate discounts. No waiting - shop and save now.';

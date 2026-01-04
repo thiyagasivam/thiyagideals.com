@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * New Year Sale 2026 - Best New Year Deals
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/new-year-deals';
 
 $pageTitle = 'New Year Sale 2026 - Best New Year Deals';
 $pageDescription = 'Happy New Year 2026! Start the year with best New Year deals on electronics, fashion, mobiles, laptops. Biggest New Year sale.';

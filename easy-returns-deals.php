@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Easy Returns Deals - Hassle-Free Return Policy
  * Category: Delivery
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/easy-returns-deals';
 
 $pageTitle = 'Easy Returns Deals - Hassle-Free Return Policy';
 $pageDescription = 'Easy returns! Hassle-free return policy on these products. 7-30 days return window.';

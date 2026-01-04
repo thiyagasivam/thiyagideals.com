@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Next Day Delivery Deals - Get It Tomorrow
  * Category: Delivery
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/next-day-delivery-deals';
 
 $pageTitle = 'Next Day Delivery Deals - Get It Tomorrow';
 $pageDescription = 'Next day delivery! Order today, get it tomorrow. Fast next-day shipping available.';

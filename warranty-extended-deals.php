@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Extended Warranty Deals - Extra Protection
  * Category: Condition
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/warranty-extended-deals';
 
 $pageTitle = 'Extended Warranty Deals - Extra Protection';
 $pageDescription = 'Extended warranty deals! Products with extra protection plans. Extended coverage for peace of mind.';

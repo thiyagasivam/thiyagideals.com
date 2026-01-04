@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Apple Deals & Offers
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/apple-deals';
 
 $pageTitle = 'Apple Deals & Offers';
 $pageDescription = 'Exclusive Apple iPhone, iPad, MacBook, AirPods deals. Save big on premium Apple products with best prices and offers.';

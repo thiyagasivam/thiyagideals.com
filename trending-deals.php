@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Trending Deals - Hot & Viral Products
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/trending-deals';
 
 $pageTitle = 'Trending Deals - Hot & Viral Products';
 $pageDescription = 'Shop trending products! Get hot & viral items, most searched products. Trending deals everyone is buying.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
 
@@ -339,7 +339,7 @@ include 'includes/header.php';
                             <img src="<?php echo htmlspecialchars_decode($deal['product_image']); ?>" 
                                  alt="<?php echo sanitizeOutput($deal['product_name']); ?>" 
                                  class="product-image"
-                                 loading="<?php echo $index < 6 ? 'eager' : 'lazy'; ?>"
+                                 loading="<?php echo $index < 3 ? 'eager' : 'lazy'; ?>"
                                  onerror="this.src='https://via.placeholder.com/300x200?text=Product+Image'">
                         </div>
                         

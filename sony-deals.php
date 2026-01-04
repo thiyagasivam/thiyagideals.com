@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Sony Electronics Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/sony-deals';
 
 $pageTitle = 'Sony Electronics Deals';
 $pageDescription = 'Sony electronics deals - TVs, cameras, headphones, PlayStation. Get exclusive Sony product discounts.';

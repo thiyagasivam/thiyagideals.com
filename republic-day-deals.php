@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Republic Day Sale 2025 - 26th January Deals
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/republic-day-deals';
 
 $pageTitle = 'Republic Day Sale 2025 - 26th January Deals';
 $pageDescription = 'Republic Day sale 2025! Celebrate 26th January with patriotic deals on electronics, fashion, home appliances. Best Republic Day offers.';

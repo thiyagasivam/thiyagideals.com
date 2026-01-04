@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Verified Sellers Deals - Buy from Trusted Sellers
  * Category: Quality
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/verified-sellers-deals';
 
 $pageTitle = 'Verified Sellers Deals - Buy from Trusted Sellers';
 $pageDescription = 'Buy from verified sellers only! Shop authentic products from trusted sellers on Amazon & Flipkart. 100% genuine products.';

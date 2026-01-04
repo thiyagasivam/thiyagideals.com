@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Adidas Shoes & Sports Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/adidas-deals';
 
 $pageTitle = 'Adidas Shoes & Sports Deals';
 $pageDescription = 'Adidas shoes and sportswear deals. Save on Adidas sneakers, clothing, and sports gear.';

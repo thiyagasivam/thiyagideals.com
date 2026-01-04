@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Amazon Prime Day 2025 - Best Prime Deals
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/prime-day-deals';
 
 $pageTitle = 'Amazon Prime Day 2025 - Best Prime Deals';
 $pageDescription = 'Amazon Prime Day 2025! Get exclusive Prime member deals on electronics, fashion, home appliances. Biggest Prime Day sale with lightning deals.';

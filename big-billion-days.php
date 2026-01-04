@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Flipkart Big Billion Days 2025 - Biggest Sale
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/big-billion-days';
 
 $pageTitle = 'Flipkart Big Billion Days 2025 - Biggest Sale';
 $pageDescription = 'Flipkart Big Billion Days 2025! India's biggest shopping festival. Get up to 80% off on mobiles, electronics, fashion, home appliances.';

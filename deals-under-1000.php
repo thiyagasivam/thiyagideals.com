@@ -51,10 +51,34 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Best Deals Under ?1000 2025";
-$metaDescription = "Amazing deals under ?1000 with great discounts - Find Best Deals Under ?1000 with massive discounts and offers.";
+$pageTitle = "Best Deals Under ₹1000 2025";
+$metaDescription = "Amazing deals under ₹1000 with great discounts - Find Best Deals Under ₹1000 with massive discounts and offers.";
 $pageDescription = $metaDescription;
-$pageKeywords = "Best Deals Under ?1000, deals, offers, discounts, online shopping";
+$pageKeywords = "Best Deals Under ₹1000, deals, offers, discounts, online shopping";
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-under-1000';
+
+// Collection Schema for rich snippets
+$collectionSchema = [
+    "@context" => "https://schema.org",
+    "@type" => "CollectionPage",
+    "name" => $pageTitle,
+    "description" => $pageDescription,
+    "url" => $canonicalUrl,
+    "mainEntity" => [
+        "@type" => "ItemList",
+        "numberOfItems" => $totalDeals
+    ],
+    "breadcrumb" => [
+        "@type" => "BreadcrumbList",
+        "itemListElement" => [
+            ["@type" => "ListItem", "position" => 1, "name" => "Home", "item" => SITE_URL],
+            ["@type" => "ListItem", "position" => 2, "name" => "Deals Under ₹1000", "item" => $canonicalUrl]
+        ]
+    ]
+];
+$structuredData = $collectionSchema;
 
 // Include header
 include 'includes/header.php';

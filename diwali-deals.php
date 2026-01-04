@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Diwali Sale 2025 - Best Diwali Deals & Offers
  * Seasonal event page - High search volume during festival season
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/diwali-deals';
 
 $pageTitle = 'Diwali Sale 2025 - Best Diwali Deals & Offers';
 $pageDescription = 'Biggest Diwali sale 2025! Get exclusive Diwali deals, offers, and discounts on electronics, fashion, home decor, gifts, and more. Celebrate with amazing savings.';

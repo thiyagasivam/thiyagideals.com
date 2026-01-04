@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Dell Laptop & Computer Deals
  * Brand-specific deals page - High search volume
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/dell-deals';
 
 $pageTitle = 'Dell Laptop & Computer Deals';
 $pageDescription = 'Dell laptop and desktop deals. Get exclusive discounts on Dell computers, monitors, and accessories.';

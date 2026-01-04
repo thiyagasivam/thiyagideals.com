@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Deals Under ₹499 - Best Products Below 500
  * Price range page - High search volume for budget-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-under-499';
 
 $pageTitle = 'Deals Under ₹499 - Best Products Below 500';
 $pageDescription = 'Top deals under ₹499! Find best products below 500 rupees. Shop mobiles accessories, headphones, fashion, home essentials with huge discounts under Rs 500.';

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * 10% OFF Deals - Get 10 Percent Discount
  * Discount percentage page - High search volume for discount-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-10-percent-off';
 
 $pageTitle = '10% OFF Deals - Get 10 Percent Discount';
 $pageDescription = 'Get 10% off deals on all products! Shop electronics, fashion, home essentials with 10 percent discount. Best 10% OFF offers from Amazon & Flipkart.';

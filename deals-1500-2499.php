@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Deals ₹1500-2499 - Best Mid-Range Products
  * Price range page - High search volume for budget-specific searches
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/deals-1500-2499';
 
 $pageTitle = 'Deals ₹1500-2499 - Best Mid-Range Products';
 $pageDescription = 'Top mid-range deals ₹1500-2499! Shop quality electronics, smartwatches, headphones, fashion in 1500-2500 price range with best discounts.';

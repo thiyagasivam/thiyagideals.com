@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Express Delivery Deals - Super Fast Shipping
  * Category: Delivery
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/express-delivery-deals';
 
 $pageTitle = 'Express Delivery Deals - Super Fast Shipping';
 $pageDescription = 'Express delivery! Super fast shipping on these products. Get it delivered in 1-2 days.';

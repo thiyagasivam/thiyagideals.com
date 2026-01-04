@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Refurbished Products Deals - Professionally Restored
  * Category: Condition
@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/refurbished-deals';
 
 $pageTitle = 'Refurbished Products Deals - Professionally Restored';
 $pageDescription = 'Refurbished products! Professionally restored items with warranty. Quality assured at great prices.';
