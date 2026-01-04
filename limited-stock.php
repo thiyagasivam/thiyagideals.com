@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Limited Stock - Hurry Up! 2025";
+$pageTitle = "Limited Stock - Hurry Up! 2026";
 $metaDescription = "Almost sold out - grab before it's gone - Find Limited Stock - Hurry Up! with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Limited Stock - Hurry Up!, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Limited Stock - Hurry Up! - Best Offers 2025</h2>
+                    <h2>Limited Stock - Hurry Up! - Best Offers 2026</h2>
                     <p>Almost sold out - grab before it's gone</p>
                     
                     <h3>Why Shop Limited Stock - Hurry Up!?</h3>

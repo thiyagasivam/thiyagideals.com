@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Best Value for Money 2025";
+$pageTitle = "Best Value for Money 2026";
 $metaDescription = "Perfect balance of price and quality - Find Best Value for Money with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Best Value for Money, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Best Value for Money - Best Offers 2025</h2>
+                    <h2>Best Value for Money - Best Offers 2026</h2>
                     <p>Perfect balance of price and quality</p>
                     
                     <h3>Why Shop Best Value for Money?</h3>

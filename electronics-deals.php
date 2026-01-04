@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Electronics & Gadgets Deals 2025";
+$pageTitle = "Electronics & Gadgets Deals 2026";
 $metaDescription = "Best deals on electronics and gadgets - Find Electronics & Gadgets Deals with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Electronics & Gadgets Deals, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Electronics & Gadgets Deals - Best Offers 2025</h2>
+                    <h2>Electronics & Gadgets Deals - Best Offers 2026</h2>
                     <p>Best deals on electronics and gadgets</p>
                     
                     <h3>Why Shop Electronics & Gadgets Deals?</h3>

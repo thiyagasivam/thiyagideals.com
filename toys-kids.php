@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Toys & Kids Products 2025";
+$pageTitle = "Toys & Kids Products 2026";
 $metaDescription = "Toys and kids products at best prices - Find Toys & Kids Products with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Toys & Kids Products, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Toys & Kids Products - Best Offers 2025</h2>
+                    <h2>Toys & Kids Products - Best Offers 2026</h2>
                     <p>Toys and kids products at best prices</p>
                     
                     <h3>Why Shop Toys & Kids Products?</h3>

@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Deal of the Day 2025";
+$pageTitle = "Deal of the Day 2026";
 $metaDescription = "Featured deal of the day with massive discount - Find Deal of the Day with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Deal of the Day, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Deal of the Day - Best Offers 2025</h2>
+                    <h2>Deal of the Day - Best Offers 2026</h2>
                     <p>Featured deal of the day with massive discount</p>
                     
                     <h3>Why Shop Deal of the Day?</h3>

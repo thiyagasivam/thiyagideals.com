@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Recommended For You 2025";
+$pageTitle = "Recommended For You 2026";
 $pageDescription = "Personalized deals based on your interest - Find Recommended For You with massive discounts and offers.";
 $pageKeywords = "Recommended For You, deals, offers, discounts, online shopping";
 
@@ -197,7 +197,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Recommended For You - Best Offers 2025</h2>
+                    <h2>Recommended For You - Best Offers 2026</h2>
                     <p>Personalized deals based on your interest</p>
                     
                     <h3>Why Shop Recommended For You?</h3>

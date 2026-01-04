@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Handmade & Unique Products 2025";
+$pageTitle = "Handmade & Unique Products 2026";
 $pageDescription = "Handcrafted and unique product deals - Find Handmade & Unique Products with massive discounts and offers.";
 $pageKeywords = "Handmade & Unique Products, deals, offers, discounts, online shopping";
 
@@ -197,7 +197,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Handmade & Unique Products - Best Offers 2025</h2>
+                    <h2>Handmade & Unique Products - Best Offers 2026</h2>
                     <p>Handcrafted and unique product deals</p>
                     
                     <h3>Why Shop Handmade & Unique Products?</h3>

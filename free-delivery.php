@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Free Delivery Offers 2025";
+$pageTitle = "Free Delivery Offers 2026";
 $metaDescription = "Products with free home delivery - Find Free Delivery Offers with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Free Delivery Offers, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Free Delivery Offers - Best Offers 2025</h2>
+                    <h2>Free Delivery Offers - Best Offers 2026</h2>
                     <p>Products with free home delivery</p>
                     
                     <h3>Why Shop Free Delivery Offers?</h3>

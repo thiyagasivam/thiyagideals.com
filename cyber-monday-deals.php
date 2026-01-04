@@ -1,6 +1,6 @@
 ﻿<?php
 /**
- * Cyber Monday Sale 2025 - Best Online Deals
+ * Cyber Monday Sale 2026 - Best Online Deals
  * Seasonal event page - High search volume during festival season
  */
 
@@ -10,9 +10,9 @@ require_once 'includes/functions.php';
 // Canonical URL for SEO
 $canonicalUrl = SITE_URL . '/cyber-monday-deals';
 
-$pageTitle = 'Cyber Monday Sale 2025 - Best Online Deals';
-$pageDescription = 'Cyber Monday India 2025! Best online shopping deals on electronics, gadgets, mobiles. Exclusive Cyber Monday offers up to 70% off.';
-$pageKeywords = 'cyber monday deals india, cyber monday sale 2025, online shopping deals';
+$pageTitle = 'Cyber Monday Sale 2026 - Best Online Deals';
+$pageDescription = 'Cyber Monday India 2026! Best online shopping deals on electronics, gadgets, mobiles. Exclusive Cyber Monday offers up to 70% off.';
+$pageKeywords = 'cyber monday deals india, cyber monday sale 2026, online shopping deals';
 $eventName = 'Cyber Monday';
 $eventColor = '#00acc1';
 $eventIcon = '💻';
@@ -95,7 +95,7 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
             <div class="col-12">
                 <div class="festival-banner text-white p-4 rounded-3 text-center">
                     <div class="display-1 mb-3"><?php echo $eventIcon; ?></div>
-                    <h1 class="display-4 fw-bold mb-3"><?php echo $eventName; ?> Sale 2025</h1>
+                    <h1 class="display-4 fw-bold mb-3"><?php echo $eventName; ?> Sale 2026</h1>
                     <p class="lead fs-3 mb-4">🎉 Up to <?php echo $maxDiscount; ?>% OFF on Everything! 🎉</p>
                     <div class="d-flex justify-content-center gap-3 flex-wrap mb-3">
                         <span class="badge bg-white text-dark fs-5 px-4 py-2">
@@ -196,8 +196,8 @@ $maxDiscount = $totalDeals > 0 ? round(max(array_map(function($d) {
                 <div class="col-12">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h2 class="h3 mb-3"><?php echo $eventName; ?> Sale 2025 - Best Deals & Offers</h2>
-                            <p class="lead">Welcome to the biggest <?php echo $eventName; ?> sale of 2025! Get up to <?php echo $maxDiscount; ?>% off on <?php echo $totalDeals; ?>+ verified deals across all categories.</p>
+                            <h2 class="h3 mb-3"><?php echo $eventName; ?> Sale 2026 - Best Deals & Offers</h2>
+                            <p class="lead">Welcome to the biggest <?php echo $eventName; ?> sale of 2026! Get up to <?php echo $maxDiscount; ?>% off on <?php echo $totalDeals; ?>+ verified deals across all categories.</p>
                             
                             <h3 class="h5 mt-4 mb-2">Why Shop <?php echo $eventName; ?> Deals Here?</h3>
                             <ul class="list-unstyled">

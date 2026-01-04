@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Flash Sale - Limited Time 2025";
+$pageTitle = "Flash Sale - Limited Time 2026";
 $metaDescription = "Lightning deals - grab before they're gone - Find Flash Sale - Limited Time with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Flash Sale - Limited Time, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Flash Sale - Limited Time - Best Offers 2025</h2>
+                    <h2>Flash Sale - Limited Time - Best Offers 2026</h2>
                     <p>Lightning deals - grab before they're gone</p>
                     
                     <h3>Why Shop Flash Sale - Limited Time?</h3>

@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Month End Clearance Sale 2025";
+$pageTitle = "Month End Clearance Sale 2026";
 $metaDescription = "Month end clearance with huge discounts - Find Month End Clearance Sale with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Month End Clearance Sale, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Month End Clearance Sale - Best Offers 2025</h2>
+                    <h2>Month End Clearance Sale - Best Offers 2026</h2>
                     <p>Month end clearance with huge discounts</p>
                     
                     <h3>Why Shop Month End Clearance Sale?</h3>

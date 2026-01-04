@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Editor's Choice Deals 2025";
+$pageTitle = "Editor's Choice Deals 2026";
 $metaDescription = "Hand-picked deals by our expert team - Find Editor's Choice Deals with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Editor's Choice Deals, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Editor's Choice Deals - Best Offers 2025</h2>
+                    <h2>Editor's Choice Deals - Best Offers 2026</h2>
                     <p>Hand-picked deals by our expert team</p>
                     
                     <h3>Why Shop Editor's Choice Deals?</h3>

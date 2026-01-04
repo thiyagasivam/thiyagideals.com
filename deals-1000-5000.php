@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Deals Between ?1000-5000 2025";
+$pageTitle = "Deals Between ?1000-5000 2026";
 $metaDescription = "Quality products in ?1000-5000 range - Find Deals Between ?1000-5000 with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Deals Between ?1000-5000, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Deals Between ?1000-5000 - Best Offers 2025</h2>
+                    <h2>Deals Between ?1000-5000 - Best Offers 2026</h2>
                     <p>Quality products in ?1000-5000 range</p>
                     
                     <h3>Why Shop Deals Between ?1000-5000?</h3>

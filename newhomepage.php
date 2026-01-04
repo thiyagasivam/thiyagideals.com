@@ -596,7 +596,7 @@ include 'includes/header.php';
             <a href="#flash-deals" class="view-all-btn">Shop Flash Deals</a>
         </div>
     </div>
-    <div class="slide" style="background-image: url('https://assets.indiadesire.com/bbd/bbd2025first.png');">
+    <div class="slide" style="background-image: url('https://assets.indiadesire.com/bbd/bbd2026first.png');">
         <div class="slide-overlay"></div>
         <div class="slide-content">
             <h2>âš¡ Hot Deals Today!</h2>

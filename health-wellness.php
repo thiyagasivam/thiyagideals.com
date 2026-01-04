@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Health & Wellness 2025";
+$pageTitle = "Health & Wellness 2026";
 $metaDescription = "Health and wellness products - Find Health & Wellness with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Health & Wellness, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Health & Wellness - Best Offers 2025</h2>
+                    <h2>Health & Wellness - Best Offers 2026</h2>
                     <p>Health and wellness products</p>
                     
                     <h3>Why Shop Health & Wellness?</h3>

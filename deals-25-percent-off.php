@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Minimum 25% OFF Deals 2025";
+$pageTitle = "Minimum 25% OFF Deals 2026";
 $metaDescription = "Great deals with at least 25% discount - Find Minimum 25% OFF Deals with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Minimum 25% OFF Deals, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Minimum 25% OFF Deals - Best Offers 2025</h2>
+                    <h2>Minimum 25% OFF Deals - Best Offers 2026</h2>
                     <p>Great deals with at least 25% discount</p>
                     
                     <h3>Why Shop Minimum 25% OFF Deals?</h3>

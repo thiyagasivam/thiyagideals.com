@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Trending Deals Now 2025";
+$pageTitle = "Trending Deals Now 2026";
 $metaDescription = "Most popular and trending deals right now - Find Trending Deals Now with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Trending Deals Now, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Trending Deals Now - Best Offers 2025</h2>
+                    <h2>Trending Deals Now - Best Offers 2026</h2>
                     <p>Most popular and trending deals right now</p>
                     
                     <h3>Why Shop Trending Deals Now?</h3>

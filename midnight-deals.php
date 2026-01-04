@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Midnight Sale - Special Prices 2025";
+$pageTitle = "Midnight Sale - Special Prices 2026";
 $pageDescription = "Exclusive midnight deals and offers - Find Midnight Sale - Special Prices with massive discounts and offers.";
 $pageKeywords = "Midnight Sale - Special Prices, deals, offers, discounts, online shopping";
 
@@ -197,7 +197,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Midnight Sale - Special Prices - Best Offers 2025</h2>
+                    <h2>Midnight Sale - Special Prices - Best Offers 2026</h2>
                     <p>Exclusive midnight deals and offers</p>
                     
                     <h3>Why Shop Midnight Sale - Special Prices?</h3>

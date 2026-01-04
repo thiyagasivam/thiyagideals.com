@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Premium Deals (?5000+) 2025";
+$pageTitle = "Premium Deals (?5000+) 2026";
 $pageDescription = "Premium and luxury products with exclusive discounts - Find Premium Deals (?5000+) with massive discounts and offers.";
 $pageKeywords = "Premium Deals (?5000+), deals, offers, discounts, online shopping";
 
@@ -197,7 +197,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Premium Deals (?5000+) - Best Offers 2025</h2>
+                    <h2>Premium Deals (?5000+) - Best Offers 2026</h2>
                     <p>Premium and luxury products with exclusive discounts</p>
                     
                     <h3>Why Shop Premium Deals (?5000+)?</h3>

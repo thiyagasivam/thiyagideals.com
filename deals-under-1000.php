@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Best Deals Under ?1000
  * Auto-generated specialized deals page
@@ -51,7 +51,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Best Deals Under ₹1000 2025";
+$pageTitle = "Best Deals Under ₹1000 2026";
 $metaDescription = "Amazing deals under ₹1000 with great discounts - Find Best Deals Under ₹1000 with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Best Deals Under ₹1000, deals, offers, discounts, online shopping";
@@ -195,7 +195,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Best Deals Under ?1000 - Best Offers 2025</h2>
+                    <h2>Best Deals Under ?1000 - Best Offers 2026</h2>
                     <p>Amazing deals under ?1000 with great discounts</p>
                     
                     <h3>Why Shop Best Deals Under ?1000?</h3>

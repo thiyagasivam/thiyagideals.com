@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "New Arrivals - Latest Deals 2025";
+$pageTitle = "New Arrivals - Latest Deals 2026";
 $metaDescription = "Newest deals and latest product offers - Find New Arrivals - Latest Deals with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "New Arrivals - Latest Deals, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>New Arrivals - Latest Deals - Best Offers 2025</h2>
+                    <h2>New Arrivals - Latest Deals - Best Offers 2026</h2>
                     <p>Newest deals and latest product offers</p>
                     
                     <h3>Why Shop New Arrivals - Latest Deals?</h3>

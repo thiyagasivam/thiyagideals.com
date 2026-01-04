@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Sports & Fitness Gear 2025";
+$pageTitle = "Sports & Fitness Gear 2026";
 $metaDescription = "Sports equipment and fitness gear deals - Find Sports & Fitness Gear with massive discounts and offers.";
 $pageDescription = $metaDescription;
 $pageKeywords = "Sports & Fitness Gear, deals, offers, discounts, online shopping";
@@ -174,7 +174,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Sports & Fitness Gear - Best Offers 2025</h2>
+                    <h2>Sports & Fitness Gear - Best Offers 2026</h2>
                     <p>Sports equipment and fitness gear deals</p>
                     
                     <h3>Why Shop Sports & Fitness Gear?</h3>

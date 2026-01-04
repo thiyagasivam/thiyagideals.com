@@ -54,7 +54,7 @@ foreach ($filteredDeals as $deal) {
     $totalSavings += $savings;
 }
 
-$pageTitle = "Combo & Bundle Offers 2025";
+$pageTitle = "Combo & Bundle Offers 2026";
 $pageDescription = "Multi-pack and combo deals - Find Combo & Bundle Offers with massive discounts and offers.";
 $pageKeywords = "Combo & Bundle Offers, deals, offers, discounts, online shopping";
 
@@ -197,7 +197,7 @@ include 'includes/header.php';
         <div class="row">
             <div class="col-md-12">
                 <div class="seo-content" style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
-                    <h2>Combo & Bundle Offers - Best Offers 2025</h2>
+                    <h2>Combo & Bundle Offers - Best Offers 2026</h2>
                     <p>Multi-pack and combo deals</p>
                     
                     <h3>Why Shop Combo & Bundle Offers?</h3>
