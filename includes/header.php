@@ -708,12 +708,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarPopular">
                                 <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/hot-deals">🔥 Hot Deals (40%+ OFF)</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/todays-deals">📅 Today's Deals</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/flash-sale">⚡ Flash Sale</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/deal-of-day">🎯 Deal of the Day</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/trending">📈 Trending Now</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/best-sellers">⭐ Best Sellers</a></li>
+                                
                             </ul>
                         </li>
                         
@@ -742,12 +737,12 @@
                                 <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/home-kitchen">🏠 Home & Kitchen</a></li>
                                 <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/beauty-deals">💄 Beauty & Personal Care</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/sports-fitness">⚽ Sports & Fitness</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/toys-kids">🧸 Toys & Kids</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/books-media">📚 Books & Media</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/automotive">🚗 Automotive</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/health-wellness">💊 Health & Wellness</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/pet-supplies">🐾 Pet Supplies</a></li>
+                                
+                                
+                                
+                                
+                                
+                                
                             </ul>
                         </li>
                         
@@ -773,14 +768,14 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarMore">
                                 <li><h6 class="dropdown-header">Special Offers</h6></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/buy-1-get-1">🎁 Buy 1 Get 1</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/combo-deals">🎁 Combo Deals</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/free-delivery">🚚 Free Delivery</a></li>
+                                
+                                
+                                
                                 <li><hr class="dropdown-divider"></li>
                                 <li><h6 class="dropdown-header">Events</h6></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/festival-sale">🎊 Festival Sale</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/weekend-special">📅 Weekend Special</a></li>
-                                <li><a class="dropdown-item" href="<?php echo SITE_URL; ?>/midnight-deals">🌙 Midnight Deals</a></li>
+                                
+                                
+                                
                                 <li><hr class="dropdown-divider"></li>
                                 <li><h6 class="dropdown-header">Browse</h6></li>
                                 <li><a class="dropdown-item fw-bold" href="<?php echo SITE_URL; ?>/all-pages">📋 All Deals Pages</a></li>
