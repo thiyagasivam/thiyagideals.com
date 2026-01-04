@@ -224,7 +224,7 @@ include 'includes/header.php';
         $avgDiscount = round($avgDiscount / $totalProducts);
     ?>
     <div class="quick-stats">
-        <h3>🔥 Today's Deal Statistic</h3>
+        <h3>🔥 Today's Deal Statistics</h3>
         <div class="stats-grid">
             <div class="stat-item">
                 <span class="stat-number"><?php echo $totalProducts; ?></span>
