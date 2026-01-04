@@ -488,7 +488,7 @@ include 'includes/header.php';
                                     <i class="bi bi-shop"></i> <?php echo htmlspecialchars($deal['store_name']); ?>
                                 </span>
                                 <span class="stock-status">
-                                    <?php echo $deal['stock_status'] === 'In Stock' ? '✓ In Stock' : '✗ Out of Stock'; ?>
+                                    ✓ Available
                                 </span>
                             </div>
                             
