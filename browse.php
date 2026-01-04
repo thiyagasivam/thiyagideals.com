@@ -117,6 +117,138 @@ include 'includes/header.php';
 ?>
 
 <style>
+    /* Product Card Clickable Styles */
+    .product-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .product-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+    }
+    
+    .product-card-link:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .product-image-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        overflow: hidden;
+        background: #f8f9fa;
+    }
+    
+    .product-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .product-image {
+        transform: scale(1.05);
+    }
+    
+    .product-info {
+        padding: 1rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .product-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+        line-height: 1.4;
+        min-height: 2.8rem;
+    }
+    
+    .product-card-link:hover .product-title {
+        color: #667eea;
+    }
+    
+    .product-pricing {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .offer-price {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #27ae60;
+    }
+    
+    .sale-price {
+        font-size: 0.85rem;
+        color: #999;
+        text-decoration: line-through;
+    }
+    
+    .product-store {
+        font-size: 0.85rem;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .discount-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        box-shadow: 0 2px 8px rgba(245, 87, 108, 0.4);
+        z-index: 2;
+    }
+    
+    .view-details-btn {
+        background: #667eea;
+        color: white;
+        padding: 0.75rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-top: 1px solid #eee;
+        transition: background 0.3s ease;
+        pointer-events: none;
+    }
+    
+    .product-card:hover .view-details-btn {
+        background: #5568d3;
+    }
+    
     .filter-header {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
@@ -240,6 +372,22 @@ include 'includes/header.php';
         font-weight: 600;
         cursor: pointer;
         margin-top: 0.5rem;
+    }
+    
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+        .product-card:hover {
+            transform: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-card:hover .product-image {
+            transform: none;
+        }
+        
+        .product-card:active {
+            transform: scale(0.98);
+        }
     }
 </style>
 
@@ -413,8 +561,8 @@ include 'includes/header.php';
                         $productUrl = SITE_URL . "/product/" . $pid . "/" . $slug;
                     ?>
                     <div class="col-6 col-md-4 col-lg-3">
-                        <div class="product-card">
-                            <a href="<?php echo $productUrl; ?>" class="product-link" data-product-id="<?php echo $pid; ?>">
+                        <a href="<?php echo $productUrl; ?>" class="product-card-link" data-product-id="<?php echo $pid; ?>">
+                            <div class="product-card">
                                 <div class="product-image-wrapper">
                                     <img src="<?php echo htmlspecialchars($productImage); ?>" 
                                          alt="<?php echo htmlspecialchars($productName); ?>"
@@ -437,14 +585,11 @@ include 'includes/header.php';
                                         <?php echo htmlspecialchars($storeName); ?>
                                     </div>
                                 </div>
-                            </a>
-                            <a href="<?php echo htmlspecialchars($productLink); ?>" 
-                               target="_blank" 
-                               rel="nofollow noopener"
-                               class="buy-now-btn">
-                                <i class="bi bi-cart-plus"></i> Buy Now
-                            </a>
-                        </div>
+                                <div class="view-details-btn">
+                                    <i class="bi bi-eye"></i> View Details
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <?php endforeach; ?>
                 </div>
@@ -497,6 +642,43 @@ function applySorting(sortValue) {
     url.searchParams.delete('page'); // Reset to first page
     window.location = url.toString();
 }
+
+// Product card click tracking
+document.addEventListener('DOMContentLoaded', function() {
+    const productCards = document.querySelectorAll('.product-card-link');
+    
+    productCards.forEach(function(card) {
+        // Desktop click tracking
+        card.addEventListener('click', function(e) {
+            const productId = this.dataset.productId;
+            
+            // Track click event (analytics can be added here)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'product_click', {
+                    'product_id': productId,
+                    'source': 'browse_page'
+                });
+            }
+            
+            // Add visual feedback
+            this.style.opacity = '0.8';
+            setTimeout(() => {
+                this.style.opacity = '1';
+            }, 150);
+        });
+        
+        // Mobile touch feedback
+        card.addEventListener('touchstart', function() {
+            this.querySelector('.product-card').style.transform = 'scale(0.98)';
+        }, { passive: true });
+        
+        card.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.querySelector('.product-card').style.transform = 'scale(1)';
+            }, 150);
+        }, { passive: true });
+    });
+});
 </script>
 
 <?php include 'includes/footer.php'; ?>

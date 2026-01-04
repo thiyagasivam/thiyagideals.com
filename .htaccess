@@ -24,20 +24,14 @@ RewriteRule ^product/([0-9]+)/?([^/]*)?/?$ product.php?id=$1 [L,QSA]
 
 # ===== DYNAMIC BROWSE PAGE - SEO-FRIENDLY URLs =====
 
-# Store-specific deals: /amazon-deals, /flipkart-deals
-RewriteRule ^([a-z]+)-deals/?$ browse.php?store=$1 [L,QSA]
+# Browse page (must come FIRST before other patterns)
+RewriteRule ^browse/?$ browse.php [L,QSA]
 
-# Price range deals: /deals-under-500, /deals-under-1000
-RewriteRule ^deals-under-([0-9]+)/?$ browse.php?max_price=$1 [L,QSA]
+# Store + Category + Price: /amazon-mobile-under-10000 (most specific first)
+RewriteRule ^([a-z]+)-([a-z]+)-under-([0-9]+)/?$ browse.php?store=$1&category=$2&max_price=$3 [L,QSA]
 
-# Price range between: /deals-500-1000, /deals-1000-5000
-RewriteRule ^deals-([0-9]+)-([0-9]+)/?$ browse.php?min_price=$1&max_price=$2 [L,QSA]
-
-# Discount deals: /deals-50-percent-off, /deals-70-percent-off
-RewriteRule ^deals-([0-9]+)-percent-off/?$ browse.php?min_discount=$1 [L,QSA]
-
-# Category deals: /mobile-deals, /laptop-deals, /fashion-deals
-RewriteRule ^([a-z]+)-deals/?$ browse.php?category=$1 [L,QSA]
+# Store + Category: /amazon-mobile-deals
+RewriteRule ^([a-z]+)-([a-z]+)-deals/?$ browse.php?store=$1&category=$2 [L,QSA]
 
 # Store + Price: /amazon-deals-under-1000
 RewriteRule ^([a-z]+)-deals-under-([0-9]+)/?$ browse.php?store=$1&max_price=$2 [L,QSA]
@@ -48,14 +42,20 @@ RewriteRule ^([a-z]+)-deals-([0-9]+)-off/?$ browse.php?store=$1&min_discount=$2 
 # Category + Price: /mobile-under-10000
 RewriteRule ^([a-z]+)-under-([0-9]+)/?$ browse.php?category=$1&max_price=$2 [L,QSA]
 
-# Store + Category: /amazon-mobile-deals
-RewriteRule ^([a-z]+)-([a-z]+)-deals/?$ browse.php?store=$1&category=$2 [L,QSA]
+# Price range between: /deals-500-1000, /deals-1000-5000
+RewriteRule ^deals-([0-9]+)-([0-9]+)/?$ browse.php?min_price=$1&max_price=$2 [L,QSA]
 
-# Store + Category + Price: /amazon-mobile-under-10000
-RewriteRule ^([a-z]+)-([a-z]+)-under-([0-9]+)/?$ browse.php?store=$1&category=$2&max_price=$3 [L,QSA]
+# Price range deals: /deals-under-500, /deals-under-1000
+RewriteRule ^deals-under-([0-9]+)/?$ browse.php?max_price=$1 [L,QSA]
 
-# Browse with filters (fallback for complex combinations)
-RewriteRule ^browse/?$ browse.php [L,QSA]
+# Discount deals: /deals-50-percent-off, /deals-70-percent-off
+RewriteRule ^deals-([0-9]+)-percent-off/?$ browse.php?min_discount=$1 [L,QSA]
+
+# Store-specific deals: /amazon-deals, /flipkart-deals (less specific, comes last)
+RewriteRule ^(amazon|flipkart|myntra|meesho|ajio)-deals/?$ browse.php?store=$1 [L,QSA]
+
+# Category deals: /mobile-deals, /laptop-deals, /fashion-deals
+RewriteRule ^(mobile|laptop|fashion|electronics|beauty|home)-deals/?$ browse.php?category=$1 [L,QSA]
 
 # ===== END DYNAMIC BROWSE RULES =====
 
