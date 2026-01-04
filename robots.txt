@@ -55,38 +55,15 @@ Disallow: /*&source=
 Disallow: /*&medium=
 Disallow: /*&campaign=
 
-# Allow specific bots full access
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
-Crawl-delay: 2
 
 User-agent: DuckDuckBot
 Allow: /
-Crawl-delay: 1
-
-# Block problematic bots
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: dotbot
-Disallow: /
-
-# Crawl delay for general bots
-Crawl-delay: 1
-
-# Cache directive
-Cache-delay: 1

@@ -6,6 +6,9 @@
 
 require_once 'includes/config.php';
 
+// Canonical URL for SEO
+$canonicalUrl = SITE_URL . '/all-pages';
+
 $pageTitle = "All Deals Pages - Browse 150+ Specialized Deal Collections";
 $metaDescription = "Explore 150+ specialized deal pages including budget deals, hot discounts, festival offers, category-specific deals, and exclusive collections. Find your perfect deal!";
 ?>
