@@ -63,29 +63,340 @@ include 'includes/header.php';
 ?>
 
 <style>
+    /* Modern Today's Deals Styling */
     .page-header {
-        background: linear-gradient(135deg, #667eea 0%, <?php echo adjustBrightness('#667eea', -30); ?> 100%);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
-        padding: 60px 0;
-        margin-bottom: 40px;
+        padding: 3rem 2rem;
+        margin-bottom: 3rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        position: relative;
+        overflow: hidden;
     }
+    
+    .page-header::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        animation: rotate 20s linear infinite;
+    }
+    
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        position: relative;
+        z-index: 1;
+    }
+    
+    .page-header .lead {
+        font-size: 1.2rem;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .breadcrumb {
+        background: transparent;
+        padding: 0;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .breadcrumb a {
+        color: white !important;
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+    
+    .breadcrumb a:hover {
+        opacity: 0.8;
+    }
+    
     .stats-badge {
         background: rgba(255,255,255,0.2);
         backdrop-filter: blur(10px);
-        border-radius: 10px;
-        padding: 15px 25px;
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
+    
+    .stats-badge h2, .stats-badge h3, .stats-badge h4 {
+        font-weight: 900;
+        margin-bottom: 0.5rem;
+    }
+    
+    .stats-badge hr {
+        border-color: rgba(255,255,255,0.3);
+        margin: 1rem 0;
+    }
+    
+    /* Product Grid */
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    
+    /* Product Card */
+    .product-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border: none;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+    }
+    
+    .product-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .product-card-link:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .product-image-wrapper {
+        position: relative;
+        padding-top: 100%;
+        background: #f8f9fa;
+        overflow: hidden;
+    }
+    
+    .product-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .product-image {
+        transform: scale(1.05);
+    }
+    
     .deal-badge {
-        background: #667eea;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
         color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 12px;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        z-index: 2;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+        min-height: 2.8em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .product-card-link:hover .card-title {
+        color: #667eea;
+    }
+    
+    .price-section {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .current-price {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: #27ae60;
+    }
+    
+    .original-price {
+        font-size: 1rem;
+        color: #999;
+        text-decoration: line-through;
+    }
+    
+    .discount-badge {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+    
+    .savings-badge {
+        background: linear-gradient(135deg, #d4edda, #c3e6cb);
+        color: #155724;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .store-badge {
+        background: #f8f9fa;
+        padding: 0.25rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #666;
+    }
+    
+    .stock-status {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #27ae60;
+    }
+    
+    .view-deal-btn {
+        display: block;
+        width: 100%;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1rem;
+        border: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        margin-top: auto;
+    }
+    
+    .product-card-link:hover .view-deal-btn {
+        background: linear-gradient(135deg, #764ba2, #667eea);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        transform: scale(1.02);
+    }
+    
+    /* SEO Content */
+    .seo-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    
+    .seo-content h2 {
+        color: #667eea;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+    }
+    
+    .seo-content h3 {
+        color: #333;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+    }
+    
+    .seo-content ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .seo-content li {
+        padding: 0.5rem 0;
+        padding-left: 2rem;
+        position: relative;
+    }
+    
+    .seo-content li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #27ae60;
         font-weight: bold;
-        display: inline-block;
-        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .page-header h1 {
+            font-size: 1.8rem;
+        }
+        
+        .page-header .lead {
+            font-size: 1rem;
+        }
+        
+        .stats-badge {
+            padding: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .products-grid {
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 1rem;
+        }
+        
+        .product-card:hover {
+            transform: none;
+        }
+        
+        .product-card:active {
+            transform: scale(0.98);
+        }
     }
 </style>
+
+<div class="container">
     
     <!-- Page Header -->
     <div class="page-header">
@@ -127,61 +438,66 @@ include 'includes/header.php';
     <!-- Deals Grid -->
     <div class="container mb-5">
         <?php if ($totalDeals > 0): ?>
-            <div class="row g-4" id="deals-grid">
+            <div class="products-grid">
                 <?php foreach ($filteredDeals as $deal): 
                     $price = floatval($deal['product_sale_price']);
                     $originalPrice = floatval($deal['product_offer_price']);
                     $discount = calculateDiscount($deal['product_offer_price'], $deal['product_sale_price']);
                     $savings = $originalPrice - $price;
+                    $pid = $deal['pid'] ?? crc32($deal['product_name'] . $deal['store_name']);
+                    $slug = createSlug($deal['product_name']);
+                    $productUrl = SITE_URL . "/product/" . $pid . "/" . $slug;
                 ?>
-                <div class="col-md-4 col-lg-3">
-                    <div class="card h-100 product-card">
+                <a href="<?php echo $productUrl; ?>" class="product-card-link" data-product-id="<?php echo $pid; ?>">
+                    <div class="product-card">
                         <?php if ($discount >= 40): ?>
-                        <div class="deal-badge" style="position: absolute; top: 10px; left: 10px; z-index: 1;">
-                            ?? <?php echo number_format($discount); ?>% OFF
+                        <div class="deal-badge">
+                            🔥 <?php echo number_format($discount); ?>% OFF
                         </div>
                         <?php endif; ?>
                         
-                        <img src="<?php echo htmlspecialchars($deal['product_image']); ?>" 
-                             class="card-img-top" 
-                             alt="<?php echo htmlspecialchars($deal['product_name']); ?>"
-                             style="height: 200px; object-fit: contain; padding: 20px;">
+                        <div class="product-image-wrapper">
+                            <img src="<?php echo htmlspecialchars($deal['product_image']); ?>" 
+                                 class="product-image" 
+                                 alt="<?php echo htmlspecialchars($deal['product_name']); ?>"
+                                 loading="lazy">
+                        </div>
                         
                         <div class="card-body">
-                            <h5 class="card-title" style="font-size: 14px; min-height: 60px; overflow: hidden;">
+                            <h5 class="card-title">
                                 <?php echo htmlspecialchars(substr($deal['product_name'], 0, 80)); ?>
                                 <?php echo strlen($deal['product_name']) > 80 ? '...' : ''; ?>
                             </h5>
                             
-                            <div class="price-section mb-2">
-                                <span class="current-price">?<?php echo number_format($price); ?></span>
+                            <div class="price-section">
+                                <span class="current-price">₹<?php echo number_format($price); ?></span>
                                 <?php if ($originalPrice > $price): ?>
-                                    <span class="original-price">?<?php echo number_format($originalPrice); ?></span>
+                                    <span class="original-price">₹<?php echo number_format($originalPrice); ?></span>
                                     <span class="discount-badge"><?php echo number_format($discount); ?>% OFF</span>
                                 <?php endif; ?>
                             </div>
                             
                             <?php if ($savings > 0): ?>
-                            <div class="savings-badge mb-2">
-                                ?? Save ?<?php echo number_format($savings); ?>
+                            <div class="savings-badge">
+                                💰 Save ₹<?php echo number_format($savings); ?>
                             </div>
                             <?php endif; ?>
                             
-                            <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="store-badge">
-                                    <?php echo htmlspecialchars($deal['store_name']); ?>
+                                    <i class="bi bi-shop"></i> <?php echo htmlspecialchars($deal['store_name']); ?>
                                 </span>
                                 <span class="stock-status">
-                                    <?php echo $deal['stock_status'] === 'In Stock' ? '? In Stock' : '? Out of Stock'; ?>
+                                    <?php echo $deal['stock_status'] === 'In Stock' ? '✓ In Stock' : '✗ Out of Stock'; ?>
                                 </span>
                             </div>
                             
-                            <a href="<?php echo SITE_URL; ?>/product/<?php echo $deal['pid']; ?>/<?php echo createSlug($deal['product_name']); ?>" data-product-id="<?php echo $deal['pid']; ?>" title="View details for <?php echo sanitizeOutput($deal['product_name']); ?>" class="btn btn-primary w-100">
-                                View Deal
-                            </a>
+                            <div class="view-deal-btn">
+                                <i class="bi bi-eye"></i> View Deal
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <?php endforeach; ?>
             </div>
         <?php else: ?>
@@ -219,5 +535,44 @@ include 'includes/header.php';
             </div>
         </div>
     </div>
+    
+    <script>
+    // Product card click tracking
+    document.addEventListener('DOMContentLoaded', function() {
+        const productCards = document.querySelectorAll('.product-card-link');
+        
+        productCards.forEach(function(card) {
+            // Desktop click tracking
+            card.addEventListener('click', function(e) {
+                const productId = this.dataset.productId;
+                
+                // Track click event (analytics)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'todays_deal_click', {
+                        'product_id': productId,
+                        'source': 'todays_deals_page'
+                    });
+                }
+                
+                // Visual feedback
+                this.style.opacity = '0.8';
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                }, 150);
+            });
+            
+            // Mobile touch feedback
+            card.addEventListener('touchstart', function() {
+                this.querySelector('.product-card').style.transform = 'scale(0.98)';
+            }, { passive: true });
+            
+            card.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.querySelector('.product-card').style.transform = 'scale(1)';
+                }, 150);
+            }, { passive: true });
+        });
+    });
+    </script>
     
     <?php include 'includes/footer.php'; ?>
