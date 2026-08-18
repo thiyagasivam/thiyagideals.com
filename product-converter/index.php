@@ -14,7 +14,7 @@
     <div class="container">
         <header>
             <div class="header-container">
-                <a href="https://www.thiyagideals.com/" class="logo-link">
+                <a href="https://www.thiyagideals.com/" class="logo-link" target="_blank">
                     <div class="header-left">
                         <div class="logo-placeholder">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
