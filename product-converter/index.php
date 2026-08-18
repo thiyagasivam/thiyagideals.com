@@ -14,18 +14,20 @@
     <div class="container">
         <header>
             <div class="header-container">
-                <div class="header-left">
-                    <div class="logo-placeholder">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <rect width="40" height="40" rx="8" fill="#1db854"/>
-                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" font-weight="bold" fill="white" font-family="Arial">TD</text>
-                        </svg>
+                <a href="https://www.thiyagideals.com/" class="logo-link">
+                    <div class="header-left">
+                        <div class="logo-placeholder">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="8" fill="#1db854"/>
+                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" font-weight="bold" fill="white" font-family="Arial">TD</text>
+                            </svg>
+                        </div>
+                        <div class="site-info">
+                            <h1>Product Converter</h1>
+                            <p class="site-name">thiyagideals</p>
+                        </div>
                     </div>
-                    <div class="site-info">
-                        <h1>Product Converter</h1>
-                        <p class="site-name">thiyagideals</p>
-                    </div>
-                </div>
+                </a>
                 <button id="pageShareBtn" class="page-share-btn" title="Share this page">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="18" cy="5" r="3"></circle>
@@ -40,9 +42,9 @@
 
         <main>
             <div class="form-section">
-                <textarea 
-                    id="dealInput" 
-                    class="input-area" 
+                <textarea
+                    id="dealInput"
+                    class="input-area"
                     placeholder="Paste your Products links here"
                     rows="8"
                 ></textarea>
@@ -76,9 +78,9 @@
                     <h2>Converted Links</h2>
                     <button id="closeResultBtn" class="close-btn">✕</button>
                 </div>
-                <textarea 
-                    id="resultOutput" 
-                    class="output-area" 
+                <textarea
+                    id="resultOutput"
+                    class="output-area"
                     readonly
                     rows="8"
                 ></textarea>
@@ -185,3 +187,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
