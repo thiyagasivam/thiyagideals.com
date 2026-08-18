@@ -1,0 +1,30 @@
+# Enable Apache Rewrite Module
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Remove .php extension from URLs
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([a-zA-Z0-9\-_]+)/?$ $1.php [NC,L]
+    
+    # Handle direct .php requests - remove extension for display
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [NC,L]
+    
+    # Prevent direct access to .php files
+    # RewriteRule ^(.*)\.php$ - [F,L]
+</IfModule>
+
+# Set proper MIME types
+<IfModule mod_mime.c>
+    AddType application/json .json
+</IfModule>
+
+# Enable CORS for API requests (if needed)
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>

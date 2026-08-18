@@ -13,7 +13,7 @@ const loading = document.getElementById('loading');
 const errorMessage = document.getElementById('errorMessage');
 
 // API Configuration
-const API_ENDPOINT = 'converter.php';
+const API_ENDPOINT = 'converter';
 
 // Event Listeners
 convertBtn.addEventListener('click', handleConvert);

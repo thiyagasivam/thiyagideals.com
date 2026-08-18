@@ -1,3 +1,7 @@
+<?php
+// This file serves as the main entry point for your affiliate converter application
+// Header information (optional PHP processing)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
